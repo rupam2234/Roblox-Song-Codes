@@ -1,9 +1,7 @@
 "use client";
 
-import AssetsList from "./AssetTest";
-
 const SongIDtable = () => {
-  return <div><AssetsList/></div>;
+  return <div></div>;
 };
 
 export default SongIDtable;
