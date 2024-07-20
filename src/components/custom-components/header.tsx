@@ -1,0 +1,95 @@
+"use client";
+
+import { LucideInfo, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { NavItem, SearchFormSchema } from "./constants";
+import MobileNav from "./mobile-navigation";
+import SearchBar from "./searchbar";
+
+// imports end
+
+const Header = () => {
+  const components: NavItem[] = [
+    {
+      title: "Most Popular Tracks",
+      href: "/most-popular-tracks",
+      icon: TrendingUp
+    },
+  ];
+
+  const form = useForm<z.infer<typeof SearchFormSchema>>({
+    resolver: zodResolver(SearchFormSchema),
+
+    defaultValues: {
+      SongName: "",
+    },
+  });
+
+  return (
+    <div className="p-6 lg:px-[170px] lg:py-3 bg-[#5F8C81] flex justify-between">
+      <div className="flex justify-start">
+        <Link href={"/"}>
+          <Image
+            src={"/media/Roblox Song Codes Logo.png"}
+            width={115}
+            height={5}
+            alt={"Roblox Song Codes"}
+            priority
+          />
+        </Link>
+        <HoverCard>
+          <HoverCardTrigger>
+            <LucideInfo className="text-[#C6D6CE] mt-3 h-5 w-5" />
+          </HoverCardTrigger>
+          <HoverCardContent className="text-sm">
+            Created by team at{" "}
+            <a
+              className="hover:underline"
+              href="https://geekguidez.com"
+              rel="nofollow"
+              target="_blank"
+            >
+              @GeekGuidez
+            </a>
+          </HoverCardContent>
+        </HoverCard>
+      </div>
+      <div
+        className={cn("flex justify-end items-center text-white font-light")}
+      >
+        <SearchBar/>
+
+        <div className="block md:hidden lg:hidden">
+          <MobileNav components={components} />
+        </div>
+        
+        <NavigationMenu className="ml-6 hidden sm:block">
+          <NavigationMenuList>
+            {components.map((component, index) => (
+              <NavigationMenuItem key={index}>
+                <a href={component.href}>{component.title}</a>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
