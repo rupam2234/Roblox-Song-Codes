@@ -68,6 +68,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .custom-toast {
   background-color: #c6cdc8; /* Example background color */
   color: black; /* Adjust text color if needed */

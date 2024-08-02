@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <main>
       <div className="p-6 lg:px-[140px]">
-        <div className="w-full px-7 py-10 border rounded-md my-3 bg-gradient-to-br from-[#5F8C81] to-[#337c86] ">
+        <div className="w-full px-7 py-10 border rounded-md my-3 bg-gradient-to-br from-[#5F8C81] to-[#337c86]">
           <h1
             className={cn(
               "text-[18px] text-white md:font-medium md:text-[32px]",
@@ -31,7 +31,7 @@ const HomePage = () => {
             Roblox Song Codes - Largest Boombox Music Database
           </h1>
           <div className="flex gap-10 justify-center items-center mt-7 md:mt-0">
-            <div className="text-[16px] text-white space-y-5 ">
+            <div className="text-[16px] text-white space-y-5">
               <p>
                 This is a complete list of all tested Roblox song codes across
                 different genres that you can play on Boombox. We consistently
@@ -46,7 +46,7 @@ const HomePage = () => {
                 your boombox.
               </p>
             </div>
-            <div className="m-10 justify-start items-start hidden md:flex">
+            <div className="hidden md:flex m-10">
               <Image
                 src="/media/Roblox-Boombox-Icon.png"
                 width={375}
@@ -58,18 +58,15 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="grid-cols-12 grid gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
-        <section className="lg:col-span-8 col-span-12 place-items-center">
-          {/* Content Section */}
-
+      <div className="grid grid-cols-12 gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
+        <div className="lg:col-span-8 col-span-12 flex flex-col items-center">
           <TopContent />
           <FetchSongs apiEndpoint={"/api/songs"} />
           <BottomContents />
-        </section>
-        <section className="hidden lg:block lg:col-span-4 col-span-12 ">
-          {/* Sidebar */}
+        </div>
+        <div className="hidden lg:block lg:col-span-4 col-span-12">
           <Sidebar />
-        </section>
+        </div>
       </div>
     </main>
   );

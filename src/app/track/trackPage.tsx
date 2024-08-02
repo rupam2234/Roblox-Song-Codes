@@ -175,7 +175,7 @@ const TrackPage = () => {
   }, [songRated, toast]);
 
   return (
-    <main className="grid-cols-12 grid gap-10 min-h-screen p-6 lg:px-[170px]">
+    <main className="grid-cols-12 grid md:gap-10 min-h-screen p-6 lg:px-[170px]">
       <section className="lg:col-span-8 col-span-12 place-items-center">
         {/* Content Section */}
         {SongData.length > 0 ? (
@@ -307,14 +307,13 @@ const TrackPage = () => {
                   <h2 className="mt-14 font-bold text-[20px] text-[#5F8C81]">
                     Similar Tracks You May Like:
                   </h2>
-
-                  <FetchSongs
-                    apiEndpoint={`/api/getSimilerTrack?name=${song.name.substring(
-                      0,
-                      3
-                    )}`}
-                  />
                 </div>
+                <FetchSongs
+                  apiEndpoint={`/api/getSimilerTrack?name=${song.name.substring(
+                    0,
+                    3
+                  )}`}
+                />
               </div>
             </div>
           ))
