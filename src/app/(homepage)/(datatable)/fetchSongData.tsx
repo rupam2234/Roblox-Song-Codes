@@ -10,7 +10,6 @@ import { InfoIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
-import { Button } from "@/components/ui/button";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -18,36 +17,29 @@ type FetchSongsProps = {
 
 const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   const [data, setData] = useState<SongIDs[]>([]);
-  const [start, setStart] = useState(0); // Track pagination start point
-  const [moreDataAvailable, setMoreDataAvailable] = useState(true); // Track if more data is available
   const router = useRouter();
   const [songRated, setsongRated] = useState(false);
   const hasFetchedData = useRef(false);
 
-  const fetchData = async (start: number) => {
-    try {
-      const response = await fetch(`${apiEndpoint}?start=${start}`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const result = await response.json();
-
-      // Update state with new data and check if more data is available
-      setData((prevData) => [...prevData, ...result.rows]);
-      setMoreDataAvailable(result.moreDataAvailable);
-      setStart(result.nextStart || start); // Update start for the next request if more data is available
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
   useEffect(() => {
-    // Fetch data on component mount
+    const fetchData = async () => {
+      try {
+        const response = await fetch(apiEndpoint);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const result: SongIDs[] = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Ensure fetchData is called only once
     if (!hasFetchedData.current) {
-      fetchData(start);
+      fetchData();
       hasFetchedData.current = true;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiEndpoint]);
 
   const handleRatingChange = async (
@@ -123,19 +115,16 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
     if (songRated) {
       toast({
         title: "Your rating wasn't added!",
-        description: "Because you have already rated this Roblox track.",
+        description: "Bacause you have already rated this Roblox track.",
         className: "custom-toast",
       });
       setsongRated(false); // Reset the state if needed
     }
   }, [songRated]);
 
-  const handleRowClick = (
-    rowData: string[],
-    rowMeta: { dataIndex: number; rowIndex: number }
-  ) => {
-    const id = parseInt(rowData[1], 10); // Assuming ID is at index 1
-    const name = rowData[0]; // Assuming name is at index 0
+  const handleRowClick = (rowData: { id: number; name: string }) => {
+    const { id, name } = rowData;
+    const encodedName = encodeURIComponent(name);
     router.push(`/track?id=${id}`);
   };
 
@@ -162,7 +151,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               href={`/track?id=${id}`}
               onClick={(e) => {
                 e.preventDefault();
-                handleRowClick([name, id.toString()], tableMeta.rowMeta); // Pass the required format
+                handleRowClick({ id, name });
               }}
               className="hover:text-blue-400"
             >
@@ -247,12 +236,6 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       },
     });
 
-  const loadMoreData = () => {
-    if (moreDataAvailable) {
-      fetchData(start);
-    }
-  };
-
   return (
     <>
       <div className="mt-7 border rounded-sm">
@@ -270,23 +253,8 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               elevation: 0,
               rowsPerPage: 25,
               rowsPerPageOptions: [5, 10, 25, 50],
-              onRowClick: handleRowClick, // Adjusted for proper typing
             }}
           />
-          {moreDataAvailable && (
-            <div className="flex mx-4 justify-between items-center">
-              <p className="my-4 text-gray-500 text-[13px]">
-                Click on &apos;Load More&apos; to fetch more Song IDs:
-              </p>
-              <Button
-                onClick={loadMoreData}
-                size={"sm"}
-                className="px-4 py-2 text-white bg-[#5F8C81] hover:bg-[#5F8C81] rounded"
-              >
-                Load More
-              </Button>
-            </div>
-          )}
         </ThemeProvider>
       </div>
     </>
