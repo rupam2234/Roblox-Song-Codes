@@ -10,6 +10,7 @@ import { InfoIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -20,6 +21,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   const router = useRouter();
   const [songRated, setsongRated] = useState(false);
   const hasFetchedData = useRef(false);
+  const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +43,17 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       hasFetchedData.current = true;
     }
   }, [apiEndpoint]);
+
+  useEffect(() => {
+    if (songRated) {
+      toast({
+        title: "Your rating wasn't added!",
+        description: "Bacause you have already rated this Roblox track.",
+        className: "custom-toast",
+      });
+      setsongRated(false); // Reset the state if needed
+    }
+  }, [songRated]);
 
   const handleRatingChange = async (
     id: number,
@@ -111,16 +124,23 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
     handleRatingChange(id, currentRating, -1);
   };
 
-  useEffect(() => {
-    if (songRated) {
-      toast({
-        title: "Your rating wasn't added!",
-        description: "Bacause you have already rated this Roblox track.",
-        className: "custom-toast",
+  function handleCopy(id: number) {
+    navigator.clipboard
+      .writeText(id.toString())
+      .then(() => {
+        setCopyStatus((prevState) => ({ ...prevState, [id]: true }));
+
+        // return the COPIED text to COPY on the button
+        // set timer
+
+        setTimeout(() => {
+          setCopyStatus((prevState) => ({ ...prevState, [id]: false }));
+        }, 4000);
+      })
+      .catch((error) => {
+        console.error("Failed to copy text: ", error);
       });
-      setsongRated(false); // Reset the state if needed
-    }
-  }, [songRated]);
+  }
 
   const handleRowClick = (rowData: { id: number; name: string }) => {
     const { id, name } = rowData;
@@ -167,6 +187,31 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       options: {
         filter: false,
         sort: false,
+        customBodyRender: (value: number) => {
+          return (
+            <div className="flex">
+              <p className="mt-[2px]">{value}</p>
+              <Button
+                variant={"outline"}
+                size={"sm"}
+                className="ml-2 mt-[-7px] flex items-center bg-[#edf2ed] hover:bg-[#edf2ed]"
+                onClick={() => handleCopy(value)}
+              >
+                <span className="inline-block w-[65px] text-[12px]">
+                  {" "}
+                  {/* Set a fixed width for the text */}
+                  {copyStatus[value] ? (
+                    <>
+                      Copied <span className="ml-1 text-green-500">✓</span>
+                    </>
+                  ) : (
+                    "Copy"
+                  )}
+                </span>
+              </Button>
+            </div>
+          );
+        },
       },
     },
     {

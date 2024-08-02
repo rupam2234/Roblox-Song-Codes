@@ -14,7 +14,6 @@ import { Button } from "../ui/button";
 import { SearchIcon } from "lucide-react";
 
 const SearchBar = () => {
-    
   const form = useForm<z.infer<typeof SearchFormSchema>>({
     resolver: zodResolver(SearchFormSchema),
 
