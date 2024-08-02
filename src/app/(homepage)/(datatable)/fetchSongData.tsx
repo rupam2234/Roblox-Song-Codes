@@ -47,6 +47,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       fetchData(start);
       hasFetchedData.current = true;
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiEndpoint]);
 
   const handleRatingChange = async (
