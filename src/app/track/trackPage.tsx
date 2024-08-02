@@ -3,7 +3,7 @@
 import { SongIDs } from "@/components/custom-components/constants";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import Cookies from "js-cookie";
@@ -13,27 +13,22 @@ import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
 import Sidebar from "@/components/custom-components/sidebar";
 
 const TrackPage = () => {
-  const searchParams = useSearchParams();
   const [SongData, setSongData] = useState<SongIDs[]>([]);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
   const [songRated, setsongRated] = useState(false);
   const { toast } = useToast();
   const [hasFetched, setHasFetched] = useState(false);
 
-  // Retrieve the 'id' and 'name' from the query parameters
-  const id = searchParams.get("id");
-  const name = searchParams.get("name");
-
   useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const id = queryParams.get("id");
+
     if (id && !hasFetched) {
-      // Fetch track details using the ID
       const fetchTrackDetails = async () => {
         try {
-          // Construct the URL with query parameters
           const url = new URL("/api/getTrack", window.location.origin);
-          url.searchParams.append("id", id as string);
+          url.searchParams.append("id", id);
 
-          // Fetch data using GET request
           const response = await fetch(url.toString(), {
             method: "GET",
             headers: {
@@ -44,7 +39,7 @@ const TrackPage = () => {
           if (response.ok) {
             const data = await response.json();
             setSongData(data);
-            setHasFetched(true); // Mark as fetched
+            setHasFetched(true);
           } else {
             console.error("Failed to fetch track details");
           }
@@ -55,7 +50,7 @@ const TrackPage = () => {
 
       fetchTrackDetails();
     }
-  }, [id, hasFetched]);
+  }, [hasFetched]);
 
   useEffect(() => {
     if (SongData.length > 0) {
