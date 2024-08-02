@@ -1,3 +1,5 @@
+"use client"
+
 import { ComponentType } from "react";
 import { z } from "zod";
 
@@ -13,9 +15,13 @@ export type NavItem = {
   icon: ComponentType;
 };
 
-export interface Asset {
-  id: number;
+export type SongIDs = {
   name: string;
+  id: number;
+  ratings: number;
+  genres: string;
   duration: number;
-  rating: number;
-}
+  artist: string;
+  updated: string;
+
+};

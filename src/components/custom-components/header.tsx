@@ -26,7 +26,7 @@ import SearchBar from "./searchbar";
 const Header = () => {
   const components: NavItem[] = [
     {
-      title: "Most Popular Tracks",
+      title: "Popular Tracks",
       href: "/most-popular-tracks",
       icon: TrendingUp
     },
