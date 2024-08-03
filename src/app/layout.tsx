@@ -21,7 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-7255780745640035"
+        ></meta>
+        <meta
+          name="google-site-verification"
+          content="B7bk0lZ8erO_gdIJbWXsOWsUZAkd48i8wxa2ecf0SME"
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
