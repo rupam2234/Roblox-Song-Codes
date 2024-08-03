@@ -1,5 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Dancing_Script } from "next/font/google";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -19,8 +23,27 @@ const cute = Dancing_Script({
 });
 
 const Share = () => {
-  const Url = window.location.href;
   const title = "Roblox Song Codes | Tested Boombox Music IDs";
+
+  const [Url, setUrl] = useState("");
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const queryParams = new URLSearchParams(window.location.search);
+      const queryString = queryParams.toString();
+
+      // Only append `?` if there are query parameters
+      const fullUrl = `${window.location.origin}${pathname}${
+        queryString ? `?${queryString}` : ""
+      }`;
+
+      setUrl(fullUrl);
+    }
+  }, [pathname, searchParams]);
 
   return (
     <div className="flex mt-6 ml-[15px]">
