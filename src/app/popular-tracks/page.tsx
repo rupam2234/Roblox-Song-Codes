@@ -42,7 +42,7 @@ const PolularTracks = () => {
             using the search bar and start playing on boombox player with the
             music ID.
           </p>
-          <FetchSongs apiEndpoint={"/api/songs"} />
+          <FetchSongs apiEndpoint={"/api/popularTrack"} />
           <p>
             In case you are looking for tracks that aren&apos;t in this list,
             try looking into the{" "}
