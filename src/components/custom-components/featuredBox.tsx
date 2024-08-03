@@ -28,7 +28,7 @@ const FeaturedBox = ({
         {title}
       </h1>
       <div className="grid grid-cols-9 gap-10 justify-center items-center mt-7 md:mt-0">
-        <div className="text-[16px] col-span-7 text-white space-y-5">
+        <div className="text-[16px] col-span-9 md:col-span-7 text-white space-y-5">
           <p>
             {descriptionText1}
           </p>

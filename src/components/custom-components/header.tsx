@@ -27,8 +27,8 @@ const Header = () => {
   const components: NavItem[] = [
     {
       title: "Popular Tracks",
-      href: "/most-popular-tracks",
-      icon: TrendingUp
+      href: "/popular-tracks",
+      icon: TrendingUp,
     },
   ];
 
@@ -72,12 +72,12 @@ const Header = () => {
       <div
         className={cn("flex justify-end items-center text-white font-light")}
       >
-        <SearchBar/>
+        <SearchBar />
 
         <div className="block md:hidden lg:hidden">
           <MobileNav components={components} />
         </div>
-        
+
         <NavigationMenu className="ml-6 hidden sm:block">
           <NavigationMenuList>
             {components.map((component, index) => (
