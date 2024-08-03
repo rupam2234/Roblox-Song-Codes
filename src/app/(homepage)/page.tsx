@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const nato = Fira_Sans({
   subsets: ["latin"],
   weight: "800",
+  preload: true,
 });
 
 const HomePage = () => {
