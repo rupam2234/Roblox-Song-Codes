@@ -289,7 +289,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
 
   return (
     <>
-      <div className="mt-7 border w-auto rounded-sm">
+      <div className="my-7 border w-auto rounded-sm">
         <ThemeProvider theme={getMuiTheme()}>
           <MUIDataTable
             title={""}

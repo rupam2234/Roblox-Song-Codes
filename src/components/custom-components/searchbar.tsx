@@ -40,7 +40,7 @@ const SearchBar = () => {
                       {...field}
                       className="outline-none w-72 focus-visible:ring-0 bg-gray-100 text-black focus-visible:ring-transparent rounded-none flex-grow"
                     />
-                    <Button className="absolute right-0 p-2 bg-transparent hover:bg-transparent">
+                    <Button className="absolute right-2 p-2 bg-transparent hover:bg-transparent">
                       <SearchIcon className="text-gray-400" />
                     </Button>
                   </div>

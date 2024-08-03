@@ -13,7 +13,10 @@ const TopContent = () => {
         </p>
         <p>
           Alternativly you can pick roblox song id from these lists:{" "}
-          <a className="text-blue-700 hover:text-blue-400" href="/">
+          <a
+            className="text-blue-700 hover:text-blue-400"
+            href="/popular-tracks"
+          >
             Most popular tracks
           </a>
           <span className="mx-1">and</span>
