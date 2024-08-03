@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Dancing_Script } from "next/font/google";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   FacebookIcon,
@@ -29,21 +29,24 @@ const Share = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const searchParams = useSearchParams();
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
-      const queryString = queryParams.toString();
 
-      // Only append `?` if there are query parameters
+      let queryString = "";
+      if (queryParams.toString()) {
+        // Only generate queryString if there are query parameters
+        queryString = queryParams.toString();
+      } else {
+        queryString = "";
+      }
+
       const fullUrl = `${window.location.origin}${pathname}${
         queryString ? `?${queryString}` : ""
       }`;
-
       setUrl(fullUrl);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <div className="flex mt-6 ml-[15px]">
