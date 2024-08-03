@@ -4,7 +4,7 @@ import MUIDataTable from "mui-datatables";
 import React, { useEffect, useRef, useState } from "react";
 import { SongIDs } from "@/components/custom-components/constants";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { FaThumbsUp } from "react-icons/fa";
+import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
 import { InfoIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -190,7 +190,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
         customBodyRender: (value: number) => {
           return (
             <div className="flex">
-              <p className="mt-[2px]">{value}</p>
+              <p className="mt-[2px] text-[13px] md:text-[14px]">{value}</p>
               <Button
                 variant={"outline"}
                 size={"sm"}
@@ -241,6 +241,12 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
                 className="p-3 mb-1 ml-2 rounded-full text-[#5f8c81] bg-gray-100 hover:bg-gray-300 cursor-pointer"
               >
                 <FaThumbsUp />
+              </div>
+              <div
+                onClick={() => handleDecrementRating(songId, currentRating)}
+                className="p-3 mb-1 ml-2 rounded-full text-[#f89895] bg-gray-100 hover:bg-gray-300 cursor-pointer"
+              >
+                <FaThumbsDown />
               </div>
             </div>
           );
