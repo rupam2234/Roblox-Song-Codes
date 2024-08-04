@@ -1,7 +1,7 @@
 // src/app/api/songs/route.ts
-import { NextResponse, NextRequest } from 'next/server';
-import { sql } from '@vercel/postgres';
-import { SongIDs } from '@/components/custom-components/constants';
+import { NextResponse, NextRequest } from "next/server";
+import { sql } from "@vercel/postgres";
+import { SongIDs } from "@/components/custom-components/constants";
 
 export async function GET(req: NextRequest) {
   // Extract query parameters
@@ -10,7 +10,10 @@ export async function GET(req: NextRequest) {
 
   // Ensure name is provided
   if (!name) {
-    return NextResponse.json({ error: "Name parameter is required" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Name parameter is required" },
+      { status: 400 }
+    );
   }
 
   try {

@@ -25,3 +25,14 @@ export type SongIDs = {
   artist: string;
   updated: string;
 };
+
+// Define the type for the database row
+export type DBRow = {
+  name: string;
+  id: number;
+  ratings: number;
+  genres: string;
+  duration: number;
+  artist: string;
+  update_date: Date; // Original field from the database
+};

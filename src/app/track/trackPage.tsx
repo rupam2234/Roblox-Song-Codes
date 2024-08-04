@@ -276,7 +276,7 @@ const TrackPage = () => {
                     </TableRow>
                   </TableBody>
                 </Table>
-                <div className="text-[17px]"> 
+                <div className="text-[17px]">
                   <p className="mt-14">
                     You can use the <strong>{song.id}</strong> code to play the
                     &quot;{song.name}&quot; on Boombox audio player.
