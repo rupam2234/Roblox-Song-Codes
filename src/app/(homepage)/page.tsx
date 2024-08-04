@@ -4,18 +4,21 @@ import FetchSongs from "./(datatable)/fetchSongData";
 import BottomContents from "./bottomContent";
 import Sidebar from "@/components/custom-components/sidebar";
 import FeaturedBox from "../../components/custom-components/featuredBox";
+import { getFormattedDate } from "@/components/utils/date";
 
 export const metadata: Metadata = {
-  title: "Roblox Song Codes For Boombox",
+  title: "Best Roblox Song Codes For Boombox",
   description: "Largest Roblox Music Code Database",
 };
 
 const HomePage = () => {
+  const formattedDate = getFormattedDate();
+
   return (
     <main>
       <div className="p-6 lg:px-[140px]">
         <FeaturedBox
-          title={"Roblox Song Codes - Largest Boombox Music Database"}
+          title={`Roblox Song Codes (${formattedDate}) - Best Boombox Music IDs`}
           descriptionText1={
             "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
           }
