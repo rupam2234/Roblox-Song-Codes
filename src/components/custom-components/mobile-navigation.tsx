@@ -33,7 +33,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ components }) => {
       </SheetTrigger>
       <SheetContent side={"right"} className="p-0 w-64 bg-[#4F4F65] border-0">
         <NavigationMenu className="ml-3 mr-3 mt-20">
-            <NavigationMenuList>
+            <NavigationMenuList className="space-y-3">
                 {components.map((component, index) => (
                 <NavigationMenuItem key={index} className="flex gap-4 text-white px-4 py-2 hover:bg-slate-400/15 rounded-sm">
                     <component.icon/><a href={component.href}>{component.title}</a>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ComponentType } from "react";
 import { z } from "zod";
@@ -13,6 +13,7 @@ export type NavItem = {
   title: string;
   href: string;
   icon: ComponentType;
+  type: boolean;
 };
 
 export type SongIDs = {
@@ -23,5 +24,4 @@ export type SongIDs = {
   duration: number;
   artist: string;
   updated: string;
-
 };

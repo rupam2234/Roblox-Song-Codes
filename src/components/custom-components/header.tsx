@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideInfo, TrendingUp } from "lucide-react";
+import { LucideInfo, TrendingUp, WatchIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -29,6 +29,13 @@ const Header = () => {
       title: "Popular Tracks",
       href: "/popular-tracks",
       icon: TrendingUp,
+      type: true,
+    },
+    {
+      title: "Latest Tracks",
+      href: "/latest",
+      icon: WatchIcon,
+      type: false,
     },
   ];
 
@@ -80,11 +87,13 @@ const Header = () => {
 
         <NavigationMenu className="ml-6 hidden sm:block">
           <NavigationMenuList>
-            {components.map((component, index) => (
-              <NavigationMenuItem key={index}>
-                <a href={component.href}>{component.title}</a>
-              </NavigationMenuItem>
-            ))}
+            {components
+              .filter((component) => component.type)
+              .map((component, index) => (
+                <NavigationMenuItem key={index} className="gap-4">
+                  <a href={component.href}>{component.title}</a>
+                </NavigationMenuItem>
+              ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>

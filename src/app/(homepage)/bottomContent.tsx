@@ -50,10 +50,12 @@ const BottomContents = () => {
       </p>
       <p>Here&apos;s an example:</p>
       <br />
-      <code className="bg-gray-700 text-[#C5D6CB] py-2 px-4 rounded-sm">
-        Type &apos;:music 1839346346&apos; to play &apos;You Knock At My
-        Door&apos;
-      </code>
+      <div className="py-2 px-4 rounded-sm bg-gray-700 text-[#C5D6CB]">
+        <code>
+          Type &apos;:music 1839346346&apos; to play &apos;You Knock At My
+          Door&apos;
+        </code>
+      </div>
     </div>
   );
 };

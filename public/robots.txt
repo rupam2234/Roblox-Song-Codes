@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://roblox.geekguidez.com
+
+# Sitemaps
+Sitemap: https://roblox.geekguidez.com/sitemap.xml
