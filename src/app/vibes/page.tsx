@@ -1,41 +1,16 @@
-"use client";
-
 import FeaturedBox from "@/components/custom-components/featuredBox";
 import { getFormattedDate } from "@/components/utils/date";
-import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
 import Sidebar from "@/components/custom-components/sidebar";
-import { ComponentType, useEffect, useState } from "react";
-import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import HandleVibes from "./handleVibes";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roblox Song Codes By Vibes",
+  description: "Largest Roblox Music Code Database Categoried by Vibes",
+};
 
 const VibeCategories = () => {
-  const [selectedTagIndex, setSelectedTagIndex] = useState<number>(0);
-
   const formattedDate = getFormattedDate();
-
-  type tagTypes = {
-    tagName: string;
-    icon: ComponentType;
-  };
-
-  const tags: tagTypes[] = [
-    {
-      tagName: "Exciting",
-      icon: Check,
-    },
-    {
-      tagName: "Chill",
-      icon: Check,
-    },
-    {
-      tagName: "Happy",
-      icon: Check,
-    },
-  ];
-
-  const handleClick = (index: number) => {
-    setSelectedTagIndex(index);
-  };
 
   return (
     <main>
@@ -52,28 +27,7 @@ const VibeCategories = () => {
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
-          <div className="flex space-x-3">
-            {tags.map((tag, index) => (
-              <Button
-                key={index}
-                size="sm"
-                variant="outline"
-                className="flex items-center text-gray-500 px-5 gap-2"
-                onClick={() => handleClick(index)}
-              >
-                {selectedTagIndex === index && <tag.icon />}
-                {tag.tagName}
-              </Button>
-            ))}
-          </div>
-
-          {/* FetchSongs Component with dynamic API endpoint */}
-          {selectedTagIndex !== null && (
-            <FetchSongs
-              apiEndpoint={`/api/vibeTrack?genre=${tags[selectedTagIndex].tagName}`}
-            />
-          )}
-
+          <HandleVibes />
           <p>
             In case you are looking for tracks that aren&apos;t in this list,
             try looking into the{" "}
