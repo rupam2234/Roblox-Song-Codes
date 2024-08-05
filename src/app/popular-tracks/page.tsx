@@ -2,6 +2,7 @@ import FeaturedBox from "@/components/custom-components/featuredBox";
 import Sidebar from "@/components/custom-components/sidebar";
 import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
 import { Metadata } from "next";
+import { getFormattedDate } from "@/components/utils/date";
 
 export const metadata: Metadata = {
   title: "Popular Song Codes For Boombox",
@@ -10,11 +11,13 @@ export const metadata: Metadata = {
 };
 
 const PolularTracks = () => {
+  const formattedDate = getFormattedDate();
+
   return (
     <main>
       <div className="p-6 lg:px-[140px]">
         <FeaturedBox
-          title={"Popular Boombox Music Codes"}
+          title={`Popular Boombox Music Codes (${formattedDate})`}
           descriptionText1={
             "This comprehensive collection includes a complete list of tested Roblox song codes from a wide range of popular genres. We've filtered the higested 'USER RATED' trending songs to offer you the absolute best song IDs for your Boombox experience."
           }

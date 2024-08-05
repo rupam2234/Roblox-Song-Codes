@@ -8,8 +8,8 @@ const SidebarMenu = () => {
 
   const MenuItems: MenuElements[] = [
     {
-      title: "Trending Tracks",
-      url: "/trending-tracks",
+      title: "Tracks to Vibe",
+      url: "/vibes",
     },
     {
       title: "Popular Tracks",

@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideInfo, TrendingUp, WatchIcon } from "lucide-react";
+import { LucideInfo, LucideMove, TrendingUp, VibrateIcon, WatchIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,6 +20,7 @@ import { z } from "zod";
 import { NavItem, SearchFormSchema } from "./constants";
 import MobileNav from "./mobile-navigation";
 import SearchBar from "./searchbar";
+import { GiLoveSong } from "react-icons/gi";
 
 // imports end
 
@@ -32,9 +33,9 @@ const Header = () => {
       type: true,
     },
     {
-      title: "Latest Tracks",
-      href: "/latest",
-      icon: WatchIcon,
+      title: "Our Favorite Vibes",
+      href: "/vibes",
+      icon: GiLoveSong ,
       type: false,
     },
   ];

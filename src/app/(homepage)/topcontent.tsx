@@ -17,11 +17,14 @@ const TopContent = () => {
             className="text-blue-700 hover:text-blue-400"
             href="/popular-tracks"
           >
-            Most popular tracks
+            most popular tracks
           </a>
           <span className="mx-1">and</span>
-          <a className="text-blue-700 hover:text-blue-400" href="/">
-            Trending songs
+          <a
+            className="text-blue-700 hover:text-blue-400"
+            href="/vibes"
+          >
+            filtered by vibes
           </a>
           .
         </p>

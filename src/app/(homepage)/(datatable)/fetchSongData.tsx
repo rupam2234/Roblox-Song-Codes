@@ -37,11 +37,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       }
     };
 
-    // Ensure fetchData is called only once
-    if (!hasFetchedData.current) {
-      fetchData();
-      hasFetchedData.current = true;
-    }
+    fetchData();
   }, [apiEndpoint]);
 
   useEffect(() => {
@@ -289,7 +285,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
 
   return (
     <>
-      <div className="my-7 border w-auto rounded-sm">
+      <div className="my-7 border w-auto rounded-sm" key={apiEndpoint}>
         <ThemeProvider theme={getMuiTheme()}>
           <MUIDataTable
             title={""}
