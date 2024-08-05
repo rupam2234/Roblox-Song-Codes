@@ -12,7 +12,7 @@ const Ads = () => {
 </script>
     `;
   return (
-    <div className="mt-10">
+    <div className="mt-10 mx-[15px]">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }} />
     </div>
   );

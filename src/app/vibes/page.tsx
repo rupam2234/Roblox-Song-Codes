@@ -29,13 +29,12 @@ const VibeCategories = () => {
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
           <HandleVibes />
           <p>
-            In case you are looking for tracks that aren&apos;t in this list,
-            try looking into the{" "}
+            To access the full database of working Roblox song codes, go to the{" "}
             <a
               href="/"
               className="text-blue-500 hover:text-blue-400 cursor-pointer"
             >
-              full Boombox music database
+              homepage
             </a>
             .
           </p>
