@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { ComponentType, useState } from "react";
-import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
+import FetchSongs from "../../(homepage)/(datatable)/fetchSongData";
 
 const HandleVibes = () => {
   const [selectedTagIndex, setSelectedTagIndex] = useState<number>(0);

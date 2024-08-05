@@ -1,8 +1,8 @@
 import FeaturedBox from "@/components/custom-components/featuredBox";
 import Sidebar from "@/components/custom-components/sidebar";
-import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
 import { Metadata } from "next";
 import { getFormattedDate } from "@/components/utils/date";
+import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 
 export const metadata: Metadata = {
   title: "Popular Song Codes For Boombox",
