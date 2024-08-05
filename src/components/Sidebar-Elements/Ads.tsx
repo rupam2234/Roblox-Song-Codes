@@ -4,7 +4,7 @@ const Ads = () => {
      crossorigin="anonymous"></script>
 <!-- Roblox Site Sidebar -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:250px;height:500px"
+     style="display:inline-block;width:300px;height:500px"
      data-ad-client="ca-pub-7255780745640035"
      data-ad-slot="2144460063"></ins>
 <script>
