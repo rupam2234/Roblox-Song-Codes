@@ -105,3 +105,20 @@
 .zoom-on-hover:hover {
   transform: scale(1.1); /* Scale up the element on hover */
 }
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+}
+
+.terms-list li {
+  position: relative;
+  padding-left: 1.5rem; /* Space for the icon/point */
+}
+
+.terms-list li:before {
+  content: "•"; /* Change to desired symbol */
+  position: absolute;
+  left: 0;
+  color: #5F8C81; /* Or any other color */
+}

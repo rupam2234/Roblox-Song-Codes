@@ -1,6 +1,7 @@
 import FeaturedBox from "@/components/custom-components/featuredBox";
 import Sidebar from "@/components/custom-components/sidebar";
 import { Metadata } from "next";
+import MainContent from "./mainContent";
 
 export const metadata: Metadata = {
   title: "Terms Of Use",
@@ -14,16 +15,17 @@ const TermsOfUse = () => {
         <FeaturedBox
           title={`Terms Of Use`}
           descriptionText1={
-            "This is our comprehensive database of Roblox song codes, specially curated for Boombox enthusiasts. By accessing and using our website, you agree to adhere to the following terms and conditions."
+            "The following terms and conditions apply to your use of the Roblox.geekguidez.com website and all content, services, and products available through it (collectively, the Website)."
           }
           descriptionText2={
-            "To maintain the quality and functionality of our service, we automatically filter out any codes that are no longer available or have been deleted. We encourage users to respect the rules and guidelines provided herein, as they are designed to enhance your experience and ensure the seamless operation of the platform."
+            `By using this Website, you agree to these terms and conditions without any changes. This includes all rules, policies, and procedures that Roblox.geekguidez.com may update from time to time.`
           }
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
           {/* content will go here */}
+          <MainContent/>
         </div>
         <div className="hidden lg:block lg:col-span-4 col-span-12">
           <Sidebar />
