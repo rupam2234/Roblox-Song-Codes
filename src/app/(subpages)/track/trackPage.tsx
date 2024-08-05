@@ -3,14 +3,13 @@
 import { SongIDs } from "@/components/custom-components/constants";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import Cookies from "js-cookie";
 import { useToast } from "@/components/ui/use-toast";
 import ProgressBar from "@/components/custom-components/progressbar";
-import FetchSongs from "../(homepage)/(datatable)/fetchSongData";
 import Sidebar from "@/components/custom-components/sidebar";
+import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 
 const TrackPage = () => {
   const [SongData, setSongData] = useState<SongIDs[]>([]);
