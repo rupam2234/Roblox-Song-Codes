@@ -2,7 +2,7 @@
 
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const SearchResults = () => {
   const [searchString, setSearchString] = useState("");
@@ -28,4 +28,10 @@ const SearchResults = () => {
   );
 };
 
-export default SearchResults;
+const SearchPage = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <SearchResults />
+  </Suspense>
+);
+
+export default SearchPage;
