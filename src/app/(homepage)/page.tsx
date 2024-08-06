@@ -5,6 +5,7 @@ import BottomContents from "./bottomContent";
 import Sidebar from "@/components/custom-components/sidebar";
 import FeaturedBox from "../../components/custom-components/featuredBox";
 import { getFormattedDate } from "@/components/utils/date";
+import HandleCategories from "./handleCategories";
 
 export const metadata: Metadata = {
   title: "Best Roblox Song Codes For Boombox",
@@ -32,7 +33,7 @@ const HomePage = () => {
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
           <TopContent />
-          <FetchSongs apiEndpoint={"/api/songs"} />
+          <HandleCategories/>
           <BottomContents />
         </div>
         <div className="hidden lg:block lg:col-span-4 col-span-12">
