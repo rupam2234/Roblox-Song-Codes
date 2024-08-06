@@ -25,6 +25,8 @@ const HomePage = () => {
           descriptionText2={
             "Our algorithm actively searches for new music codes and seamlessly updates the list. We also automatically remove codes that have been deleted or are no longer available. This means you can trust that all the codes listed below will work with your boombox."
           }
+          image="/media/Roblox-Boombox-Icon.png"
+          altText={"Best Boombox Music IDs"}
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">

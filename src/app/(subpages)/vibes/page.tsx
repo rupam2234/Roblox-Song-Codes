@@ -23,6 +23,8 @@ const VibeCategories = () => {
           descriptionText2={
             "You can choose a category from the tags below, and each category will show you a table with song IDs for that category. We can display songs from one category at a time."
           }
+          image="/media/Roblox-Boombox-Icon.png"
+          altText={"Boombox Music Codes"}
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">

@@ -24,6 +24,8 @@ const PolularTracks = () => {
           descriptionText2={
             "Our database is consistently updated, regularly removing outdated codes and adding fresh new ones. You can confidently rely on these carefully curated codes to always work flawlessly with your Boombox."
           }
+          image="/media/Roblox-Boombox-Icon.png"
+          altText={"Roblox-Boombox-Ico"}
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">

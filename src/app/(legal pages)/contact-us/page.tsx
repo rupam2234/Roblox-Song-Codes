@@ -1,10 +1,13 @@
 import FeaturedBox from "@/components/custom-components/featuredBox";
 import Sidebar from "@/components/custom-components/sidebar";
 import { Metadata } from "next";
+import React from "react";
+import ContactFormHandler from "./contactForm";
 
 export const metadata: Metadata = {
   title: "Contact us",
-  description: "Roblox Music Code Database",
+  description:
+    "Contact information to reach out Roblox music code database creator.",
 };
 
 const Contact = () => {
@@ -14,16 +17,19 @@ const Contact = () => {
         <FeaturedBox
           title={`Contact`}
           descriptionText1={
-            "This is our comprehensive database of Roblox song codes, specially curated for Boombox enthusiasts. By accessing and using our website, you agree to adhere to the following terms and conditions."
+            "If you have any questions or would like to discuss anything related to the content on this website, please feel free to reach out using the contact details provided."
           }
           descriptionText2={
-            "To maintain the quality and functionality of our service, we automatically filter out any codes that are no longer available or have been deleted. We encourage users to respect the rules and guidelines provided herein, as they are designed to enhance your experience and ensure the seamless operation of the platform."
+            "123 Main Street, Anytown, CA 12345, United States | team@geekguidez.com | Or you can use the contact form below."
           }
+          image="/media/contact-us.png"
+          altText={"contact-us"}
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
           {/* content will go here */}
+          <ContactFormHandler />
         </div>
         <div className="hidden lg:block lg:col-span-4 col-span-12">
           <Sidebar />

@@ -19,6 +19,8 @@ const PrivacyPolicy = () => {
           descriptionText2={
             "To maintain the quality and functionality of our service, we automatically filter out any codes that are no longer available or have been deleted. We encourage users to respect the rules and guidelines provided herein, as they are designed to enhance your experience and ensure the seamless operation of the platform."
           }
+          image=""
+          altText={"Privacy-Policy"}
         />
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
