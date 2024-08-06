@@ -1,3 +1,6 @@
+import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
+import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+
 const TopContent = () => {
   return (
     <>
@@ -20,14 +23,17 @@ const TopContent = () => {
             most popular tracks
           </a>
           <span className="mx-1">and</span>
-          <a
-            className="text-blue-700 hover:text-blue-400"
-            href="/vibes"
-          >
+          <a className="text-blue-700 hover:text-blue-400" href="/vibes">
             filtered by vibes
           </a>
           .
         </p>
+        <div className="my-4 hidden md:block items-center justify-center">
+          <AdsDesktopIncontent />
+        </div>
+        <div className="my-4 block md:hidden mx-auto">
+          <AdsMobileIncontent />
+        </div>
       </div>
     </>
   );

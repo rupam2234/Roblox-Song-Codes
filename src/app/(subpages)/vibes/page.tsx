@@ -3,6 +3,8 @@ import { getFormattedDate } from "@/components/utils/date";
 import Sidebar from "@/components/custom-components/sidebar";
 import HandleVibes from "./handleVibes";
 import { Metadata } from "next";
+import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
+import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 
 export const metadata: Metadata = {
   title: "Roblox Song Codes By Vibes",
@@ -29,6 +31,12 @@ const VibeCategories = () => {
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
+          <div className="my-4 hidden md:block items-center justify-center">
+            <AdsDesktopIncontent />
+          </div>
+          <div className="my-4 block md:hidden mx-auto">
+            <AdsMobileIncontent />
+          </div>
           <HandleVibes />
           <p>
             To access the full database of working Roblox song codes, go to the{" "}
