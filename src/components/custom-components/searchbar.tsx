@@ -44,6 +44,7 @@ const SearchBar = () => {
                     <Input
                       placeholder="Type a song name"
                       {...field}
+                      autoComplete="off"
                       className="outline-none w-72 focus-visible:ring-0 bg-gray-100 text-black focus-visible:ring-transparent rounded-none flex-grow"
                     />
                     <Button
