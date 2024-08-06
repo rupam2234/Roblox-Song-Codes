@@ -49,7 +49,7 @@ const PolularTracks = () => {
             using the search bar and start playing on boombox player with the
             music ID.
           </p>
-          <div className="my-4 hidden md:block items-center justify-center">
+          <div className="my-3 hidden md:block items-center justify-center">
             <AdsDesktopIncontent />
           </div>
           <div className="my-4 block md:hidden mx-auto">

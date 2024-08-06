@@ -31,7 +31,7 @@ const VibeCategories = () => {
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
-          <div className="my-4 hidden md:block items-center justify-center">
+          <div className="my-3 hidden md:block items-center justify-center">
             <AdsDesktopIncontent />
           </div>
           <div className="my-4 block md:hidden mx-auto">

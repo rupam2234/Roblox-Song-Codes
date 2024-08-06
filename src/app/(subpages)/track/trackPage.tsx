@@ -309,7 +309,7 @@ const TrackPage = () => {
                     Similar Tracks You May Like:
                   </h2>
                 </div>
-                <div className="my-4 hidden md:block items-center justify-center">
+                <div className="my-3 hidden md:block items-center justify-center">
                   <AdsDesktopIncontent />
                 </div>
                 <div className="my-4 block md:hidden mx-auto">

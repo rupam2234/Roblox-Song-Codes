@@ -12,21 +12,27 @@ import { SearchFormSchema } from "./constants";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { SearchIcon } from "lucide-react";
+import { useRouter } from "next/navigation"; // Import the useRouter hook
 
 const SearchBar = () => {
+  const router = useRouter(); // Initialize the router
   const form = useForm<z.infer<typeof SearchFormSchema>>({
     resolver: zodResolver(SearchFormSchema),
-
     defaultValues: {
       SongName: "",
     },
   });
 
+  const onSubmit = (data: z.infer<typeof SearchFormSchema>) => {
+    // Programmatically navigate to the search page with the query parameter
+    router.push(`/search?SongName=${encodeURIComponent(data.SongName)}`);
+  };
+
   return (
     <div>
       <Form {...form}>
         <form
-          //onSubmit={form.handleSubmit()}
+          onSubmit={form.handleSubmit(onSubmit)}
           className="hidden sm:block"
         >
           <FormField
@@ -40,7 +46,10 @@ const SearchBar = () => {
                       {...field}
                       className="outline-none w-72 focus-visible:ring-0 bg-gray-100 text-black focus-visible:ring-transparent rounded-none flex-grow"
                     />
-                    <Button className="absolute right-2 p-2 bg-transparent hover:bg-transparent">
+                    <Button
+                      type="submit"
+                      className="absolute right-2 p-2 bg-transparent hover:bg-transparent"
+                    >
                       <SearchIcon className="text-gray-400" />
                     </Button>
                   </div>

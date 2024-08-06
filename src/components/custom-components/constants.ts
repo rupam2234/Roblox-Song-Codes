@@ -4,7 +4,7 @@ import { ComponentType } from "react";
 import { z } from "zod";
 
 export const SearchFormSchema = z.object({
-  SongName: z.string().min(2, {
+  SongName: z.string().min(1, {
     message: "type the song name",
   }),
 });
