@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
+import { CircularProgress } from "@mui/material";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -20,7 +21,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   const [data, setData] = useState<SongIDs[]>([]);
   const router = useRouter();
   const [songRated, setsongRated] = useState(false);
-  const hasFetchedData = useRef(false);
+  const [loading, setLoading] = useState(true);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
 
   useEffect(() => {
@@ -32,8 +33,10 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
         }
         const result: SongIDs[] = await response.json();
         setData(result);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false);
       }
     };
 
@@ -286,23 +289,29 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   return (
     <>
       <div className="my-7 border w-auto rounded-sm" key={apiEndpoint}>
-        <ThemeProvider theme={getMuiTheme()}>
-          <MUIDataTable
-            title={""}
-            data={data}
-            columns={columns}
-            options={{
-              selectableRows: "none",
-              filter: false,
-              print: false,
-              download: false,
-              searchPlaceholder: "type a song name",
-              elevation: 0,
-              rowsPerPage: 25,
-              rowsPerPageOptions: [5, 10, 25, 50],
-            }}
-          />
-        </ThemeProvider>
+        {loading ? (
+          <div className="flex justify-center items-center py-10">
+            <CircularProgress />
+          </div>
+        ) : (
+          <ThemeProvider theme={getMuiTheme()}>
+            <MUIDataTable
+              title={""}
+              data={data}
+              columns={columns}
+              options={{
+                selectableRows: "none",
+                filter: false,
+                print: false,
+                download: false,
+                searchPlaceholder: "type a song name",
+                elevation: 0,
+                rowsPerPage: 25,
+                rowsPerPageOptions: [5, 10, 25, 50],
+              }}
+            />
+          </ThemeProvider>
+        )}
       </div>
     </>
   );

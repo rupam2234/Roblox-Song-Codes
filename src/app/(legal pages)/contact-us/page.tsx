@@ -22,7 +22,7 @@ const Contact = () => {
           descriptionText2={
             "123 Main Street, Anytown, CA 12345, United States | team@geekguidez.com | Or you can use the contact form below."
           }
-          image="/media/contact-us.png"
+          image="/media/Contact-us.png"
           altText={"contact-us"}
         />
       </div>
