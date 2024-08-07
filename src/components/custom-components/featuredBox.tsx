@@ -44,6 +44,7 @@ const FeaturedBox = ({
             height={375}
             alt={altText}
             className="zoom-on-hover"
+            priority
           />
         </div>
       </div>
