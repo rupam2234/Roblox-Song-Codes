@@ -8,7 +8,7 @@ const SidebarMenu = () => {
 
   const MenuItems: MenuElements[] = [
     {
-      title: "Tracks to Vibe",
+      title: "Tracks By Vibe",
       url: "/vibes",
     },
     {
