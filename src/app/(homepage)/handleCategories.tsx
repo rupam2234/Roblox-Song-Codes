@@ -35,11 +35,15 @@ const HandleCategories = () => {
       tagName: "Folk",
       icon: Check,
     },
+    {
+      tagName: "Lofi",
+      icon: Check,
+    },
   ];
 
   return (
     <div>
-      <TableDropdownMenu tags={tags} />
+      <TableDropdownMenu tags={tags} songAPIAddress={"songs"} />
     </div>
   );
 };

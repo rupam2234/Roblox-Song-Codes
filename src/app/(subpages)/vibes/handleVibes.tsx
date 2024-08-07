@@ -6,7 +6,6 @@ import TableDropdownMenu, {
 } from "@/components/custom-components/tableNavigationHandler";
 
 const HandleVibes = () => {
-
   const tags: tagTypes[] = [
     {
       tagName: "Exciting",
@@ -22,10 +21,9 @@ const HandleVibes = () => {
     },
   ];
 
-
   return (
     <div>
-      <TableDropdownMenu tags={tags} />
+      <TableDropdownMenu tags={tags} songAPIAddress={"vibeTrack"} />
     </div>
   );
 };

@@ -11,11 +11,16 @@ export type tagTypes = {
 
 interface TableDropdownMenuProps {
   tags: tagTypes[];
+  songAPIAddress: string;
 }
 
-const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({ tags }) => {
+const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({
+  tags,
+  songAPIAddress,
+}) => {
   const [selectedTagIndex, setSelectedTagIndex] = useState<number>(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedTagName, setSelectedTagName] = useState<string>("");
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -23,6 +28,7 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({ tags }) => {
 
   const handleClick = (index: number) => {
     setSelectedTagIndex(index);
+    setSelectedTagName(tags[index].tagName);
   };
 
   return (
@@ -30,10 +36,10 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({ tags }) => {
       <Button
         size="sm"
         variant="outline"
-        className="flex items-center text-gray-500 px-5 gap-2 mb-3"
+        className="flex items-center text-white px-5 gap-2 mb-3 overflow-hidden text-ellipsis whitespace-nowrap w-32 bg-[#5F8C81] hover:bg-[#5F8C81] hover:text-white"
         onClick={toggleDropdown}
       >
-        Select Genre
+        {selectedTagName || "Select Genre"} {/* Display selected tag name */}
       </Button>
       {dropdownOpen && (
         <div className="absolute bg-white border rounded shadow-lg mt-2 w-full max-w-52 z-50">
@@ -59,7 +65,7 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({ tags }) => {
       {/* FetchSongs Component with dynamic API endpoint */}
       {selectedTagIndex !== null && (
         <FetchSongs
-          apiEndpoint={`/api/songs?genre=${tags[selectedTagIndex].tagName}`}
+          apiEndpoint={`/api/${songAPIAddress}?genre=${tags[selectedTagIndex].tagName}`}
         />
       )}
     </div>
