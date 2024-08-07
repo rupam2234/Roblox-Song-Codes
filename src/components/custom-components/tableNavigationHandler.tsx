@@ -32,7 +32,7 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({
   };
 
   return (
-    <div className="mt-7">
+    <div className="relative mt-7">
       <Button
         size="sm"
         variant="outline"
@@ -43,7 +43,7 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({
       </Button>
       {dropdownOpen && (
         <div className="absolute bg-white border rounded shadow-lg mt-2 w-full max-w-52 z-50">
-          <div className="flex flex-col">
+          <div className="flex flex-col overflow-y-auto max-h-60">
             {tags.map((tag, index) => (
               <div
                 key={index}
