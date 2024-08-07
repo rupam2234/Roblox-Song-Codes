@@ -26,6 +26,22 @@ const HandleCategories = () => {
       tagName: "Holiday",
       icon: Check,
     },
+    {
+      tagName: "Beats",
+      icon: Check,
+    },
+    {
+      tagName: "Funk",
+      icon: Check,
+    },
+    {
+      tagName: "Classical",
+      icon: Check,
+    },
+    {
+      tagName: "Folk",
+      icon: Check,
+    },
   ];
 
   const handleClick = (index: number) => {
