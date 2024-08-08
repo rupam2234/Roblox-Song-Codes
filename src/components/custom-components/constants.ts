@@ -36,3 +36,19 @@ export type DBRow = {
   artist: string;
   update_date: Date; // Original field from the database
 };
+
+export type archiveModules = {
+  postname: string;
+  postFeatureImage: string;
+  imageAlt: string;
+  postDescription: string;
+  postLink: string;
+};
+
+export type PostheadProps = {
+  title: string;
+  author: string;
+  publishDate: string;
+  featuredImage: string;
+  featuredImageAlt: string;
+};

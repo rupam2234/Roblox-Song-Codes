@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import TopContent from "./topcontent";
-import FetchSongs from "./(datatable)/fetchSongData";
 import BottomContents from "./bottomContent";
 import Sidebar from "@/components/custom-components/sidebar";
 import FeaturedBox from "../../components/custom-components/featuredBox";
@@ -10,6 +9,12 @@ import HandleCategories from "./handleCategories";
 export const metadata: Metadata = {
   title: "Best Roblox Song Codes For Boombox",
   description: "Largest Roblox Music Code Database",
+  keywords: [
+    "Best Roblox Song Codes",
+    "Roblox Music Codes",
+    "Song Codes for Boombox",
+    "Music ID for Boombox",
+  ],
 };
 
 const HomePage = () => {
@@ -33,7 +38,7 @@ const HomePage = () => {
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
           <TopContent />
-          <HandleCategories/>
+          <HandleCategories />
           <BottomContents />
         </div>
         <div className="hidden lg:block lg:col-span-4 col-span-12">

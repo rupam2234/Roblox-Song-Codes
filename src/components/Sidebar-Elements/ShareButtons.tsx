@@ -65,7 +65,7 @@ const Share = () => {
           cute.className
         )}
       >
-        Share us:
+        Share this page:
       </div>
       <div className="flex gap-3">
         <FacebookShareButton

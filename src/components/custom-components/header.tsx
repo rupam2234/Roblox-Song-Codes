@@ -1,6 +1,13 @@
 "use client";
 
-import { LucideInfo, LucideMove, TrendingUp, VibrateIcon, WatchIcon } from "lucide-react";
+import {
+  DockIcon,
+  LucideInfo,
+  LucideMove,
+  TrendingUp,
+  VibrateIcon,
+  WatchIcon,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -35,8 +42,14 @@ const Header = () => {
     {
       title: "Our Favorite Vibes",
       href: "/vibes",
-      icon: GiLoveSong ,
+      icon: GiLoveSong,
       type: false,
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+      icon: DockIcon,
+      type: true,
     },
   ];
 
@@ -91,7 +104,7 @@ const Header = () => {
             {components
               .filter((component) => component.type)
               .map((component, index) => (
-                <NavigationMenuItem key={index} className="gap-4">
+                <NavigationMenuItem key={index} className="mr-5 text-[15px] ">
                   <a href={component.href}>{component.title}</a>
                 </NavigationMenuItem>
               ))}
