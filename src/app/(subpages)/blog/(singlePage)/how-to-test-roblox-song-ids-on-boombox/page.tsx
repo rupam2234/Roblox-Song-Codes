@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "How to test the song IDs on Roblox",
     "song IDs on Roblox",
   ],
-  publisher: "roblox song codes | GeekGuidez",
+  publisher: "GeekGuidez",
 };
 
 const Content_1 = () => {

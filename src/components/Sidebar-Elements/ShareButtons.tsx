@@ -5,24 +5,13 @@ import { Dancing_Script } from "next/font/google";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
-  FacebookIcon,
   FacebookShareButton,
-  PinterestIcon,
   PinterestShareButton,
-  RedditIcon,
   RedditShareButton,
-  TwitterIcon,
   TwitterShareButton,
 } from "react-share";
-import { Button } from "../ui/button";
-import {
-  FaFacebook,
-  FaFacebookF,
-  FaPinterest,
-  FaReddit,
-  FaTwitter,
-} from "react-icons/fa";
-import { LucideFacebook } from "lucide-react";
+import { FaFacebookF, FaPinterest, FaReddit } from "react-icons/fa";
+import { metadata } from "@/app/layout";
 
 const cute = Dancing_Script({
   weight: "500",
@@ -102,9 +91,9 @@ const Share = () => {
         <PinterestShareButton
           url={Url}
           title={title}
-          description="This is a complete list of tested Roblox song codes across different genres that you can play on Boombox and are WORKING!"
+          description={metadata.description}
           pinId=""
-          media="/_next/image?url=%2Fmedia%2FRoblox-Boombox-Icon.png&w=384&q=75"
+          media=""
         >
           <div className="rounded-full bg-[#E60023] hover:bg-transparent text-white hover:text-[#E60023] p-3 border">
             <FaPinterest className="w-4 h-4" />
