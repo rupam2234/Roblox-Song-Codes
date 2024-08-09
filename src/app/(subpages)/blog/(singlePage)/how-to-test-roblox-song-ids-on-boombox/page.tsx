@@ -61,7 +61,7 @@ const Content_1 = () => {
         </p>
         <p>
           To be able to play music on Boombox you first need to find a game that
-          offers Boombox gamepass. Games like "
+          offers Boombox gamepass. Games like &quot;
           <a
             href="https://www.roblox.com/games/4924922222/Brookhaven-RP"
             className="underline hover:no-underline underline-offset-2"
@@ -70,7 +70,7 @@ const Content_1 = () => {
           >
             Brookhaven 🏡RP
           </a>
-          " and "
+          &quot; and &quot;
           <a
             href="https://www.roblox.com/games/9872472334/Evade"
             className="underline hover:no-underline underline-offset-2"
@@ -79,13 +79,13 @@ const Content_1 = () => {
           >
             Evade
           </a>
-          " offers unique Boombox gamepass that allows you to play the music
-          tracks on the game.
+          &quot; offers unique Boombox gamepass that allows you to play the
+          music tracks on the game.
         </p>
         <p>These are some examples:</p>
         <ul className="space-y-3 terms-list">
           <li>
-            To play music on Evade you'll need to aqurie{" "}
+            To play music on Evade you&apos;ll need to aqurie{" "}
             <a
               href="https://www.roblox.com/game-pass/69211896/Boombox"
               className="underline hover:no-underline underline-offset-2"
@@ -94,7 +94,7 @@ const Content_1 = () => {
             >
               this Boombox
             </a>{" "}
-            by 'Hexagon Development Community'.
+            by &apos;Hexagon Development Community&apos;.
           </li>
           <li>
             In Brookhaven you can purcahse the music gamepass from the cart on
@@ -143,9 +143,9 @@ const Content_1 = () => {
           you play music using Boomboxes without requiring a Game Pass.
         </p>
         <p>
-          On Roblox, use the search bar to type "boombox" and browse the
-          experiences. You'll find plenty of games where you can explore and
-          enjoy the Boombox music experience.
+          On Roblox, use the search bar to type &quot;boombox&quot; and browse
+          the experiences. You&apos;ll find plenty of games where you can
+          explore and enjoy the Boombox music experience.
         </p>
         <Image
           src={"/media/Free Boombox Players.png"}
@@ -154,8 +154,8 @@ const Content_1 = () => {
           height={600}
         />
         <p>
-          Below I've listed some of the free Boombox players I have used and are
-          really good.
+          Below I&apos;ve listed some of the free Boombox players I have used
+          and are really good.
         </p>
         <ul className="space-y-3 terms-list">
           <li>
@@ -202,7 +202,7 @@ const Content_1 = () => {
         <p>
           <strong>NOTE:</strong> Some song IDs may not work on the Boombox
           because certain games have restrictions on playing certain music. Also
-          be sure that the song IDs you use comply with Roblox’s content
+          be sure that the song IDs you use comply with Roblox&apos;s content
           guidelines. Playing extremely high-pitched music can also lead to
           being banned from the game or platform.
         </p>
