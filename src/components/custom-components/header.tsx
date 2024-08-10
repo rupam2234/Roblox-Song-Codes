@@ -3,11 +3,8 @@
 import {
   DockIcon,
   LucideInfo,
-  LucideMove,
   Music2Icon,
   TrendingUp,
-  VibrateIcon,
-  WatchIcon,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +25,6 @@ import { z } from "zod";
 import { NavItem, SearchFormSchema } from "./constants";
 import MobileNav from "./mobile-navigation";
 import SearchBar from "./searchbar";
-import { GiLoveSong } from "react-icons/gi";
 
 // imports end
 

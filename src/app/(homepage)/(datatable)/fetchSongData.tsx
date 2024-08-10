@@ -1,7 +1,7 @@
 "use client";
 
 import MUIDataTable from "mui-datatables";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SongIDs } from "@/components/custom-components/constants";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
