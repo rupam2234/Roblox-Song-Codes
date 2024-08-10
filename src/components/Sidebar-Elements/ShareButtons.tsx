@@ -11,7 +11,6 @@ import {
   TwitterShareButton,
 } from "react-share";
 import { FaFacebookF, FaPinterest, FaReddit } from "react-icons/fa";
-import { metadata } from "@/app/layout";
 
 const cute = Dancing_Script({
   weight: "500",
@@ -26,6 +25,58 @@ const Share = () => {
   const [Url, setUrl] = useState("");
   const router = useRouter();
   const pathname = usePathname();
+  const [mediaUrl, setMediaUrl] = useState("");
+  const [description, setDescription] = useState("");
+
+  // to fetch media file from current page automatically:
+  useEffect(() => {
+    // Select all images on the page
+    const allImages = document.querySelectorAll("img");
+
+    // Words to exclude from image file names
+    const excludeWords = ["logo", "banner", "thumbnail"];
+
+    // Filter out the images you want to exclude
+    const filteredImages = Array.from(allImages).filter((img) => {
+      const imageSrc = img.src.toLowerCase();
+
+      // Check if the image file name contains any of the excluded words
+      const containsExcludedWord = excludeWords.some((word) =>
+        imageSrc.includes(word)
+      );
+
+      // Return true to keep the image, false to exclude it
+      return !containsExcludedWord;
+    });
+
+    // Set the media URL to the first image that passes the filter
+    if (filteredImages.length > 0) {
+      setMediaUrl(filteredImages[0].src);
+    }
+
+    // Extract description from the page's source code
+    const extractDescriptionFromSource = () => {
+      const scripts = document.querySelectorAll("script");
+      let foundDescription = "";
+
+      scripts.forEach((script) => {
+        const scriptContent = script.innerText || script.textContent;
+        if (scriptContent && scriptContent.includes("description")) {
+          const match = scriptContent.match(/description:\s*['"]([^'"]+)['"]/);
+          if (match) {
+            foundDescription = match[1];
+          }
+        }
+      });
+
+      return foundDescription;
+    };
+
+    const description = extractDescriptionFromSource();
+    if (description) {
+      setDescription(description);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -91,9 +142,9 @@ const Share = () => {
         <PinterestShareButton
           url={Url}
           title={title}
-          description={metadata.description}
+          description={description}
           pinId=""
-          media=""
+          media={mediaUrl}
         >
           <div className="rounded-full bg-[#E60023] hover:bg-transparent text-white hover:text-[#E60023] p-3 border">
             <FaPinterest className="w-4 h-4" />
