@@ -4,6 +4,7 @@ import {
   DockIcon,
   LucideInfo,
   LucideMove,
+  Music2Icon,
   TrendingUp,
   VibrateIcon,
   WatchIcon,
@@ -40,9 +41,9 @@ const Header = () => {
       type: true,
     },
     {
-      title: "Our Favorite Vibes",
+      title: "ID By Vibes",
       href: "/vibes",
-      icon: GiLoveSong,
+      icon: Music2Icon,
       type: false,
     },
     {
