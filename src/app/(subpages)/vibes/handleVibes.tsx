@@ -19,6 +19,18 @@ const HandleVibes = () => {
       tagName: "Happy",
       icon: Check,
     },
+    {
+      tagName: "Suspenseful",
+      icon: Check,
+    },
+    {
+      tagName: "Smooth listening",
+      icon: Check,
+    },
+    {
+      tagName: "Scary",
+      icon: Check,
+    },
   ];
 
   return (

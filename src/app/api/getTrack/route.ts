@@ -18,9 +18,13 @@ export async function GET(req: NextRequest) {
   try {
     // Fetch data from the database
     const { rows } = await sql<DBRow>`
-      SELECT name, id, ratings, genres, duration, artist, update_date 
-      FROM assets 
-      WHERE id = ${id}`;
+    SELECT name, id, ratings, genres, duration, artist, update_date 
+    FROM assets 
+    WHERE id = ${id}
+    UNION
+    SELECT name, id, ratings, genres, duration, artist, update_date 
+    FROM vibes 
+    WHERE id = ${id}`;
 
     // Format the update_date field and map to SongIDs
     const formattedRows: SongIDs[] = rows.map((row) => {
