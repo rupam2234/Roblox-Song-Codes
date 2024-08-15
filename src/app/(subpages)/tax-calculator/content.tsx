@@ -1,6 +1,7 @@
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import Image from "next/image";
 
 const ContentSection = () => {
   return (
@@ -39,6 +40,13 @@ const ContentSection = () => {
         calculator will automatically display the selling price (Before Tax)
         needed to recieve a 300 Robux after Roblox Tax deduction.
       </p>
+      <Image
+        src={"/media/Roblox Tax Calculator.png"}
+        alt={"Roblox Tax Calculator"}
+        width={1200}
+        height={600}
+        className="border border-gray-200"
+      />
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         Robux Tax - What?
       </h2>
