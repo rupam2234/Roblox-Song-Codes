@@ -42,15 +42,17 @@ const MobileNav: React.FC<MobileNavProps> = ({ components }) => {
       >
         <NavigationMenu className="mx-3 mt-20 flex-grow">
           <NavigationMenuList className="space-y-3">
-            {components.map((component, index) => (
-              <NavigationMenuItem
-                key={index}
-                className="flex gap-4 text-white px-4 py-2 hover:bg-slate-400/15 rounded-sm"
-              >
-                <component.icon />
-                <a href={component.href}>{component.title}</a>
-              </NavigationMenuItem>
-            ))}
+            {components
+              .filter((component) => component.title !== "Tools")
+              .map((component, index) => (
+                <NavigationMenuItem
+                  key={index}
+                  className="flex gap-4 text-white px-4 py-2 hover:bg-slate-400/15 rounded-sm"
+                >
+                  <component.icon />
+                  <a href={component.href}>{component.title}</a>
+                </NavigationMenuItem>
+              ))}
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex justify-center items-end pb-4 mx-4 text-[12px] text-white">

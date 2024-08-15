@@ -5,6 +5,7 @@ import {
   DockIcon,
   LucideInfo,
   Music2Icon,
+  SettingsIcon,
   TrendingUp,
 } from "lucide-react";
 import Image from "next/image";
@@ -18,6 +19,8 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -35,7 +38,7 @@ const Header = () => {
       title: "Popular Tracks",
       href: "/popular-tracks",
       icon: TrendingUp,
-      type: true,
+      type: false,
     },
     {
       title: "ID By Vibes",
@@ -49,6 +52,21 @@ const Header = () => {
       icon: DockIcon,
       type: true,
     },
+    {
+      title: "Tax Calculator",
+      href: "/tax-calculator",
+      icon: Calculator,
+      type: false,
+    },
+    {
+      title: "Tools",
+      href: "/tools",
+      icon: SettingsIcon,
+      type: false,
+    },
+  ];
+
+  const toolComponents: NavItem[] = [
     {
       title: "Tax Calculator",
       href: "/tax-calculator",
@@ -106,12 +124,37 @@ const Header = () => {
         <NavigationMenu className="ml-6 hidden sm:block">
           <NavigationMenuList>
             {components
-              .filter((component) => component.type)
+              .filter(
+                (component) => component.type && component.title !== "Tools"
+              )
               .map((component, index) => (
-                <NavigationMenuItem key={index} className="mr-5 text-[15px] ">
+                <NavigationMenuItem
+                  key={index}
+                  className="mr-2 text-[15px] font-bold"
+                >
                   <a href={component.href}>{component.title}</a>
                 </NavigationMenuItem>
               ))}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent hover:text-white text-[15px] font-bold">
+                Tools
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="py-4 px-5 w-52 bg-white space-y-3">
+                  {toolComponents.map((tool, index) => (
+                    <li key={index} className="py-1 px-2">
+                      <a
+                        href={tool.href}
+                        className="flex items-center gap-2 text-[15px] font-semibold hover:text-[#5F8C81] hover:font-semibold"
+                      >
+                        <tool.icon />
+                        {tool.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
