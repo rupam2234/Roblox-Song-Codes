@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/(subpages)/tax-calculator/breadcrumbs";
 import ContentSection from "./content";
 import { Metadata } from "next";
 
-const meta: Metadata = {
+export const metadata: Metadata = {
   title: "Roblox Tax Calculator – Estimate Your Robux After Taxes",
   description:
     "This calculator helps you estimate the selling price of items on the Roblox marketplace and shows how much you'll receive after a sale.",
