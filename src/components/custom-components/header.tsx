@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Calculator,
   DockIcon,
   LucideInfo,
   Music2Icon,
@@ -47,6 +48,12 @@ const Header = () => {
       href: "/blog",
       icon: DockIcon,
       type: true,
+    },
+    {
+      title: "Tax Calculator",
+      href: "/tax-calculator",
+      icon: Calculator,
+      type: false,
     },
   ];
 

@@ -120,5 +120,14 @@
   content: "•"; /* Change to desired symbol */
   position: absolute;
   left: 0;
-  color: #5F8C81; /* Or any other color */
+  color: #5f8c81; /* Or any other color */
+}
+
+.breadcrumbs .crumb::after {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.breadcrumbs .crumb:last-child::after {
+  display: none;
 }

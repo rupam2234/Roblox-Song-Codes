@@ -52,3 +52,8 @@ export type PostheadProps = {
   featuredImage: string;
   featuredImageAlt: string;
 };
+
+export type UserRatings = {
+  total_rating: number;
+  rating_number: number;
+};
