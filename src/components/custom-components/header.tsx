@@ -53,7 +53,6 @@ const Header = () => {
       icon: DockIcon,
       type: true,
     },
-
     {
       title: "Tools",
       href: "/tools",
@@ -137,12 +136,12 @@ const Header = () => {
                   <a href={component.href}>{component.title}</a>
                 </NavigationMenuItem>
               ))}
-
-            {/* Tools Trigger and Dropdown under the same NavigationMenuItem */}
-            <NavigationMenuItem className="relative">
-              <NavigationMenuTrigger className="">Tools</NavigationMenuTrigger>
-              <NavigationMenuContent className="absolute top-full left-0 mt-2 w-52 bg-white py-4 px-5 space-y-3">
-                <ul>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent hover:text-white text-[15px] font-bold">
+                Tools
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="py-4 px-5 w-52 bg-white space-y-3">
                   {toolComponents.map((tool, index) => (
                     <li key={index} className="py-1 px-2">
                       <a
