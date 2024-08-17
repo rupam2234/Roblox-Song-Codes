@@ -15,13 +15,9 @@ const SidebarMenu = () => {
       title: "Popular Tracks",
       url: "/popular-tracks",
     },
-    {
-      title: "Tracks By Artists",
-      url: "/articts",
-    },
     // {
-    //   title: "Roblox Tax Calculator",
-    //   url: "/tax-calculator"
+    //   title: "Tracks By Artists",
+    //   url: "/artists",
     // },
   ];
 
