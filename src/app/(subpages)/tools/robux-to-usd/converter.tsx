@@ -19,7 +19,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { RatingSystem } from "@/components/custom-components/ratingSystem";
-import { DollarSignIcon } from "lucide-react";
+import { DollarSignIcon, IndianRupee } from "lucide-react";
 import { useEffect, useState } from "react";
 import CurrencyHandler, { CurrencyTypes } from "./currencyHandler";
 
@@ -62,7 +62,13 @@ const Converter = () => {
       currencyName: "GBP",
       icon: DollarSignIcon,
       currencyRate: 0.0088,
-      currencyTag: "EUR Rate",
+      currencyTag: "GBP Rate",
+    },
+    {
+      currencyName: "INR",
+      icon: IndianRupee,
+      currencyRate: 1.25,
+      currencyTag: "INR Rate",
     },
   ];
 
