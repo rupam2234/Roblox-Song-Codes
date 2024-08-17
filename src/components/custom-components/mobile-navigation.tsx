@@ -8,7 +8,10 @@ import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@radix-ui/react-navigation-menu";
+import { FaTools } from "react-icons/fa";
 
 const Sheet = dynamic(
   () => import("../ui/sheet").then((module) => module.Sheet),
@@ -25,9 +28,13 @@ const SheetTrigger = dynamic(
 
 type MobileNavProps = {
   components: NavItem[];
+  childComponents: NavItem[];
 };
 
-const MobileNav: React.FC<MobileNavProps> = ({ components }) => {
+const MobileNav: React.FC<MobileNavProps> = ({
+  components,
+  childComponents,
+}) => {
   const year = new Date().getFullYear();
   return (
     <Sheet>
@@ -53,6 +60,33 @@ const MobileNav: React.FC<MobileNavProps> = ({ components }) => {
                   <a href={component.href}>{component.title}</a>
                 </NavigationMenuItem>
               ))}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger
+                className="flex text-white gap-[13px] w-full mr-2 "
+                style={{
+                  marginLeft: "12px",
+                  padding: "8px",
+                }}
+              >
+                <FaTools size={20} />
+                Tools
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="py-4 px-5 w-auto bg-gray-200/50 rounded-sm space-y-3">
+                  {childComponents.map((tool, index) => (
+                    <li key={index} className="py-1 px-2">
+                      <a
+                        href={tool.href}
+                        className="flex items-center gap-2 text-[15px] text-white font-semibold hover:text-black hover:font-semibold"
+                      >
+                        <tool.icon />
+                        {tool.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex justify-center items-end pb-4 mx-4 text-[12px] text-white">

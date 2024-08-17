@@ -1,20 +1,21 @@
 import Sidebar from "@/components/custom-components/sidebar";
 import TaxCalculatorHandler from "./taxCalculatorHandler";
 import TopSection from "./topSection";
-import Breadcrumbs from "@/app/(subpages)/tax-calculator/breadcrumbs";
 import ContentSection from "./content";
 import { Metadata } from "next";
+import Breadcrumbs from "../breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Roblox Tax Calculator – Estimate Your Robux After Taxes",
   description:
     "This calculator helps you estimate the selling price of items on the Roblox marketplace and shows how much you'll receive after a sale.",
   publisher: "Geek Guidez",
+  keywords: "Robux Tax Calculator",
 };
 
 const TaxCalculator = () => {
   return (
-    <main className="w-full">
+    <>
       <div className="bg-[#eef8f3] px-6 py-14 lg:px-[170px] flex items-center">
         <div>
           <Breadcrumbs />
@@ -32,7 +33,7 @@ const TaxCalculator = () => {
           <Sidebar />
         </div>
       </div>
-    </main>
+    </>
   );
 };
 

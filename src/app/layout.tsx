@@ -13,7 +13,6 @@ const inter = Inter({
   preload: true,
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{

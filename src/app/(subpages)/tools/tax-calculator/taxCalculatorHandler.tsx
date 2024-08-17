@@ -247,7 +247,7 @@ const TaxCalculatorHandler = () => {
           </form>
         </Form>
         <div className="flex justify-center mt-6">
-          <RatingSystem />
+          <RatingSystem id={1} />
         </div>
       </div>
     </div>

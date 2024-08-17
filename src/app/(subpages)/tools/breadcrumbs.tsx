@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaGreaterThan } from "react-icons/fa";
 
 export default function Breadcrumbs() {
   const location = usePathname();
@@ -18,17 +17,18 @@ export default function Breadcrumbs() {
         Home
       </Link>
       {crumbs.map((crumb, index) => {
-        currentLink += `/${crumb}`;
+        // Build the URL for the current crumb
+        const crumbLink = `/${crumbs.slice(0, index + 1).join("/")}`;
 
         return (
           <div key={crumb} className="flex items-center">
             {/* Render the separator slash between crumbs */}
             <span className="mx-2">/</span>
-            <p className="crumb">
+            <Link href={crumbLink} className="crumb text-[#5F8C81]">
               {crumb
                 .replace(/-/g, " ")
                 .replace(/\b\w/g, (char) => char.toUpperCase())}
-            </p>
+            </Link>
           </div>
         );
       })}

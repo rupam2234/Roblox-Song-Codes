@@ -4,15 +4,17 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useState, useEffect } from "react";
 
-export function RatingSystem() {
+type RatingSystemProps = {
+  id: number;
+};
+
+export function RatingSystem({ id }: RatingSystemProps) {
   const [state, setState] = useState({
     review: "",
     rating: 0, // Initial value
   });
   const [ratingSum, setRatingSum] = useState<number>(0);
   const [ratingCount, setRatingCount] = useState<number>(0);
-
-  const id: number = 1;
 
   useEffect(() => {
     async function fetchRatings() {

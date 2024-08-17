@@ -3,6 +3,7 @@
 import {
   Calculator,
   DockIcon,
+  DollarSign,
   LucideInfo,
   Music2Icon,
   SettingsIcon,
@@ -52,12 +53,7 @@ const Header = () => {
       icon: DockIcon,
       type: true,
     },
-    {
-      title: "Tax Calculator",
-      href: "/tax-calculator",
-      icon: Calculator,
-      type: false,
-    },
+
     {
       title: "Tools",
       href: "/tools",
@@ -69,8 +65,14 @@ const Header = () => {
   const toolComponents: NavItem[] = [
     {
       title: "Tax Calculator",
-      href: "/tax-calculator",
+      href: "/tools/tax-calculator",
       icon: Calculator,
+      type: false,
+    },
+    {
+      title: "Robux To USD",
+      href: "/tools/robux-to-usd",
+      icon: DollarSign,
       type: false,
     },
   ];
@@ -118,7 +120,7 @@ const Header = () => {
         <SearchBar />
 
         <div className="block md:hidden lg:hidden">
-          <MobileNav components={components} />
+          <MobileNav components={components} childComponents={toolComponents} />
         </div>
 
         <NavigationMenu className="ml-6 hidden sm:block">
@@ -135,12 +137,12 @@ const Header = () => {
                   <a href={component.href}>{component.title}</a>
                 </NavigationMenuItem>
               ))}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent hover:text-white text-[15px] font-bold">
-                Tools
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="py-4 px-5 w-52 bg-white space-y-3">
+
+            {/* Tools Trigger and Dropdown under the same NavigationMenuItem */}
+            <NavigationMenuItem className="relative">
+              <NavigationMenuTrigger className="">Tools</NavigationMenuTrigger>
+              <NavigationMenuContent className="absolute top-full left-0 mt-2 w-52 bg-white py-4 px-5 space-y-3">
+                <ul>
                   {toolComponents.map((tool, index) => (
                     <li key={index} className="py-1 px-2">
                       <a

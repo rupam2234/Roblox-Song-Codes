@@ -1,4 +1,3 @@
-import { RatingSystem } from "@/components/custom-components/ratingSystem";
 import { cn } from "@/lib/utils";
 import { Fira_Sans } from "next/font/google";
 
