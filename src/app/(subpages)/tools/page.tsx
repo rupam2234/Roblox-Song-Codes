@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import Breadcrumbs from "./breadcrumbs";
 import TopSection from "./tax-calculator/topSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Free Roblox Utilities",
+  description:
+    "This is a collection of simple utilities designed to make your life on Roblox easier.",
+  publisher: "Geek Guidez",
+  keywords: "Roblox Utilities, Free Roblox Utilities, DevEx Converter",
+};
 
 type Tools = {
   name: string;
