@@ -14,6 +14,7 @@ import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 
 const TrackPage = () => {
+  //const router = useRouter();
   const [SongData, setSongData] = useState<SongIDs[]>([]);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
   const [songRated, setsongRated] = useState(false);
@@ -41,6 +42,14 @@ const TrackPage = () => {
             const data = await response.json();
             setSongData(data);
             setHasFetched(true);
+
+            // if (data.length > 0) {
+            //   const songName = data[0].name;
+            //   const currentUrl = new URL(window.location.href);
+
+            //   // Add the name to the URL
+            //   router.push(`${currentUrl.pathname}?id=${id}&name=${songName}`);
+            // }
           } else {
             console.error("Failed to fetch track details");
           }

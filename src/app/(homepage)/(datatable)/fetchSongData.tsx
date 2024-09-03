@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { CircularProgress } from "@mui/material";
+import Link from "next/link";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -141,10 +142,18 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       });
   }
 
+  const formatNameForURL = (name: string) => {
+    return name
+      .toLowerCase()         // Convert to lowercase
+      .replace(/['"]/g, '')  // Remove apostrophes and quotes
+      .replace(/\s+/g, '-')  // Replace spaces with hyphens
+      .replace(/[^a-z0-9-]/g, ''); // Remove any characters that aren't letters, numbers, or hyphens
+  };
+
   const handleRowClick = (rowData: { id: number; name: string }) => {
     const { id, name } = rowData;
-    const encodedName = encodeURIComponent(name);
-    router.push(`/track?id=${id}`);
+    const encodedName = formatNameForURL(name);
+    router.push(`/track?id=${id}&name=${encodedName}`);
   };
 
   const formatDuration = (duration: number) => {
@@ -166,16 +175,18 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
           const name = rowData[0];
 
           return (
-            <a
-              href={`/track?id=${id}`}
+            <Link
+              href={`/track?id=${id}&name=${formatNameForURL(name)}`}
               onClick={(e) => {
                 e.preventDefault();
                 handleRowClick({ id, name });
               }}
               className="hover:text-blue-400"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {name}
-            </a>
+            </Link>
           );
         },
       },
