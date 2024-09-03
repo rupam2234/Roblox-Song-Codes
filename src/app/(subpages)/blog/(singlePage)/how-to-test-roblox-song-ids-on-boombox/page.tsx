@@ -133,6 +133,15 @@ const Content_1 = () => {
           and enter it to the input field on Boombox. Then click on the play
           button to start playing the desired music associated with the song ID.
         </p>
+        <p>
+          <strong className="text-red-400">Editor pick </strong>|{" "}
+          <a
+            href="/blog/latest-roblox-song-codes"
+            className="text-blue-600 hover:text-blue-400"
+          >
+            Latest Working Roblox Song Codes in 2024
+          </a>
+        </p>
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           Method 2: Join a Free Boombox Game
         </h2>

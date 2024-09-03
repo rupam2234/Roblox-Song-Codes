@@ -33,9 +33,15 @@ const BlogPost_2 = () => {
       <div className="space-y-6 text-[16px] mt-8 text-gray-700 leading-relaxed">
         <p>
           In 2024, Roblox remains a hub for creativity where music enhances the
-          gaming experience. Finding and using the latest Roblox song codes lets
-          players connect with friends, set the mood, and express their style
-          in-game.
+          gaming experience. Finding and{" "}
+          <a
+            href="/blog/how-to-test-roblox-song-ids-on-boombox"
+            className="underline hover:no-underline underline-offset-2"
+          >
+            using the latest Roblox song codes
+          </a>{" "}
+          lets players connect with friends, set the mood, and express their
+          style in-game.
         </p>
         <p>
           As you know, Roblox&apos;s music library keeps changes, and some
