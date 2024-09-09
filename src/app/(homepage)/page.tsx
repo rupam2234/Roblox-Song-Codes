@@ -8,13 +8,22 @@ import HandleCategories from "./handleCategories";
 
 export const metadata: Metadata = {
   title: "Best Roblox Song Codes For Boombox",
-  description: "Largest Roblox Music Code Database",
+  description:
+    "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
     "Best Roblox Song Codes",
     "Roblox Music Codes",
     "Song Codes for Boombox",
     "Music ID for Boombox",
   ],
+  publisher: "GeekGuidez",
+  openGraph: {
+    title: "Best Working Roblox Song Codes For Boombox",
+    description:
+      "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
+    siteName: "Geek Guidez",
+    images: "/media/Working Roblox Song Codes.png",
+  },
 };
 
 const HomePage = () => {

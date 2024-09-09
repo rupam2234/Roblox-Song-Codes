@@ -144,10 +144,10 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
 
   const formatNameForURL = (name: string) => {
     return name
-      .toLowerCase()         // Convert to lowercase
-      .replace(/['"]/g, '')  // Remove apostrophes and quotes
-      .replace(/\s+/g, '-')  // Replace spaces with hyphens
-      .replace(/[^a-z0-9-]/g, ''); // Remove any characters that aren't letters, numbers, or hyphens
+      .toLowerCase() // Convert to lowercase
+      .replace(/['"]/g, "") // Remove apostrophes and quotes
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .replace(/[^a-z0-9-]/g, ""); // Remove any characters that aren't letters, numbers, or hyphens
   };
 
   const handleRowClick = (rowData: { id: number; name: string }) => {

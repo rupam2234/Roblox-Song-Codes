@@ -56,6 +56,26 @@ const BottomContents = () => {
           Door&apos;
         </code>
       </div>
+      <br />
+      <p className="font-bold  text-[#5F8C81]">Discover More Codes:</p>
+      <ul className="terms-list space-y-3">
+        <li>
+          <a
+            href="/blog/how-to-test-roblox-song-ids-on-boombox"
+            className="hover:text-blue-400 text-blue-600"
+          >
+            How to test the song IDs on Roblox?
+          </a>
+        </li>
+        <li>
+          <a
+            href="/blog/latest-roblox-song-codes"
+            className="hover:text-blue-400 text-blue-600"
+          >
+            Latest Working Roblox Song Codes
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

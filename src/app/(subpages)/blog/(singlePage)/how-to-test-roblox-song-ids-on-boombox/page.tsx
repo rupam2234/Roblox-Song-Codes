@@ -20,20 +20,23 @@ export const metadata: Metadata = {
     "song IDs on Roblox",
   ],
   publisher: "GeekGuidez",
+  openGraph: {
+    title: "How to Test Song IDs on Roblox Boombox Player?",
+    description:
+      "You can test Boombox song IDs by either trying to play it on Boombox Game Pass on Roblox or run it on free Boombox alternatives.",
+    images: "/media/How to Test Song IDs on Roblox Boombox Player.png",
+    publishedTime: "8 August, 2024",
+    authors: "Geek Guidez",
+  },
 };
 
 const Content_1 = () => {
-  const date = new Date();
-
-  // Format the date using date-fns
-  const formattedDate = format(date, "MMMM d, yyyy");
-
   return (
     <section>
       <Posthead
         title={"How to Test Song IDs on Roblox Boombox Player?"}
         author={"Leon Klein"}
-        publishDate={formattedDate}
+        publishDate={"8 August, 2024"}
         featuredImage={
           "/media/How to Test Song IDs on Roblox Boombox Player.png"
         }
