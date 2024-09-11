@@ -211,7 +211,7 @@ const Converter = () => {
                       className={`col-span-12 md:col-span-3 mt-[6px] flex`}
                     >
                       Robux
-                      <img
+                      <Image
                         width="18"
                         height="18"
                         src="https://img.icons8.com/color/48/robux--v1.png"

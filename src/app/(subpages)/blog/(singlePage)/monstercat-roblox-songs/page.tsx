@@ -73,9 +73,9 @@ const MonsterCatList = () => {
           about the tracks and few relevent track IDs.
         </p>
         <p className="italic">
-          Feel free to rate the tracks after you've used them! Your feedback
-          helps us keep track of what's popular and ensures that all the tracks
-          are working smoothly.
+          Feel free to rate the tracks after you&apos;ve used them! Your
+          feedback helps us keep track of what&apos;s popular and ensures that
+          all the tracks are working smoothly.
         </p>
         <br />
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
@@ -83,7 +83,7 @@ const MonsterCatList = () => {
           How to Test Monstercat Roblox Song IDs?
         </h2>
         <p>
-          It's easy to test Monstercat tracks or any music IDs on Roblox
+          It&apos;s easy to test Monstercat tracks or any music IDs on Roblox
           boombox. Typically you have{" "}
           <a
             href="/blog/how-to-test-roblox-song-ids-on-boombox"
@@ -95,9 +95,9 @@ const MonsterCatList = () => {
         </p>
         <p>
           Either you can get the Boombox Gamepass and test your code or join a
-          free Boombox game, there're planty of them in Roblox. Just search for
-          Boombox in experience and you&apos;ll find a lot of games that offers
-          to play Boombox music for free.{" "}
+          free Boombox game, there&apos;re planty of them in Roblox. Just search
+          for Boombox in experience and you&apos;ll find a lot of games that
+          offers to play Boombox music for free.{" "}
         </p>
         <h3 className="font-bold text-[18px] text-[#5F8C81]">
           More Roblox Song IDs:
