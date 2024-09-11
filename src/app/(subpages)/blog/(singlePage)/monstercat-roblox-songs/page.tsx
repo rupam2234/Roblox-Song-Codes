@@ -37,34 +37,34 @@ const tableSchema = {
   "@context": "https://schema.org",
   "@type": "Table",
   "@id": "https://roblox.geekguidez.com/blog/monstercat-roblox-songs",
-  caption: "Monstercat Roblox Songs",
-  about: "List of Roblox Song IDs from Monstercat",
-  creator: {
+  "caption": "Monstercat Roblox Songs",
+  "about": "List of Roblox Song IDs from Monstercat",
+  "creator": {
     "@type": "Person",
-    name: "Leon Klein",
+    "name": "Leon Klein",
   },
-  tableSchema: {
+  "tableSchema": {
     "@type": "TableSchema",
-    columns: [
+    "columns": [
       {
         "@type": "PropertyValue",
-        name: "Song Name",
-        description: "The name of the track on Roblox",
+        "name": "Song Name",
+        "description": "The name of the track on Roblox",
       },
       {
         "@type": "PropertyValue",
-        name: "Song ID",
-        description: "The Roblox Song ID",
+        "name": "Song ID",
+        "description": "The Roblox Song ID",
       },
       {
         "@type": "PropertyValue",
-        name: "Duration",
-        description: "length of the track",
+        "name": "Duration",
+        "description": "length of the track",
       },
       {
         "@type": "PropertyValue",
-        name: "Ratings",
-        description: "User ratings for the track",
+        "name": "Ratings",
+        "description": "User ratings for the track",
       },
     ],
   },
