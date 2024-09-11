@@ -4,6 +4,7 @@ import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import TableSchemaHandler from "@/components/SchemaHandler/schema";
 
 export const metadata: Metadata = {
   title: "Latest Monstercat Roblox Song IDs That Works",

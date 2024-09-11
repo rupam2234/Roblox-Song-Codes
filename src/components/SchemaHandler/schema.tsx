@@ -63,3 +63,5 @@ const TableSchemaHandler: React.FC<SchemaData> = ({
     </>
   );
 };
+
+export default TableSchemaHandler;
