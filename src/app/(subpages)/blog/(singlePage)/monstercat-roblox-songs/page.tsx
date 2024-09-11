@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import { InfoIcon } from "lucide-react";
+import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 
 export const metadata: Metadata = {
   title: "Latest Monstercat Roblox Song IDs That Works",
@@ -78,6 +80,7 @@ const MonsterCatList = () => {
           all the tracks are working smoothly.
         </p>
         <br />
+        <AdsDesktopIncontent />
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to Test Monstercat Roblox Song IDs?
@@ -99,6 +102,7 @@ const MonsterCatList = () => {
           for Boombox in experience and you&apos;ll find a lot of games that
           offers to play Boombox music for free.{" "}
         </p>
+        <ResponsiveAd />
         <h3 className="font-bold text-[18px] text-[#5F8C81]">
           More Roblox Song IDs:
         </h3>
