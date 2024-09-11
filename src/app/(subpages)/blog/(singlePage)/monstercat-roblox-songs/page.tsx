@@ -33,47 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: "Monstercat Roblox Songs",
-  author: {
-    "@type": "Person",
-    name: "Leon Klein",
-  },
-  mainEntity: {
-    "@type": "Table",
-    "@id": "https://roblox.geekguidez.com/blog/monstercat-roblox-songs",
-    caption: "Monstercat Roblox Songs",
-    about: "List of Roblox Song IDs from Monstercat",
-    tableSchema: {
-      "@type": "TableSchema",
-      columns: [
-        {
-          "@type": "PropertyValue",
-          name: "Song Name",
-          description: "The name of the song",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Song ID",
-          description: "The Roblox Song ID",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Ratings",
-          description: "User ratings for the track",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Duration",
-          description: "Length of the track",
-        },
-      ],
-    },
-  },
-};
-
 const MonsterCatList = () => {
   const artist = "Monstercat";
 
@@ -123,9 +82,14 @@ const MonsterCatList = () => {
         <br />
         <AdsDesktopIncontent />
         <AdsMobileIncontent />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        <TableSchemaHandler
+          Headline={"Monstercat Roblox Song IDs That Works"}
+          AuthorName={"Leon Klein"}
+          PageUrl={"https://roblox.geekguidez.com/blog/monstercat-roblox-songs"}
+          PageName={`Latest Monstercat Roblox Song IDs (Works in ${year})`}
+          PageAbout={
+            "Here’s a list of Roblox music IDs published by Monstercat. We’ve tested all codes to ensure they work on your Boombox, so you can enjoy them without issues."
+          }
         />
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
