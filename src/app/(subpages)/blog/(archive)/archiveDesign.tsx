@@ -28,7 +28,7 @@ const Archive = () => {
     <div className="grid grid-cols-4 gap-5">
       {archive.map((items, index) => (
         <div className="col-span-4 md:col-span-2" key={index}>
-          <div className="border p-4 bg-[#EDF2ED] h-[180px] rounded-sm flex flex-col">
+          <div className="border p-4 bg-[#EDF2ED] h-[210px] rounded-sm flex flex-col">
             <h2 className="font-bold text-[16px] text-gray-700">
               {items.postname}
             </h2>

@@ -17,6 +17,14 @@ let archive: archiveModules[] = [
       "These are some of the most used currently working Roblox song codes in 2024. These roblox music IDs are filtered from our tested song ID database.",
     postLink: "/latest-roblox-song-codes",
   },
+  {
+    postname: "Latest Monstercat Roblox Song IDs",
+    postFeatureImage: "/media/Working Monstercat Roblox Song IDs.png",
+    imageAlt: "Working Monstercat Roblox Song IDs",
+    postDescription:
+      "Here’s a list of Roblox music IDs published by Monstercat. We’ve tested all codes to ensure they work on your Boombox, so you can enjoy them without issues.",
+    postLink: "/monstercat-roblox-songs",
+  },
 ];
 
 export function getArchive(): archiveModules[] {
