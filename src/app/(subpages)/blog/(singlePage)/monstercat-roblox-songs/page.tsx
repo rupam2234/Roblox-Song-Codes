@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
-import { InfoIcon } from "lucide-react";
 import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
@@ -31,6 +30,43 @@ export const metadata: Metadata = {
     images: "/media/Working Monstercat Roblox Song IDs.png",
     publishedTime: "10 september, 2024",
     authors: "Leon Klein",
+  },
+};
+
+const tableSchema = {
+  "@context": "https://schema.org",
+  "@type": "Table",
+  "@id": "https://roblox.geekguidez.com/blog/monstercat-roblox-songs",
+  caption: "Monstercat Roblox Songs",
+  about: "List of Roblox Song IDs from Monstercat",
+  creator: {
+    "@type": "Person",
+    name: "Leon Klein",
+  },
+  tableSchema: {
+    "@type": "TableSchema",
+    columns: [
+      {
+        "@type": "PropertyValue",
+        name: "Song Name",
+        description: "The name of the track on Roblox",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Song ID",
+        description: "The Roblox Song ID",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Duration",
+        description: "length of the track",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Ratings",
+        description: "User ratings for the track",
+      },
+    ],
   },
 };
 
@@ -82,7 +118,11 @@ const MonsterCatList = () => {
         </p>
         <br />
         <AdsDesktopIncontent />
-        <AdsMobileIncontent/>
+        <AdsMobileIncontent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(tableSchema) }}
+        />
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to Test Monstercat Roblox Song IDs?
