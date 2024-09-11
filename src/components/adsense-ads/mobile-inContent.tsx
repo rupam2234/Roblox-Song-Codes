@@ -14,7 +14,7 @@ const AdsMobileIncontent = () => {
 </script> 
         `;
   return (
-    <div className="mt-10 mx-[15px]">
+    <div className="md:hidden lg:hidden mt-10 mx-[15px]">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }} />
     </div>
   );

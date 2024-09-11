@@ -4,6 +4,7 @@ import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import { InfoIcon } from "lucide-react";
 import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
+import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 
 export const metadata: Metadata = {
   title: "Latest Monstercat Roblox Song IDs That Works",
@@ -81,6 +82,7 @@ const MonsterCatList = () => {
         </p>
         <br />
         <AdsDesktopIncontent />
+        <AdsMobileIncontent/>
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to Test Monstercat Roblox Song IDs?

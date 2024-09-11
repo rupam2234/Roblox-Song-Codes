@@ -12,7 +12,7 @@ const AdsDesktopIncontent = () => {
 </script> 
       `;
   return (
-    <div className="hidden md:block mt-10 mx-[15px]">
+    <div className="hidden sm:block mt-10 mx-[15px]">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }} />
     </div>
   );
