@@ -4,7 +4,6 @@ import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
-import Ajv from "ajv";
 
 export const metadata: Metadata = {
   title: "Latest Monstercat Roblox Song IDs That Works",
@@ -34,88 +33,46 @@ export const metadata: Metadata = {
   },
 };
 
-const ajv = new Ajv();
-
-const tableSchema = {
-  type: "object",
-  properties: {
-    "@type": { type: "string" },
-    "@id": { type: "string" },
-    caption: { type: "string" },
-    about: { type: "string" },
-    creator: {
-      type: "object",
-      properties: {
-        "@type": { type: "string" },
-        name: { type: "string" },
-      },
-      required: ["@type", "name"],
-    },
-    tableSchema: {
-      type: "object",
-      properties: {
-        "@type": { type: "string" },
-        columns: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              "@type": { type: "string" },
-              name: { type: "string" },
-              description: { type: "string" },
-            },
-            required: ["@type", "name", "description"],
-          },
-        },
-      },
-      required: ["@type", "columns"],
-    },
-  },
-  required: ["@type", "@id", "tableSchema"],
-};
-
-// Validate the schema
-const validate = ajv.compile(tableSchema);
-
-const data = {
-  "@type": "Table",
-  "@id": "https://roblox.geekguidez.com/blog/monstercat-roblox-songs",
-  caption: "Monstercat Roblox Songs",
-  about: "List of Roblox Song IDs from Monstercat",
-  creator: {
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: "Monstercat Roblox Songs",
+  author: {
     "@type": "Person",
     name: "Leon Klein",
   },
-  tableSchema: {
-    "@type": "TableSchema",
-    columns: [
-      {
-        "@type": "PropertyValue",
-        name: "Song Name",
-        description: "The name of the song",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Song ID",
-        description: "The Roblox Song ID",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Ratings",
-        description: "Track's user ratings",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Duration",
-        description: "Duration of the track",
-      },
-    ],
+  mainEntity: {
+    "@type": "Table",
+    "@id": "https://roblox.geekguidez.com/blog/monstercat-roblox-songs",
+    caption: "Monstercat Roblox Songs",
+    about: "List of Roblox Song IDs from Monstercat",
+    tableSchema: {
+      "@type": "TableSchema",
+      columns: [
+        {
+          "@type": "PropertyValue",
+          name: "Song Name",
+          description: "The name of the song",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Song ID",
+          description: "The Roblox Song ID",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Ratings",
+          description: "User ratings for the track",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Duration",
+          description: "Length of the track",
+        },
+      ],
+    },
   },
 };
-
-// Validate the data
-const valid = validate(data);
-if (!valid) console.log(validate.errors);
 
 const MonsterCatList = () => {
   const artist = "Monstercat";
@@ -168,7 +125,7 @@ const MonsterCatList = () => {
         <AdsMobileIncontent />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
         <FetchSongs apiEndpoint={`/api/ByArtist?artist=${artist}`} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
