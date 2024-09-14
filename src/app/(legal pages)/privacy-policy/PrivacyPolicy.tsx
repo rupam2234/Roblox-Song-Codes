@@ -7,7 +7,7 @@ const MainPolicyContent = () => {
       <h3 className="text-[#efa568] font-semibold">Types of Data Collected:</h3>
       <h4 className="font-semibold">Personal Data - </h4>
       <p>
-        When you use our Service, we may request certain personally identifiable
+        When you use our site, we may request certain personally identifiable
         information from you that can be used to contact or identify you. This
         information may include:
       </p>
@@ -128,7 +128,7 @@ const MainPolicyContent = () => {
         <li>
           <strong>With Affiliates:</strong> We may share your information with
           our affiliates, including our parent company and subsidiaries, all of
-          which will follow this Privacy Policy.
+          which will follow this privacy policy.
         </li>
         <li>
           <strong> With business partners:</strong> We may share your
@@ -144,7 +144,7 @@ const MainPolicyContent = () => {
       </h2>
       <p>
         The website will retain your personal Data only as long as necessary for
-        the purposes outlined in this Privacy Policy. We keep your data to
+        the purposes outlined in this privacy policy. We keep your data to
         comply with legal obligations, resolve disputes, and enforce our
         agreements and policies.
       </p>
@@ -161,7 +161,7 @@ const MainPolicyContent = () => {
         transferred to locations outside your jurisdiction, where data
         protection laws may differ. By submitting your information, you agree to
         this transfer. The Company ensures your data is securely handled in
-        accordance with this Privacy Policy and only transfers data to
+        accordance with this privacy policy and only transfers data to
         organizations or countries with adequate security measures.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
@@ -204,15 +204,15 @@ const MainPolicyContent = () => {
       <p>
         Our Service may include links to websites not operated by us. Clicking
         on these links will take you to third-party sites. We recommend
-        reviewing the Privacy Policy of any site you visit. We are not
+        reviewing the privacy policy of any site you visit. We are not
         responsible for the content, privacy policies, or practices of any
         third-party sites or services.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
-        Changes to this Privacy Policy{" "}
+        Changes to this privacy policy{" "}
       </h2>
       <p>
-        We may update our Privacy Policy occasionally. Any changes will be
+        We may update our privacy policy occasionally. Any changes will be
         posted on this page, with the &quot;Last updated&quot; date revised
         accordingly.
       </p>
@@ -221,12 +221,12 @@ const MainPolicyContent = () => {
         notice on our Service before they take effect.
       </p>
       <p>
-        Please review this Privacy Policy periodically for updates. Changes are
+        Please review this privacy policy periodically for updates. Changes are
         effective when posted on this page.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">Contact us</h2>
       <p>
-        If you have any questions about this Privacy Policy, You can contact us
+        If you have any questions about this privacy policy, You can contact us
         by email at: team@geekguidez.com or visit our{" "}
         <a href="/contact-us" className="text-blue-500 hover:text-blue-400">
           contact page

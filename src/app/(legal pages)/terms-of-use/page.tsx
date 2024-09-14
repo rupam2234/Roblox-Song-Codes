@@ -15,9 +15,9 @@ const TermsOfUse = () => {
         <FeaturedBox
           title={`Terms Of Use`}
           descriptionText1={
-            "The following terms and conditions apply to your use of the Robloxsongcodes.com website and all content, services, and products available through it (collectively, the Website)."
+            "The following terms and conditions apply to your use of the Robloxsongcodes.com website and all content, services, and products available through it (collectively, the website)."
           }
-          descriptionText2={`By using this Website, you agree to these terms and conditions without any changes. This includes all rules, policies, and procedures that Robloxsongcodes.com may update from time to time.`}
+          descriptionText2={`By using this website, you agree to these terms and conditions without any changes. This includes all rules, policies, and procedures that Robloxsongcodes.com may update from time to time.`}
           image={"/media/terms-of-service.png"}
           altText={"Terms Of service"}
         />

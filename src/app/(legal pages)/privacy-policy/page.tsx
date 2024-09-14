@@ -6,7 +6,7 @@ import MainPolicyContent from "./PrivacyPolicy";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "This Privacy Policy explains our policies and procedures regarding the collection, use, and disclosure of your information when you use our service. It also informs you about your privacy rights and how the law protects you.",
+    "This privacy policy explains our policies and procedures regarding the collection, use, and disclosure of your information when you use our service. It also informs you about your privacy rights and how the law protects you.",
 };
 
 const PrivacyPolicy = () => {
@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
         <FeaturedBox
           title={`Privacy Policy`}
           descriptionText1={
-            "This Privacy Policy explains our policies and procedures regarding the collection, use, and disclosure of your information when you use our service. It also informs you about your privacy rights and how the law protects you."
+            "This privacy Policy explains our policies and procedures regarding the collection, use, and disclosure of your information when you use our service. It also informs you about your privacy rights and how the law protects you."
           }
           descriptionText2={
             "We use cookies to improve our appliaction. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy."

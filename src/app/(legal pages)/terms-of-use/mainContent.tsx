@@ -4,21 +4,21 @@ const MainContent = () => {
   return (
     <div className="text-[17px] text-gray-600 space-y-5">
       <p>
-        Please read this agreement carefully before using the Website. You agree
+        Please read this agreement carefully before using the website. You agree
         to be bound by these terms and conditions by accessing or using any part
-        of the Website. If you do not agree to all of these terms and
-        conditions, you may not use the Website or any of its services.
+        of the website. If you do not agree to all of these terms and
+        conditions, you may not use the website or any of its services.
       </p>
       <p>
         If these terms and conditions are considered an offer by
         Robloxsongcodes.com, your acceptance is limited to these terms only.
       </p>
       <p>
-        The Website is only available to individuals who are at least 13 years
+        The website is only available to individuals who are at least 13 years
         old.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
-        1. Responsibility of Website Visitors
+        1. Responsibility of website Visitors
       </h2>
       <p>
         As a visitor to our website Robloxsongcodes.com, you have a few
@@ -44,16 +44,16 @@ const MainContent = () => {
               Impersonate any person or entity, or misrepresent your affiliation
               with any person or organization.
             </li>
-            <li>Use the Website for any illegal or unauthorized purposes.</li>
+            <li>Use the website for any illegal or unauthorized purposes.</li>
             <li>
-              Disrupt or interfere with the Website, its servers, or networks
-              connected to the Website.
+              Disrupt or interfere with the website, its servers, or networks
+              connected to the website.
             </li>
           </ul>
         </li>
       </ul>
       <p>
-        Following these rules, you help keep our website roblox.geekguidez.com
+        Following these rules, you help keep our website Robloxsongcodes.com
         safe and enjoyable for everyone.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
@@ -75,30 +75,29 @@ const MainContent = () => {
         3. Disclaimer of Warranties
       </h2>
       <p>
-        The Website is provided &quot;as is&quot;: Robloxsongcodes.com and its
-        suppliers and licensors do not make any guarantees about the Website.
+        The website is provided &quot;as is&quot;: Robloxsongcodes.com and its
+        suppliers and licensors do not make any guarantees about the website.
         This includes guarantees about quality, suitability for a specific
         purpose, and non-infringement of rights.
       </p>
       <p>
-        Roblox.geekguidez.com and its suppliers and licensors do not guarantee
-        that the Website will be free of errors or that it will always be
-        available without interruption. You understand that any content or
-        services you download or obtain from the Website are done at your own
-        risk.
+        Robloxsongcodes.comand its suppliers and licensors do not guarantee that
+        the website will be free of errors or that it will always be available
+        without interruption. You understand that any content or services you
+        download or obtain from the website are done at your own risk.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         4. Use of Services
       </h2>
       <p>
-        You agree to use the Website only through the interface provided by
+        You agree to use the website only through the interface provided by
         Robloxsongcodes.com. Unless you have a separate agreement with
-        Robloxsongcodes.com, do not try to access the Website in any other way.
+        Robloxsongcodes.com, do not try to access the website in any other way.
       </p>
       <p>
         Specifically, do not use automated methods like scripts or web crawlers
-        to access the Website. Make sure to follow the instructions in any
-        robots.txt file on the Website.
+        to access the website. Make sure to follow the instructions in any
+        robots.txt file on the website.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         5. Copyright Infringement & DMCA Policy
@@ -122,7 +121,7 @@ const MainContent = () => {
       <p>
         If a visitor repeatedly infringes on the copyrights or other
         intellectual property rights of Robloxsongcodes.com or others, we may
-        terminate or deny their access to the Website. In such cases,
+        terminate or deny their access to the website. In such cases,
         Robloxsongcodes.com will not provide a refund for any amounts previously
         paid.
       </p>
@@ -140,8 +139,8 @@ const MainContent = () => {
         Robloxsongcodes.com.
       </p>
       <p>
-        Other trademarks and logos on the Website may belong to different
-        companies. Your use of the Website does not give you permission to use
+        Other trademarks and logos on the website may belong to different
+        companies. Your use of the website does not give you permission to use
         or copy any trademarks from Robloxsongcodes.com or others.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">7. Modifications</h2>
@@ -151,12 +150,12 @@ const MainContent = () => {
         periodically for changes.
       </p>
       <p>
-        Your continued use of or access to the Website following the posting of
+        Your continued use of or access to the website following the posting of
         any changes to this Agreement constitutes acceptance of those changes.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">8. Termination</h2>
       <p>
-        Robloxsongcodes.com can stop your access to the Website at any time, for
+        Robloxsongcodes.com can stop your access to the website at any time, for
         any reason, with or without warning, and it will take effect right away.
       </p>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">9. Governing Law</h2>
