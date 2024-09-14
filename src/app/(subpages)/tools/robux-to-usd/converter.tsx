@@ -210,15 +210,7 @@ const Converter = () => {
                     <FormLabel
                       className={`col-span-12 md:col-span-3 mt-[6px] flex`}
                     >
-                      Robux
-                      <Image
-                        width="18"
-                        height="18"
-                        src="https://img.icons8.com/color/48/robux--v1.png"
-                        alt="robux--v1"
-                        className="mx-[3px] mt-[-1px]"
-                      />
-                      :
+                      Robux 
                     </FormLabel>
                     <FormControl className="col-span-11 md:col-span-8">
                       <Input
