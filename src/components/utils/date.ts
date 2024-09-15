@@ -2,7 +2,7 @@
 export const getFormattedDate = (): string => {
   const date = new Date();
   const options: Intl.DateTimeFormatOptions = {
-    month: "short",
+    //month: "long",
     year: "numeric",
   };
   return date.toLocaleDateString("en-US", options);

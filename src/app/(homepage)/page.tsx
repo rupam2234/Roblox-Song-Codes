@@ -7,7 +7,7 @@ import { getFormattedDate } from "@/components/utils/date";
 import HandleCategories from "./handleCategories";
 
 export const metadata: Metadata = {
-  title: "Best Roblox Song Codes For Boombox",
+  title: "Best Working Roblox Song Codes | Boombox Song IDs",
   description:
     "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
@@ -33,7 +33,7 @@ const HomePage = () => {
     <main>
       <div className="p-6 lg:px-[140px]">
         <FeaturedBox
-          title={`Roblox Song Codes (${formattedDate}) - Best Boombox Music IDs`}
+          title={`Best Roblox Song Codes For Boombox (Working in ${formattedDate})`}
           descriptionText1={
             "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
           }
