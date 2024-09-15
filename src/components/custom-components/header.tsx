@@ -86,7 +86,7 @@ const Header = () => {
 
   return (
     <div className="p-6 lg:px-[170px] lg:py-3 bg-[#5F8C81] flex justify-between">
-      <div className="flex justify-start">
+      <div className="flex justify-start w-[115px] h-[5px]">
         <Link href={"/"}>
           <Image
             src={"/media/Roblox Song Codes Logo.png"}
