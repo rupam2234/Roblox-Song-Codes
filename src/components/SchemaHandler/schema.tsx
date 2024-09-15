@@ -1,4 +1,4 @@
-interface SchemaData {
+export interface SchemaData {
   Headline: string;
   AuthorName: string;
   PageUrl: string;

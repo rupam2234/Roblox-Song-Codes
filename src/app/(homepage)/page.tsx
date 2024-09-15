@@ -5,6 +5,7 @@ import Sidebar from "@/components/custom-components/sidebar";
 import FeaturedBox from "../../components/custom-components/featuredBox";
 import { getFormattedDate } from "@/components/utils/date";
 import HandleCategories from "./handleCategories";
+import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
 export const metadata: Metadata = {
   title: "Best Working Roblox Song Codes | Boombox Song IDs",
@@ -46,6 +47,15 @@ const HomePage = () => {
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
+          <HomapageSchema
+            Headline={`Best Roblox Song Codes For Boombox (Working in ${formattedDate})`}
+            PageUrl={"/"}
+            PageAbout={
+              "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
+            }
+            AuthorName={""}
+            PageName={""}
+          />
           <TopContent />
           <HandleCategories />
           <BottomContents />

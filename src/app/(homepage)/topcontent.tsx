@@ -1,5 +1,6 @@
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
 const TopContent = () => {
   return (
