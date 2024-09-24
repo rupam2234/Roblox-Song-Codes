@@ -48,7 +48,7 @@ const HomePage = () => {
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
           <HomapageSchema
-            Headline={`Best Roblox Song Codes For Boombox (Working in ${formattedDate})`}
+            Headline={`Roblox Song Codes - Largest Working Boombox Song ID Database`}
             PageUrl={"/"}
             PageAbout={
               "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
