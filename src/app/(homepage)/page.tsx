@@ -8,7 +8,7 @@ import HandleCategories from "./handleCategories";
 import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
 export const metadata: Metadata = {
-  title: "Best Working Roblox Song Codes | Boombox Song IDs",
+  title: "Roblox Song Codes - Largest Working Boombox Song ID Database",
   description:
     "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   publisher: "GeekGuidez",
   openGraph: {
-    title: "Best Working Roblox Song Codes For Boombox",
+    title: "Roblox Song Codes - Largest Working Boombox Song ID Database",
     description:
       "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
     siteName: "Geek Guidez",
@@ -34,7 +34,7 @@ const HomePage = () => {
     <main>
       <div className="p-6 lg:px-[140px]">
         <FeaturedBox
-          title={`Best Roblox Song Codes For Boombox (Working in ${formattedDate})`}
+          title={`Roblox Song Codes - Largest Working Boombox Song ID Database`}
           descriptionText1={
             "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
           }
