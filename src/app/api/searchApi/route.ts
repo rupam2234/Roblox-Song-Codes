@@ -33,11 +33,11 @@ export async function GET(req: NextRequest) {
     const result = await sql<DBRow[]>`
       SELECT name, id, ratings, genres, duration, artist, update_date
       FROM assets
-      WHERE name ILIKE ${`%${name}%`}
+      WHERE name ILIKE ${`%${name}%`} OR artist ILIKE ${`%${name}%`}
       UNION
       SELECT name, id, ratings, genres, duration, artist, update_date
       FROM vibes
-      WHERE name ILIKE ${`%${name}%`}
+      WHERE name ILIKE ${`%${name}%`} OR artist ILIKE ${`%${name}%`}
     `;
 
     const rows = mapToDBRow(result.rows);

@@ -24,8 +24,9 @@ const SearchBar = () => {
   });
 
   const onSubmit = (data: z.infer<typeof SearchFormSchema>) => {
+    const trimmedSongName = data.SongName.trim();
     // Programmatically navigate to the search page with the query parameter
-    router.push(`/search?SongName=${encodeURIComponent(data.SongName)}`);
+    router.push(`/search?SongName=${encodeURIComponent(trimmedSongName)}`);
   };
 
   return (
@@ -42,7 +43,7 @@ const SearchBar = () => {
                 <FormControl>
                   <div className="relative flex items-center">
                     <Input
-                      placeholder="Type a song name"
+                      placeholder="Type a song or artist name"
                       {...field}
                       autoComplete="off"
                       className="outline-none w-72 px-5 focus-visible:ring-0 bg-gray-100 text-black focus-visible:ring-transparent rounded-none flex-grow"
