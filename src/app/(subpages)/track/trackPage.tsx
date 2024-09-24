@@ -14,7 +14,6 @@ import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 
 const TrackPage = () => {
-  //const router = useRouter();
   const [SongData, setSongData] = useState<SongIDs[]>([]);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
   const [songRated, setsongRated] = useState(false);
@@ -42,14 +41,6 @@ const TrackPage = () => {
             const data = await response.json();
             setSongData(data);
             setHasFetched(true);
-
-            // if (data.length > 0) {
-            //   const songName = data[0].name;
-            //   const currentUrl = new URL(window.location.href);
-
-            //   // Add the name to the URL
-            //   router.push(`${currentUrl.pathname}?id=${id}&name=${songName}`);
-            // }
           } else {
             console.error("Failed to fetch track details");
           }
@@ -293,22 +284,6 @@ const TrackPage = () => {
                   </p>
                   <br />
                   <p>
-                    If you don&apos;t have the Boombox Pass you can still look
-                    for free Boombox alternatives experience in Roblox. Open
-                    Roblox and search for{" "}
-                    <a
-                      href="https://www.roblox.com/discover/?Keyword=boombox"
-                      rel="nofollow"
-                      target="_blank"
-                      className="text-blue-600 hover:text-blue-400"
-                    >
-                      boombox in experience
-                    </a>
-                    , you will find a lot of options with free Boombox players
-                    where you can test your music IDs.
-                  </p>
-                  <br />
-                  <p>
                     Leave a thumb if you liked the audio and the track ID is
                     working on Boombox. This will help us filter the song IDs
                     that is truely working on Roblox.
@@ -330,6 +305,32 @@ const TrackPage = () => {
                     3
                   )}`}
                 />
+                <br />
+                <div className="text-[16px] space-y-3">
+                  <p>
+                    <strong>
+                      You can find more such song IDs on these pages:
+                    </strong>
+                  </p>
+                  <ul className="space-y-3 terms-list">
+                    <li>
+                      <a
+                        href="/blog/latest-roblox-song-codes"
+                        className="text-blue-600 hover:text-blue-500 hover:underline"
+                      >
+                        Latest Working Roblox Song Codes (Tested).
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/blog/monstercat-roblox-songs"
+                        className="text-blue-600 hover:text-blue-500 hover:underline"
+                      >
+                        Latest Monstercat Roblox Song IDs.
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           ))
