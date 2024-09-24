@@ -3,7 +3,6 @@ import TopContent from "./topcontent";
 import BottomContents from "./bottomContent";
 import Sidebar from "@/components/custom-components/sidebar";
 import FeaturedBox from "../../components/custom-components/featuredBox";
-import { getFormattedDate } from "@/components/utils/date";
 import HandleCategories from "./handleCategories";
 import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
@@ -28,8 +27,6 @@ export const metadata: Metadata = {
 };
 
 const HomePage = () => {
-  const formattedDate = getFormattedDate();
-
   return (
     <main>
       <div className="p-6 lg:px-[140px]">

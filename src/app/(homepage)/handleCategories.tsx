@@ -39,6 +39,10 @@ const HandleCategories = () => {
       tagName: "Lofi",
       icon: Check,
     },
+    {
+      tagName: "Pop",
+      icon: Check,
+    },
   ];
 
   return (
