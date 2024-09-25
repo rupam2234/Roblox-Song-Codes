@@ -150,6 +150,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       .replace(/[^a-z0-9-]/g, ""); // Remove any characters that aren't letters, numbers, or hyphens
   };
 
+  // not in use
   const handleRowClick = (rowData: { id: number; name: string }) => {
     const { id, name } = rowData;
     const encodedName = formatNameForURL(name);
@@ -177,10 +178,10 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
           return (
             <Link
               href={`/track?id=${id}&name=${formatNameForURL(name)}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleRowClick({ id, name });
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   handleRowClick({ id, name });
+              // }}
               className="hover:text-blue-400"
               target="_blank"
               rel="noopener noreferrer"
