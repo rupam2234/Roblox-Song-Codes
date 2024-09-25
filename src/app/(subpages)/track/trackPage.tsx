@@ -181,7 +181,7 @@ const TrackPage = () => {
     try {
       window.open(
         `https://roblox.com/library/${SongData.map((song) => song.id)}`,
-        "_blank",
+        "_blank"
       );
     } catch (error) {
       console.log(error);
@@ -298,7 +298,7 @@ const TrackPage = () => {
                   <div className="mt-6">
                     <Button
                       variant={"secondary"}
-                      className="bg-[#ff804e] hover:bg-[#FF804E] hover:text-white text-white flex items-center"
+                      className="bg-[#ff804e] hover:bg-[#ff7040] hover:shadow-lg hover:text-white text-white flex items-center group"
                       onClick={handleListenButton}
                     >
                       Listen on Roblox
@@ -309,7 +309,7 @@ const TrackPage = () => {
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                         stroke="#ffffff"
-                        className="ml-2"
+                        className="ml-2 transition-transform duration-500 ease-in-out group-hover:translate-x-1"
                       >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g
