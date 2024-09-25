@@ -20,7 +20,7 @@ const Contact = () => {
             "If you have any questions or would like to discuss anything related to the content on this website, please feel free to reach out using the contact details provided."
           }
           descriptionText2={
-            "123 Main Street, Anytown, CA 12345, United States | team@geekguidez.com | Or you can use the contact form below."
+            "You can either connect with us at this address: support@robloxsongcodes.com or you can use the contact form below | 123 Main Street, Anytown, CA 12345, United States"
           }
           image="/media/Contact_bg.png"
           altText={"contact-us"}
