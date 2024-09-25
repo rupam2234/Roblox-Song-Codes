@@ -6,20 +6,22 @@ import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
 import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
 
+const formattedDate = getFormattedDate();
+
 export const metadata: Metadata = {
-  title: "Popular Song Codes For Boombox",
+  title: `Popular Song Codes For Boombox (Working in ${formattedDate})`,
   description:
     "We have filtered highest rated tracks by users to find the coolest songs to play on Boombox.",
 };
 
 const PolularTracks = () => {
-  const formattedDate = getFormattedDate();
+  
 
   return (
     <main>
       <div className="p-6 lg:px-[140px]">
         <FeaturedBox
-          title={`Popular Boombox Music Codes (${formattedDate})`}
+          title={`Popular Song Codes For Boombox (Working in ${formattedDate})`}
           descriptionText1={
             "This comprehensive collection includes a complete list of tested Roblox song codes from a wide range of popular genres. We've filtered the higested 'USER RATED' trending songs to offer you the absolute best song IDs for your Boombox experience."
           }

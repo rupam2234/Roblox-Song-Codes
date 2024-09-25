@@ -6,8 +6,13 @@ import FeaturedBox from "../../components/custom-components/featuredBox";
 import HandleCategories from "./handleCategories";
 import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
+const date = new Date();
+
+const month = date.toLocaleString("default", { month: "long" });
+const year = date.getFullYear();
+
 export const metadata: Metadata = {
-  title: "Roblox Song Codes - Largest Working Boombox Song ID Database",
+  title: `All Roblox Song Codes & Working Song IDs (${month} ${year})`,
   description:
     "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
@@ -18,7 +23,7 @@ export const metadata: Metadata = {
   ],
   publisher: "GeekGuidez",
   openGraph: {
-    title: "Roblox Song Codes - Largest Working Boombox Song ID Database",
+    title: `All Roblox Song Codes & Working Song IDs (${month} ${year})`,
     description:
       "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
     siteName: "Geek Guidez",
@@ -45,7 +50,7 @@ const HomePage = () => {
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
           <HomapageSchema
-            Headline={`Roblox Song Codes - Largest Working Boombox Song ID Database`}
+            Headline={`All Roblox Song Codes & Working Song IDs (${month} ${year})`}
             PageUrl={"/"}
             PageAbout={
               "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
