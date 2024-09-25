@@ -40,7 +40,7 @@ const CopyRightFreeIds = () => {
         author={"Leon Klein"}
         publishDate={"25 september, 2024"}
         featuredImage={"/media/Roblox Music Codes That Are Not Copyrighted.png"}
-        featuredImageAlt={"Latest-Monstercat-Roblox-Song-IDs"}
+        featuredImageAlt={"Roblox-Music-Codes-That-Are-Not-Copyrighted"}
       />
       <div className="space-y-6 text-[16px] mt-8 text-gray-700 leading-relaxed">
         <p>
@@ -99,10 +99,10 @@ const CopyRightFreeIds = () => {
           </li>
           <li>
             <a
-              href="/blog/latest-roblox-song-codes"
+              href="/blog/monstercat-roblox-songs"
               className="text-blue-500 hover:text-orange-500"
             >
-              Latest Working Roblox Song Codes
+              Latest Monstercat Roblox Song IDs
             </a>
           </li>
         </ul>

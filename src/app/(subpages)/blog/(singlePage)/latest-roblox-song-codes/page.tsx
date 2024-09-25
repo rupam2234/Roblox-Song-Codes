@@ -99,6 +99,34 @@ const BlogPost_2 = () => {
           , so you can discover your track from favorite genre and continue
           jamming your own personal hits along the way.
         </p>
+        <p>...or</p>
+        <p>Take a look into our classified lists of Boombox IDs that works:</p>
+        <ul className="terms-list space-y-3">
+          <li>
+            <a
+              href="/blog/roblox-music-codes-not-copyrighted"
+              className="text-blue-500 hover:text-orange-500"
+            >
+              Roblox Music Codes That Are Not Copyrighted
+            </a>
+          </li>
+          <li>
+            <a
+              href="/popular-tracks"
+              className="text-blue-500 hover:text-orange-500"
+            >
+              Popular Boombox Music IDs
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog/monstercat-roblox-songs"
+              className="text-blue-500 hover:text-orange-500"
+            >
+              Latest Monstercat Roblox Song IDs
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   );

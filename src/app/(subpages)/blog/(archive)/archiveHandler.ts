@@ -25,6 +25,14 @@ let archive: archiveModules[] = [
       "Here’s a list of Roblox music IDs published by Monstercat. We’ve tested all codes to ensure they work on your Boombox, so you can enjoy them without issues.",
     postLink: "/monstercat-roblox-songs",
   },
+  {
+    postname: "300+ Roblox Music Codes That Are Not Copyrighted",
+    postFeatureImage: "/media/Roblox Music Codes That Are Not Copyrighted.png",
+    imageAlt: "Roblox-Music-Codes-That-Are-Not-Copyrighted",
+    postDescription:
+      "Here’s a list of copyright free Roblox music IDs. We have programmatically tested these codes so you can enjoy them without issues.",
+    postLink: "/roblox-music-codes-not-copyrighted",
+  },
 ];
 
 export function getArchive(): archiveModules[] {
