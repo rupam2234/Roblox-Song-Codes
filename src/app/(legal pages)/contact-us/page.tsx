@@ -20,7 +20,7 @@ const Contact = () => {
             "If you have any questions or would like to discuss anything related to the content on this website, please feel free to reach out using the contact details provided."
           }
           descriptionText2={
-            "You can reach us at support@robloxsongcodes.com, or simply use the contact form below:"
+            "You can reach us at support@robloxsongcodes.com, or simply use the contact form below: - "
           }
           image="/media/Contact_bg.png"
           altText={"contact-us"}
