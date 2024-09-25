@@ -57,8 +57,8 @@ const TrackPage = () => {
     if (SongData.length > 0) {
       // Assuming SongData[0] contains the relevant song details
       const songName = SongData[0].name;
-      const title = `${songName} - Song Code For Boombox`;
-      const description = `Get the Roblox song code for ${songName} and use it on your Boombox.`;
+      const title = `${songName} - Roblox Music ID For Boombox`;
+      const description = `Get the Roblox song code for ${songName} and use it on your Boombox player.`;
 
       // Update the document's title and meta description
       document.title = title;
@@ -175,6 +175,19 @@ const TrackPage = () => {
     }
   }, [songRated, toast]);
 
+  function handleListenButton(
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void {
+    try {
+      window.open(
+        `https://roblox.com/library/${SongData.map((song) => song.id)}`,
+        "_blank",
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <main className="grid-cols-12 grid md:gap-10 min-h-screen p-6 lg:px-[170px]">
       <section className="lg:col-span-8 col-span-12 place-items-center">
@@ -280,15 +293,46 @@ const TrackPage = () => {
                 <div className="text-[17px]">
                   <p className="mt-14">
                     You can use the <strong>{song.id}</strong> code to play the
-                    &quot;{song.name}&quot; on Boombox audio player.
+                    &quot;{song.name}&quot; on Boombox audio player. Or...
                   </p>
+                  <div className="mt-6">
+                    <Button
+                      variant={"secondary"}
+                      className="bg-[#ff804e] hover:bg-[#FF804E] hover:text-white text-white flex items-center"
+                      onClick={handleListenButton}
+                    >
+                      Listen on Roblox
+                      <svg
+                        fill="#ffffff"
+                        width="20px" // Adjust the size as needed
+                        height="20px"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffffff"
+                        className="ml-2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            id="primary"
+                            d="M18.86,5A9.38,9.38,0,0,0,2.64,12.05L3,17v1a4,4,0,0,0,4,4H8a2,2,0,0,0,2-2V13a2,2,0,0,0-2-2H7a3.94,3.94,0,0,0-2.36.79A7.37,7.37,0,0,1,12,4a7.37,7.37,0,0,1,7.36,7.79A3.94,3.94,0,0,0,17,11H16a2,2,0,0,0-2,2v7a2,2,0,0,0,2,2h1a4,4,0,0,0,4-4V17l.36-5A9.43,9.43,0,0,0,18.86,5Z"
+                            style={{ fill: "#ffffff" }}
+                          ></path>
+                        </g>
+                      </svg>
+                    </Button>
+                  </div>
                   <br />
                   <p>
                     Leave a thumb if you liked the audio and the track ID is
                     working on Boombox. This will help us filter the song IDs
                     that is truely working on Roblox.
                   </p>
-
                   <h2 className="mt-14 font-bold text-[20px] text-[#5F8C81]">
                     Similar Tracks You May Like:
                   </h2>
