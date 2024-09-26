@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Dancing_Script } from "next/font/google";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   FacebookShareButton,
@@ -22,8 +22,8 @@ const cute = Dancing_Script({
 const Share = () => {
   const title = "Roblox Song Codes | Tested Boombox Music IDs";
 
+  const [pageTitle, setPageTitle] = useState("");
   const [Url, setUrl] = useState("");
-  const router = useRouter();
   const pathname = usePathname();
   const [mediaUrl, setMediaUrl] = useState("");
   const [description, setDescription] = useState("");
@@ -54,28 +54,22 @@ const Share = () => {
       setMediaUrl(filteredImages[0].src);
     }
 
-    // Extract description from the page's source code
-    const extractDescriptionFromSource = () => {
-      const scripts = document.querySelectorAll("script");
-      let foundDescription = "";
+  }, []);
 
-      scripts.forEach((script) => {
-        const scriptContent = script.innerText || script.textContent;
-        if (scriptContent && scriptContent.includes("description")) {
-          const match = scriptContent.match(/description:\s*['"]([^'"]+)['"]/);
-          if (match) {
-            foundDescription = match[1];
-          }
-        }
-      });
+  useEffect(() => {
+    const extractMetaData = () => {
+      // Extract title
+      const titleElement = document.querySelectorAll('title');
+      const titleText = titleElement.length > 0 ? titleElement[0]?.textContent || '' : '';
+      setPageTitle(titleText);
 
-      return foundDescription;
+      // Extract meta description
+      const metaDescriptionElement = document.querySelector('meta[property="og:description"]');
+      const metaDescriptionContent = metaDescriptionElement?.getAttribute('content') || '';
+      setDescription(metaDescriptionContent);
     };
 
-    const description = extractDescriptionFromSource();
-    if (description) {
-      setDescription(description);
-    }
+    extractMetaData();
   }, []);
 
   useEffect(() => {
@@ -110,7 +104,7 @@ const Share = () => {
       <div className="flex gap-3">
         <FacebookShareButton
           url={Url}
-          title={title}
+          title={pageTitle}
           hashtag="Roblox Song Codes"
         >
           <div className="rounded-full bg-[#3B5998] hover:bg-transparent text-white hover:text-black p-3 border">
@@ -118,14 +112,14 @@ const Share = () => {
           </div>
         </FacebookShareButton>
 
-        <RedditShareButton url={Url} title={title}>
+        <RedditShareButton url={Url} title={pageTitle}>
           <div className="rounded-full bg-[#FF4500] hover:bg-transparent text-white hover:text-[#FF4500] p-3 border">
             <FaReddit className="w-4 h-4" />
           </div>
         </RedditShareButton>
         <TwitterShareButton
           url={Url}
-          title={title}
+          title={pageTitle}
           hashtags={["Roblox", "SongIDs", "Boombox"]}
           related={["@GeekGuidez"]}
         >
@@ -141,7 +135,7 @@ const Share = () => {
         </TwitterShareButton>
         <PinterestShareButton
           url={Url}
-          title={title}
+          title={pageTitle}
           description={description}
           pinId=""
           media={mediaUrl}
