@@ -51,7 +51,7 @@ const TrackPage = () => {
 
       fetchTrackDetails();
     }
-  }, [hasFetched]);
+  }, []);
 
   useEffect(() => {
     if (SongData.length > 0) {
