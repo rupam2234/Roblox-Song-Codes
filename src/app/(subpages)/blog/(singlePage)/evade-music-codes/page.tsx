@@ -78,7 +78,7 @@ const EvadeSongCodes = () => {
           <li>6765683083 - Caramelo (Ozuna)</li>
           <li>6781116057 - Dejavu (Olivia Rodrigo)</li>
           <li>8222790838 - Cake (Melanie Martinez) </li>
-          <li>6913550990 - It's been so long</li>
+          <li>6913550990 - It&apos;s been so long</li>
           <li>8291162351 - Wannabe (LOOP - Spice Girls)</li>
           <li>1844750628 - Oversized (Peter Jordan)</li>
           <li>7029011778 - No sleep (Beach Season)</li>
@@ -90,7 +90,7 @@ const EvadeSongCodes = () => {
           <li>8964762256 - Say It right (LOOP - Nelly Furtado)</li>
           <li>6797864253 - Nya arigato (LOUD - Tokyo)</li>
           <li>1839983980 - Pull Over (Ronald Fritz)</li>
-          <li>11809028042 - I'm back baby</li>
+          <li>11809028042 - I&apos;m back baby</li>
           <li>1841425090 - Pink limonade</li>
           <li>6703926669 - Surf Cure (Freaks)</li>
           <li>8494188412 - Renai Circulation</li>
