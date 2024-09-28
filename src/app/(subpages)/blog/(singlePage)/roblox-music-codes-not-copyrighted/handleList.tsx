@@ -62,7 +62,8 @@ const HandleList = ({ apiEndpoint }: fetchSongProps) => {
                 >
                   <strong>{song.name}</strong>
                 </Link>{" "}
-                - {song.id} - ({song.artist})
+                - <span style={{ display: "inline-block" }}>{song.id}</span> - (
+                {song.artist})
               </p>
             </li>
           ))}

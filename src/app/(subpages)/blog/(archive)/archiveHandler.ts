@@ -33,6 +33,14 @@ let archive: archiveModules[] = [
       "Here’s a list of copyright free Roblox music IDs. We have programmatically tested these codes so you can enjoy them without issues.",
     postLink: "/roblox-music-codes-not-copyrighted",
   },
+  {
+    postname: "30+ Evade Music Codes That You Should Not Miss",
+    postFeatureImage: "/media/Roblox Music Codes That Are Not Copyrighted.png",
+    imageAlt: "Roblox-Music-Codes-That-Are-Not-Copyrighted",
+    postDescription:
+      "Here’s a list of copyright free Roblox music IDs. We have programmatically tested these codes so you can enjoy them without issues.",
+    postLink: "/evade-music-codes",
+  },
 ];
 
 export function getArchive(): archiveModules[] {

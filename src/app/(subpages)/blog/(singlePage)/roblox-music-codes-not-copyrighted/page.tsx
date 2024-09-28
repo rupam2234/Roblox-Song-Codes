@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     "Copyright free Roblox song codes",
     "roblox copyright free songs",
   ],
-  publisher: "GeekGuidez",
+  publisher: "Roblox Song Codes",
   openGraph: {
     title: `Roblox Music Codes That Are Not Copyrighted (${month} ${year})`,
     description:
       `Here’s a list of copyright free Roblox music IDs that are working as of ${year}. We have programmatically tested these codes to ensure they work on Boombox, so you can enjoy them without issues.`,
     images: "/media/Roblox Music Codes That Are Not Copyrighted.png",
-    publishedTime: "10 september, 2024",
+    publishedTime: "25 september, 2024",
     authors: "Leon Klein",
   },
 };
