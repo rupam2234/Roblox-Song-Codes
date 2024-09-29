@@ -29,6 +29,11 @@ export default function RootLayout({
           name="google-site-verification"
           content="B7bk0lZ8erO_gdIJbWXsOWsUZAkd48i8wxa2ecf0SME"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7255780745640035"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={cn("text-[17px]", inter.className)}>
         <Header />
