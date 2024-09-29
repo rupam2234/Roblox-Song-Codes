@@ -43,6 +43,10 @@ const HandleCategories = () => {
       tagName: "Pop",
       icon: Check,
     },
+    {
+      tagName: "Hip-hop",
+      icon: Check,
+    },
   ];
 
   return (
