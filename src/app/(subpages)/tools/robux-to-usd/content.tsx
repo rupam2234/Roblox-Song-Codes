@@ -1,6 +1,6 @@
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
-import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 import Image from "next/image";
 
 const Content = () => {
@@ -19,12 +19,7 @@ const Content = () => {
         </a>
         and converted into other currencies like USD, GBP, CAD and EUR.
       </p>
-      <div className="hidden sm:block">
-        <AdsDesktopIncontent />
-      </div>
-      <div className="block md:hidden">
-        <ResponsiveAd />
-      </div>
+      <FirstInContentAd />
       <p>
         We have configured the current payout rates such as Dev Exchange is
         0.0035 USD per Robux for each currencies. When you enter the amount of
@@ -90,7 +85,7 @@ const Content = () => {
         <li>EUR Rate: 0.0102 EUR / Robux</li>
         <li>GBP Rate: 0.0088 GBP / Robux</li>
       </ul>
-      <AdsMobileIncontent />
+      <InContentAd2 />
       <h2 className="font-bold text-[20px] text-[#5F8C81]">What Can Change?</h2>
       <p>
         Exchange rates can fluctuate over time due to various factors, and as a

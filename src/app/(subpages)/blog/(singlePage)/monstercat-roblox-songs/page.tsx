@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
-import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 import TableSchemaHandler from "@/components/SchemaHandler/schema";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 
 export const metadata: Metadata = {
   title: "Latest Monstercat Roblox Song IDs That Works",
@@ -81,8 +80,7 @@ const MonsterCatList = () => {
           all the tracks are working smoothly.
         </p>
         <br />
-        <AdsDesktopIncontent />
-        <AdsMobileIncontent />
+        <FirstInContentAd/>
         <TableSchemaHandler
           Headline={"Monstercat Roblox Song IDs That Works"}
           AuthorName={"Leon Klein"}
@@ -113,7 +111,7 @@ const MonsterCatList = () => {
           for Boombox in experience and you&apos;ll find a lot of games that
           offers to play Boombox music for free.{" "}
         </p>
-        <ResponsiveAd />
+        <InContentAd3 />
         <h3 className="font-bold text-[18px] text-[#5F8C81]">
           More Roblox Song IDs:
         </h3>

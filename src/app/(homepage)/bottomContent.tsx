@@ -1,6 +1,12 @@
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
+
 const BottomContents = () => {
   return (
     <div className="text-[17px] mt-10 text-gray-600 space-y-5 mb-24">
+      <div className="my-3 items-center justify-center">
+        <FirstInContentAd />
+      </div>
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         How to use Roblox music codes in Boombox?
       </h2>
@@ -48,6 +54,7 @@ const BottomContents = () => {
         To play a specific track, type :music followed by a space, and then
         paste your music ID using Ctrl+V (Cmd+V on Mac).
       </p>
+      
       <p>Here&apos;s an example:</p>
       <br />
       <div className="py-2 px-4 rounded-sm bg-gray-700 text-[#C5D6CB]">
@@ -57,6 +64,7 @@ const BottomContents = () => {
         </code>
       </div>
       <br />
+      <InContentAd2/>
       <p className="font-bold  text-[#5F8C81]">Discover More Codes:</p>
       <ul className="terms-list space-y-3">
         <li>

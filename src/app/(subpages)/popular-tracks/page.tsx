@@ -3,8 +3,7 @@ import Sidebar from "@/components/custom-components/sidebar";
 import { Metadata } from "next";
 import { getFormattedDate } from "@/components/utils/date";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 
 const formattedDate = getFormattedDate();
 
@@ -15,8 +14,6 @@ export const metadata: Metadata = {
 };
 
 const PolularTracks = () => {
-  
-
   return (
     <main>
       <div className="p-6 lg:px-[140px]">
@@ -51,13 +48,7 @@ const PolularTracks = () => {
             using the search bar and start playing on boombox player with the
             music ID.
           </p>
-          <div className="my-3 hidden md:block items-center justify-center">
-            <AdsDesktopIncontent />
-          </div>
-          <div className="my-4 block md:hidden mx-auto">
-            <AdsMobileIncontent />
-          </div>
-
+          <FirstInContentAd />
           <FetchSongs apiEndpoint={"/api/popularTrack"} />
           <p>
             In case you are looking for tracks that aren&apos;t in this list,

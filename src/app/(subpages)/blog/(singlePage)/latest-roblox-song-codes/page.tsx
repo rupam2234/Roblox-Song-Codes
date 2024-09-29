@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
-import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
 
 export const metadata: Metadata = {
   title: "Latest Working Roblox Song Codes in 2024",
@@ -48,7 +50,7 @@ const BlogPost_2 = () => {
           tracks may disappear, that would definitely leave gaps in your
           playlist. But the good new is — new codes are always available.
         </p>
-        <ResponsiveAd />
+        <InContentAd2 />
         <p>
           Here&apos;s a list of Roblox song codes to keep your game soundtrack
           fresh and exciting. We have tested all these codes and are currently
@@ -71,7 +73,7 @@ const BlogPost_2 = () => {
           <li>Ripped Away - KPM - 1840944319</li>
           <li>Hard Rock Madness - AXS - 1836088813</li>
           <li>We Gotta Try - Montmorency - 9046078700</li>
-          <ResponsiveAd />
+          <FirstInContentAd />
           <li>Hell or High Water - KPM - 1841651723</li>
           <li>We Go Far - Kosinus - 1839428776</li>
           <li>Shadows In The Exit - Pop Machine - 9047018818</li>

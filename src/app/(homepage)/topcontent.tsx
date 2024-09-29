@@ -1,6 +1,3 @@
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
-import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
 const TopContent = () => {
   return (
@@ -29,12 +26,6 @@ const TopContent = () => {
           </a>
           .
         </p>
-        <div className="my-3 hidden md:block items-center justify-center">
-          <AdsDesktopIncontent />
-        </div>
-        <div className="my-4 block md:hidden mx-auto">
-          <AdsMobileIncontent />
-        </div>
       </div>
     </>
   );

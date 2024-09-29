@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 
 const date = new Date();
 const year = date.getFullYear();
@@ -66,6 +69,7 @@ const EvadeSongCodes = () => {
           will be available. And here are a few working music codes for Evade
           that you can start playing right now.
         </p>
+        <FirstInContentAd />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           30+ Working Evade Music Codes for {year}
         </h2>
@@ -128,6 +132,7 @@ const EvadeSongCodes = () => {
           </a>{" "}
           that are working on Boombox.
         </p>
+        <InContentAd2 />
         <p>
           You can bookmark this page or this site, and always find codes that
           are currently working on Roblox because we programmatically filter out
@@ -168,6 +173,7 @@ const EvadeSongCodes = () => {
           great chance of finding some cool tracks by typing “Evade Music Codes{" "}
           {year}”
         </p>
+        <InContentAd3 />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           Tips for Enhancing Your Evade Music Experience{" "}
         </h2>

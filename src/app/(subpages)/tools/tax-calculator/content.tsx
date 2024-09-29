@@ -1,6 +1,6 @@
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
-import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 import Image from "next/image";
 
 const ContentSection = () => {
@@ -13,7 +13,7 @@ const ContentSection = () => {
         marketplace, helping you know exactly how much you or the creator will
         receive for the item.
       </p>
-      <ResponsiveAd />
+      <FirstInContentAd />
       <p>Here&apos;s how it works: </p>
       <ul className="terms-list space-y-3">
         <li>
@@ -67,7 +67,7 @@ const ContentSection = () => {
         offering developers tools and resources to create and monetize their
         content.
       </p>
-      <AdsMobileIncontent />
+      <InContentAd2 />
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         How is Roblox Tax Calculated?
       </h2>
@@ -127,6 +127,7 @@ const ContentSection = () => {
         celebrated this long-awaited change. It was a moment of triumph, a rare
         win for the creative minds powering the Roblox world.
       </p>
+      <InContentAd3 />
       <div>
         <p>
           <strong>Disclaimer:</strong> This tool is not an official Roblox

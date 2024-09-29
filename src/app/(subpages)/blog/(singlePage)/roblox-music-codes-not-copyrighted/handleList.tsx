@@ -1,8 +1,10 @@
 "use client";
 
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 import { SongIDs } from "@/components/custom-components/constants";
 import { Loader2Icon } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import { useEffect, useState } from "react";
 
 type fetchSongProps = {
@@ -49,23 +51,31 @@ const HandleList = ({ apiEndpoint }: fetchSongProps) => {
     <div>
       {data.length > 0 ? (
         <ul className="space-y-3 terms-list text-[13px] md:text-[14px] lg:text-[15px]">
-          {data.map((song) => (
-            <li key={song.id}>
-              <p>
-                <Link
-                  href={`/track?id=${song.id}&name=${formatNameForURL(
-                    song.name
-                  )}`}
-                  className="hover:text-orange-500 text-blue-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <strong>{song.name}</strong>
-                </Link>{" "}
-                - <span style={{ display: "inline-block" }}>{song.id}</span> - (
-                {song.artist})
-              </p>
-            </li>
+          {data.map((song, index) => (
+            <React.Fragment key={song.id}>
+              <li>
+                <p>
+                  <Link
+                    href={`/track?id=${song.id}&name=${formatNameForURL(
+                      song.name
+                    )}`}
+                    className="hover:text-orange-500 text-blue-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>{song.name}</strong>
+                  </Link>{" "}
+                  - <span style={{ display: "inline-block" }}>{song.id}</span> -
+                  ({song.artist})
+                </p>
+              </li>
+              {/* Insert the ad after every 100th item without a bullet point */}
+              {(index + 1) % 100 === 0 && (
+                <li className="list-none">
+                  <FirstInContentAd />
+                </li>
+              )}
+            </React.Fragment>
           ))}
         </ul>
       ) : (

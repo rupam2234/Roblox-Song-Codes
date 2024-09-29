@@ -10,8 +10,7 @@ import { useToast } from "@/components/ui/use-toast";
 import ProgressBar from "@/components/custom-components/progressbar";
 import Sidebar from "@/components/custom-components/sidebar";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
-import AdsDesktopIncontent from "@/components/adsense-ads/horizontal-desktop";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 
 const TrackPage = () => {
   const [SongData, setSongData] = useState<SongIDs[]>([]);
@@ -337,12 +336,7 @@ const TrackPage = () => {
                     Similar Tracks You May Like:
                   </h2>
                 </div>
-                <div className="my-3 hidden md:block items-center justify-center">
-                  <AdsDesktopIncontent />
-                </div>
-                <div className="my-4 block md:hidden mx-auto">
-                  <AdsMobileIncontent />
-                </div>
+                <FirstInContentAd/>
                 <FetchSongs
                   apiEndpoint={`/api/getSimilerTrack?name=${song.name.substring(
                     0,

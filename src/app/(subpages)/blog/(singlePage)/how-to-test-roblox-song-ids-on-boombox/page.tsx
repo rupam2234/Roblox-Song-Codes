@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
-import { format } from "date-fns";
 import Image from "next/image";
-import AdsMobileIncontent from "@/components/adsense-ads/mobile-inContent";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
 
 export const metadata: Metadata = {
   title: "How to Test Song IDs on Roblox Boombox Player?",
@@ -86,7 +86,7 @@ const Content_1 = () => {
           &quot; offers unique Boombox gamepass that allows you to play the
           music tracks on the game.
         </p>
-        <AdsMobileIncontent />
+        <FirstInContentAd />
         <p>These are some examples:</p>
         <ul className="space-y-3 terms-list">
           <li>
@@ -213,6 +213,7 @@ const Content_1 = () => {
             </a>
           </li>
         </ul>
+        <InContentAd2 />
         <p>
           <strong>NOTE:</strong> Some song IDs may not work on the Boombox
           because certain games have restrictions on playing certain music. Also

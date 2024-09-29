@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
-import ResponsiveAd from "@/components/adsense-ads/responsiveAd";
+import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 import HandleList from "./handleList";
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 
 const date = new Date();
 const month = date.toLocaleString("default", { month: "long" });
@@ -24,8 +25,7 @@ export const metadata: Metadata = {
   publisher: "Roblox Song Codes",
   openGraph: {
     title: `Roblox Music Codes That Are Not Copyrighted (${month} ${year})`,
-    description:
-      `Here’s a list of copyright free Roblox music IDs that are working as of ${year}. We have programmatically tested these codes to ensure they work on Boombox, so you can enjoy them without issues.`,
+    description: `Here’s a list of copyright free Roblox music IDs that are working as of ${year}. We have programmatically tested these codes to ensure they work on Boombox, so you can enjoy them without issues.`,
     images: "/media/Roblox Music Codes That Are Not Copyrighted.png",
     publishedTime: "25 september, 2024",
     authors: "Leon Klein",
@@ -63,6 +63,7 @@ const CopyRightFreeIds = () => {
           are some of my favorite copyright free roblox music codes and
           associated tracks are atleast 1.30 minutes longer.
         </p>
+        <FirstInContentAd/>
         <HandleList apiEndpoint={"/api/songByDuration"} />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How do I test these song IDs?
@@ -74,7 +75,7 @@ const CopyRightFreeIds = () => {
           the track name from the list above and try the music on Roblox using
           the &apos;Listen on Roblox&apos; button.
         </p>
-        <ResponsiveAd />
+        <InContentAd3 />
         <h3 className="font-bold text-[18px] text-[#5F8C81]">
           More Roblox Song IDs:
         </h3>
