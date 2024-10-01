@@ -1,3 +1,4 @@
+import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 
 const TopContent = () => {
   return (
@@ -26,6 +27,9 @@ const TopContent = () => {
           </a>
           .
         </p>
+        <div className="my-3 items-center justify-center">
+          <FirstInContentAd />
+        </div>
       </div>
     </>
   );

@@ -1,12 +1,9 @@
-import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
 
 const BottomContents = () => {
   return (
     <div className="text-[17px] mt-10 text-gray-600 space-y-5 mb-24">
-      <div className="my-3 items-center justify-center">
-        <FirstInContentAd />
-      </div>
+      
       <h2 className="font-bold text-[20px] text-[#5F8C81]">
         How to use Roblox music codes in Boombox?
       </h2>
