@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/custom-components/header";
@@ -34,6 +34,19 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7255780745640035"
           crossOrigin="anonymous"
         ></script>
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive" // Load the script after the page is interactive
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "oc9qqhsos1");
+          `,
+          }}
+        />
       </head>
       <body className={cn("text-[17px]", inter.className)}>
         <Header />
