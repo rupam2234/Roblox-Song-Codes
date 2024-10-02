@@ -96,22 +96,6 @@ const Header = () => {
             priority
           />
         </Link>
-        <HoverCard>
-          <HoverCardTrigger>
-            <LucideInfo className="text-[#C6D6CE] mt-3 h-5 w-5" />
-          </HoverCardTrigger>
-          <HoverCardContent className="text-sm">
-            Created by team at{" "}
-            <a
-              className="hover:underline"
-              href="https://geekguidez.com"
-              rel="nofollow"
-              target="_blank"
-            >
-              @GeekGuidez
-            </a>
-          </HoverCardContent>
-        </HoverCard>
       </div>
       <div
         className={cn("flex justify-end items-center text-white font-light")}
