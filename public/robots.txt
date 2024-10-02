@@ -1,9 +1,13 @@
-# *
+# Block crawlers from accessing the /_next/ directory
+
 User-agent: *
+Disallow: /_next/
+
+# Allow all other pages
 Allow: /
 
 # Host
-Host: https://roblox.geekguidez.com
+Host: https://robloxsongcodes.com
 
 # Sitemaps
-Sitemap: https://roblox.geekguidez.com/sitemap.xml
+Sitemap: https://robloxsongcodes.com/sitemap.xml
