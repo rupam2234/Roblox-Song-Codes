@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Roblox Song Codes 2024",
     "Working Roblox Song Codes in 2024",
   ],
-  publisher: "GeekGuidez",
+  publisher: "Robloxsongcodes.com",
 };
 
 const BlogPost_2 = () => {

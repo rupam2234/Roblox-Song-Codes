@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "monstercat songs roblox id",
     "Latest Monstercat Roblox Song IDs",
   ],
-  publisher: "GeekGuidez",
+  publisher: "RobloxSongCodes.com",
   openGraph: {
     title: "Best Monstercat Roblox Song IDs That Works",
     description:
