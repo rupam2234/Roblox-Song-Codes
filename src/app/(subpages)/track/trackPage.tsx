@@ -327,6 +327,7 @@ const TrackPage = () => {
                     </Button>
                   </div>
                   <br />
+                  <FirstInContentAd />
                   <p>
                     Leave a thumb if you liked the audio and the track ID is
                     working on Boombox. This will help us filter the song IDs
@@ -336,7 +337,6 @@ const TrackPage = () => {
                     Similar Tracks You May Like:
                   </h2>
                 </div>
-                <FirstInContentAd/>
                 <FetchSongs
                   apiEndpoint={`/api/getSimilerTrack?name=${song.name.substring(
                     0,
