@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     "Song Codes for Boombox",
     "Music ID for Boombox",
   ],
-  publisher: "Robloxsongcodes.com",
+  publisher: "Roblox Song Codes",
   openGraph: {
     title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
     description:
       "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
-    siteName: "Geek Guidez",
+    siteName: "Roblox Song Codes",
     images: "/media/Working Roblox Song Codes.png",
   },
 };

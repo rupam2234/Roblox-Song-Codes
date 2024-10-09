@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Contact us",
   description:
     "Contact information to reach out Roblox music code database creator.",
+  publisher: "Roblox Song Codes",
 };
 
 const Contact = () => {

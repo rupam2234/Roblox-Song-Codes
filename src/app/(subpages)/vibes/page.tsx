@@ -8,6 +8,7 @@ import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 export const metadata: Metadata = {
   title: "Roblox Song Codes By Vibes",
   description: "Largest Roblox Music Code Database Categoried by Vibes",
+  publisher: "Roblox Song Codes",
 };
 
 const VibeCategories = () => {
@@ -30,7 +31,7 @@ const VibeCategories = () => {
       </div>
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
-          <FirstInContentAd/>
+          <FirstInContentAd />
           <HandleVibes />
           <p>
             To access the full database of working Roblox song codes, go to the{" "}

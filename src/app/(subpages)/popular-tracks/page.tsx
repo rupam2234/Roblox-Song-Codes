@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: `Popular Song Codes For Boombox (Working in ${formattedDate})`,
   description:
     "We have filtered highest rated tracks by users to find the coolest songs to play on Boombox.",
+  publisher: "Roblox Song Codes",
 };
 
 const PolularTracks = () => {
