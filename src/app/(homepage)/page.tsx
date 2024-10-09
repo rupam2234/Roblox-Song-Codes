@@ -14,7 +14,7 @@ const year = date.getFullYear();
 export const metadata: Metadata = {
   title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
   description:
-    "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
+    "This collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
     "Best Roblox Song Codes",
     "Roblox Music Codes",
