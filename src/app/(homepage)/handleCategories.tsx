@@ -54,7 +54,7 @@ const HandleCategories = () => {
       <div>
         <TableDropdownMenu tags={tags} songAPIAddress={"songs"} />
       </div>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-[#FA8900] my-4">
         <strong>Tip:</strong> if you can&apos;t find your track, try searching
         on the site header. It searches our entire track database instead of
         searching in a category spacific table.
