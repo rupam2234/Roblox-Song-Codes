@@ -44,7 +44,6 @@ export default function RootLayout({
         `,
           }}
         />
-        <title>Roblox Song Codes</title>
       </head>
       <body className={cn ? cn("text-[17px]", inter.className) : "text-[17px]"}>
         <Header />
