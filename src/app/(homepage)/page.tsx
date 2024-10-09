@@ -12,7 +12,7 @@ const month = date.toLocaleString("default", { month: "long" });
 const year = date.getFullYear();
 
 export const metadata: Metadata = {
-  title: `Roblox Song Codes - Working Boombox Song ID Database (${month} ${year})`,
+  title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
   description:
     "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   publisher: "Robloxsongcodes.com",
   openGraph: {
-    title: `Roblox Song Codes - Working Boombox Song ID Database (${month} ${year})`,
+    title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
     description:
       "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
     siteName: "Geek Guidez",
