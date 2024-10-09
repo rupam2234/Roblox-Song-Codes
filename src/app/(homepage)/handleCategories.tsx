@@ -50,9 +50,16 @@ const HandleCategories = () => {
   ];
 
   return (
-    <div>
-      <TableDropdownMenu tags={tags} songAPIAddress={"songs"} />
-    </div>
+    <>
+      <div>
+        <TableDropdownMenu tags={tags} songAPIAddress={"songs"} />
+      </div>
+      <p className="text-sm text-gray-600">
+        <strong>Tip:</strong> if you can&apos;t find your track, try searching
+        on the site header. It searches our entire track database instead of
+        searching in a category spacific table.
+      </p>
+    </>
   );
 };
 
