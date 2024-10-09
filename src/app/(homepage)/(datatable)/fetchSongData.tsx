@@ -6,7 +6,7 @@ import { SongIDs } from "@/components/custom-components/constants";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
-import { InfoIcon } from "lucide-react";
+import { ExternalLink, InfoIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
@@ -182,11 +182,16 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               //   e.preventDefault();
               //   handleRowClick({ id, name });
               // }}
-              className="hover:text-blue-400"
+              className="hover:text-blue-400 flex gap-1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {name}
+              {name}{" "}
+              <ExternalLink
+                className="mt-[2px] hidden md:block"
+                width={15}
+                height={15}
+              />
             </Link>
           );
         },
