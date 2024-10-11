@@ -12,20 +12,23 @@ const month = date.toLocaleString("default", { month: "long" });
 const year = date.getFullYear();
 
 export const metadata: Metadata = {
-  title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
+  title: `Roblox Song Codes - Boombox Song ID database (${month} ${year})`,
   description:
-    "This collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
+    "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
   keywords: [
     "Best Roblox Song Codes",
     "Roblox Music Codes",
     "Song Codes for Boombox",
     "Music ID for Boombox",
+    "Updated Roblox song codes",
+    "Roblox Boombox music IDs",
+    `popular Roblox music codes ${year} `,
   ],
-  publisher: "Roblox Song Codes",
+  publisher: "Robloxsongcodes.com",
   openGraph: {
     title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
     description:
-      "This curated collection of Roblox music codes features pre-tested and fully functional song IDs. We update the database monthly with the latest codes directly from Roblox.",
+      "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
     siteName: "Roblox Song Codes",
     images: "/media/Working Roblox Song Codes.png",
   },
