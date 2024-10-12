@@ -49,7 +49,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
           async
         />
-        <Script strategy="beforeInteractive">
+        <Script id="googlefcPresent" strategy="beforeInteractive">
           {`
             (function() {
               function signalGooglefcPresent() {
