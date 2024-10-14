@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Fira_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/custom-components/header";
 import Footer from "@/components/custom-components/footer";
@@ -8,10 +8,18 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({
+export const inter = Inter({
   subsets: ["latin"],
   preload: true,
 });
+
+export const nato = Fira_Sans({
+  subsets: ["latin"],
+  weight: "800",
+  preload: true,
+});
+
+export const GlobalYear: number = new Date().getFullYear();
 
 export default function RootLayout({
   children,
@@ -33,7 +41,7 @@ export default function RootLayout({
         ></script>
         <Script
           id="clarity-script"
-          strategy="afterInteractive" // Load the script after the page is interactive
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
           (function(c,l,a,r,i,t,y){

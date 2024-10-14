@@ -4,50 +4,39 @@ import { Metadata } from "next";
 import { getFormattedDate } from "@/components/utils/date";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
-
-const formattedDate = getFormattedDate();
+import { GlobalYear, inter } from "@/app/layout";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: `Popular Song Codes For Boombox (Working in ${formattedDate})`,
+  title: `Popular Song Codes For Boombox (Working in ${GlobalYear})`,
   description:
-    "We have filtered highest rated tracks by users to find the coolest songs to play on Boombox.",
-  publisher: "Roblox Song Codes",
+    "This comprehensive collection includes a complete list of tested Roblox song codes from a wide range of popular genres. We've filtered the highest 'USER RATED' trending songs to offer you the absolute best song IDs for your Boombox experience.",
+  publisher: "RobloxSongCodes.com",
 };
 
 const PolularTracks = () => {
   return (
     <main>
-      <div className="p-6 lg:px-[140px]">
-        <FeaturedBox
-          title={`Popular Song Codes For Boombox (Working in ${formattedDate})`}
-          descriptionText1={
-            "This comprehensive collection includes a complete list of tested Roblox song codes from a wide range of popular genres. We've filtered the higested 'USER RATED' trending songs to offer you the absolute best song IDs for your Boombox experience."
-          }
-          descriptionText2={
-            "Our database is consistently updated, regularly removing outdated codes and adding fresh new ones. You can confidently rely on these carefully curated codes to always work flawlessly with your Boombox."
-          }
-          image="/media/Roblox-Boombox-Icon.png"
-          altText={"Roblox-Boombox-Ico"}
-        />
-      </div>
-      <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 lg:px-[170px]">
+      <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 mt-8 px-6 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
+          <h1
+            className={cn(
+              "text-[18px] text-[#5F8C81] md:font-bold md:text-[25px]",
+              inter.className
+            )}
+          >
+            {`Popular Song Codes For Boombox (Working in ${GlobalYear})`}
+          </h1>{" "}
           <p>
-            We have put together a list of one hundred popular songs from our
-            Roblox Audio Database. These songs have been rated by users, which
-            means that many people have enjoyed playing them on their Boombox
-            players.
+            I&apos;ve put together this list of one hundred popular songs from
+            the Roblox Audio Database. These are some of the highest rated songs
+            by the users, means they are the most liked Roblox song IDs we have
+            on this site.
           </p>
           <p>
-            Each song in this list has been selected based on positive feedback
-            and high ratings from the community, ensuring you get to enjoy some
-            of the most loved tracks.
-          </p>
-          <p>
-            You can pick a song ID by coping it and have a good time playing it
-            on Boombox. Or you can search if your favorite music is in this list
-            using the search bar and start playing on boombox player with the
-            music ID.
+            You can copy a song ID and have a good time playing it. Or you can
+            search your favorite music using the global or table search bar and
+            start playing them on boombox player.
           </p>
           <FirstInContentAd />
           <FetchSongs apiEndpoint={"/api/popularTrack"} />

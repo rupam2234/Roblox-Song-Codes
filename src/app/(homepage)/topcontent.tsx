@@ -1,9 +1,29 @@
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
+import { GlobalYear, inter } from "../layout";
+import { cn } from "@/lib/utils";
 
 const TopContent = () => {
   return (
     <>
       <div className="text-[17px] text-gray-600 space-y-5">
+        <h1
+          className={cn(
+            "text-[18px] text-[#5F8C81] md:font-bold md:text-[25px]",
+            inter.className
+          )}
+        >
+          {`Largest Roblox Song Codes Database For Boombox [${GlobalYear}]`}
+        </h1>{" "}
+        <p>
+          This is a list of tested Roblox song codes across different genres you
+          can play on Boombox. The site consistently updates and filters this
+          database to provide you with song IDs that work.
+        </p>
+        <p>
+          The algorithm actively searches for new music codes and if it finds a
+          working code updates the list immediately. Of course song IDs that no
+          longer works are automatically removed.
+        </p>
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to find a song ID?
         </h2>
@@ -14,7 +34,7 @@ const TopContent = () => {
           Boombox.
         </p>
         <p>
-          Alternativly you can pick roblox song id from these lists:{" "}
+          Alternatively you can pick roblox song id from these lists:{" "}
           <a
             className="text-blue-700 hover:text-blue-400"
             href="/popular-tracks"

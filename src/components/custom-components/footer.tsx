@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="p-6  bg-[#333333] lg:px-[170px] lg:py-7">
+    <footer className="p-6  bg-[#333333] lg:px-[170px] lg:py-7">
       <div className="flex-row lg:flex justify-between text-gray-300 text-sm">
         <div className="flex lg:justify-start justify-center">
           © {year}
@@ -50,7 +50,7 @@ const Footer = () => {
           site have no affiliation with Roblox Corporation.
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

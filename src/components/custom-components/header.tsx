@@ -91,7 +91,7 @@ const Header = () => {
           <Image
             src={"/media/Roblox Song Codes Logo.png"}
             width={115}
-            height={5}
+            height={25}
             alt={"Roblox Song Codes"}
             priority
           />
