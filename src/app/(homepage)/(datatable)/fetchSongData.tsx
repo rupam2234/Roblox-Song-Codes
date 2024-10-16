@@ -48,7 +48,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
     if (songRated) {
       toast({
         title: "Your rating wasn't added!",
-        description: "Bacause you have already rated this Roblox track.",
+        description: "Because you have already rated this Roblox track.",
         className: "custom-toast",
       });
       setsongRated(false); // Reset the state if needed

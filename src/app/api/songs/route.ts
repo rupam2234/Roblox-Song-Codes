@@ -4,13 +4,13 @@ import { sql } from "@vercel/postgres";
 import { SongIDs } from "@/components/custom-components/constants";
 
 export async function GET(req: NextRequest) {
-  // extract query perameters
+  // extract query parameters
   const url = new URL(req.url);
   const genre = url.searchParams.get("genre");
 
   if (!genre) {
     return NextResponse.json(
-      { error: "Genre parameer is missing" },
+      { error: "Genre parameter is missing" },
       { status: 400 }
     );
   }

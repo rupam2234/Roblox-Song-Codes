@@ -47,6 +47,26 @@ const HandleCategories = () => {
       tagName: "Hip-hop",
       icon: Check,
     },
+    {
+      tagName: "Rap",
+      icon: Check,
+    },
+    {
+      tagName: "Acoustic",
+      icon: Check,
+    },
+    {
+      tagName: "Indie",
+      icon: Check,
+    },
+    {
+      tagName: "Rock",
+      icon: Check,
+    },
+    {
+      tagName: "R&B",
+      icon: Check,
+    },
   ];
 
   return (
