@@ -330,6 +330,11 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
           </ThemeProvider>
         )}
       </div>
+      <p className="text-sm text-gray-600 my-4">
+        <strong className="text-[#FA8900]">Tip:</strong> if you can&apos;t find
+        your track, try searching on the site header. It searches our entire
+        track database instead of searching in a category specific table.
+      </p>
     </>
   );
 };

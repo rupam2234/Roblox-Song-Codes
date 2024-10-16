@@ -55,6 +55,7 @@ const Content = () => {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "USD to Robux Conversion Table",
+    about: "USD to Robux Conversion",
     itemListElement: usdtorobux.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -194,7 +195,11 @@ const Content = () => {
           This table represents Robux equivalent to USD for various amount of
           USD according to DevX current conversion rate:
         </p>
-        <div className="overflow-x-auto">
+        <div
+          className="overflow-x-auto"
+          itemScope
+          itemType="https://schema.org/Table"
+        >
           <table className="table-auto border border-gray-400 border-collapse w-full">
             <thead>
               <tr>
@@ -222,7 +227,11 @@ const Content = () => {
           Robux to USD Conversion Table
         </h2>
         <p>This table is for reverse conversion rates: Robux to USD</p>
-        <div className="overflow-x-auto">
+        <div
+          className="overflow-x-auto"
+          itemScope
+          itemType="https://schema.org/Table"
+        >
           <table className="table-auto w-full border border-gray-400 border-collapse">
             <thead>
               <tr>
