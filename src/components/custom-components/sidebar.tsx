@@ -4,7 +4,7 @@ import Share from "../Sidebar-Elements/ShareButtons";
 
 const Sidebar = () => {
   return (
-    <div className="md:sticky top-5">
+    <div className="md:sticky top-20">
       <div className="hidden md:block ">
         <SidebarMenu />
         <Share />

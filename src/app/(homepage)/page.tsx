@@ -45,7 +45,7 @@ const HomePage = () => {
             PageAbout={
               "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
             }
-            AuthorName={""}
+            AuthorName={"RobloxSongCodes"}
             PageName={""}
           />
           <TopContent />

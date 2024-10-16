@@ -85,7 +85,10 @@ const Header = () => {
   });
 
   return (
-    <div className="p-6 lg:px-[170px] lg:py-3 bg-[#5F8C81] flex justify-between">
+    <div
+      className="p-6 lg:px-[170px] lg:py-3 bg-[#5F8C81] flex justify-between lg:sticky"
+      style={{ top: 0, zIndex: 1000 }}
+    >
       <div className="flex justify-start w-[125px] h-[9px]">
         <Link href={"/"}>
           <Image
