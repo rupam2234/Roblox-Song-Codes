@@ -8,8 +8,8 @@ import Content from "./content";
 export const metadata: Metadata = {
   title: "Robux To USD Converter - Roblox Currency Conversion",
   description:
-    "This tool helps you estimate the value of Robux in USD based on the exchange rate used by the DevEx converter.",
-  publisher: "Geek Guidez",
+    "This converter helps you estimate the value of Robux in USD based on DevEx exchange rate and vise-versa including conversion to other currencies. ",
+  publisher: "RobloxSongCodes.com",
   keywords:
     "Robux To USD Converter, Robux To USD, USD to Robux, DevEx calculator",
 };
