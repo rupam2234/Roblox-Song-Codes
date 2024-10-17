@@ -11,7 +11,7 @@ const RobloxGiftCard = () => {
           src={"/media/Roblox.png"}
           alt={"Roblox-Gift-Card-800-Robux"}
           width={180}
-          height={450}
+          height={260}
         />
       </Link>
       <Link href={"https://amzn.to/3Y99Bb0"} target="_blank" rel="nofollow">
@@ -19,7 +19,7 @@ const RobloxGiftCard = () => {
           src={"/media/Roblox-25-dollar-robux.jpg"}
           alt={"Roblox-25-dollar-robux"}
           width={180}
-          height={450}
+          height={260}
         />
       </Link>
     </div>
