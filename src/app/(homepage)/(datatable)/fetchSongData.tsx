@@ -206,7 +206,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
         customBodyRender: (value: number) => {
           return (
             <div className="flex">
-              <p className="mt-[2px] text-[13px] md:text-[14px]">{value}</p>
+              <p className="mt-[2px] text-[14px]">{value}</p>
               <Button
                 variant={"outline"}
                 size={"sm"}

@@ -19,7 +19,7 @@ const VibeCategories = () => {
         <div className="lg:col-span-8 col-span-12 flex-col items-center space-y-5 mb-10">
           <h1
             className={cn(
-              "text-[18px] text-[#5F8C81] md:font-bold md:text-[25px]",
+              "text-[18px] text-[#5F8C81] font-bold md:font-bold md:text-[25px]",
               inter.className
             )}
           >
