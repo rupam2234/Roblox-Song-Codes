@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# test folder
+/src/app/(subpages)/blog/(singlePage)/guest-post-codes/
+
