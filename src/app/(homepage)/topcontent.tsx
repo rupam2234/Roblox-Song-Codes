@@ -15,26 +15,29 @@ const TopContent = () => {
           {`Largest Roblox Song Codes Database For Boombox [${GlobalYear}]`}
         </h1>{" "}
         <p>
-          This is a list of tested Roblox song codes across different genres you
-          can play on Boombox. The site consistently updates and filters this
-          database to provide you with song IDs that work.
+          Here&apos;s a list of Roblox song codes from various genres that you
+          can play on your Boombox. The site is regularly updated and filters
+          out non-working codes to ensure you always have access to valid song
+          IDs.
         </p>
         <p>
-          The algorithm actively searches for new music codes and if it finds a
-          working code updates the list immediately. Of course song IDs that no
-          longer works are automatically removed.
+          The program behind this site constantly searches for new music IDs
+          that work on Boombox and adds them to the database as soon as
+          they&apos;re found. It also checks for IDs that no longer work and
+          removes them every month to keep things updated.
         </p>
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to find a song ID?
         </h2>
         <p>
-          To find your favorite song IDs use the search bar. Enter the music
-          name you’re looking for, and the table will show you a list of
-          matching music IDs. From there, you can copy the Song code and play on
-          Boombox.
+          To find your favorite song IDs you can either use the global or table
+          search bar. Enter the music name you&apos;re looking for, and the
+          table will find you a list of matching music IDs. From there, you can
+          copy the song ID and play on Boombox.
         </p>
         <p>
-          Alternatively you can pick roblox song id from these lists:{" "}
+          Alternatively you can find roblox song ids from these customized
+          lists:{" "}
           <a
             className="text-blue-700 hover:text-blue-400"
             href="/popular-tracks"
@@ -44,6 +47,10 @@ const TopContent = () => {
           <span className="mx-1">and</span>
           <a className="text-blue-700 hover:text-blue-400" href="/vibes">
             filtered by vibes
+          </a>
+          , or more codes can be found on the{" "}
+          <a className="text-blue-700 hover:text-blue-400" href="/blog">
+            blog
           </a>
           .
         </p>
