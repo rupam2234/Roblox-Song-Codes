@@ -95,7 +95,7 @@ const Share = () => {
   }, [pathname]);
 
   return (
-    <div className="flex w-full my-7 mx-[15px]">
+    <div className="flex w-full my-10 mx-[15px]">
       <div
         className={cn(
           "text-gray-400 text-[20px] mr-4 flex justify-center items-center",
