@@ -64,7 +64,7 @@ const HandleCategories = () => {
       icon: Check,
     },
     {
-      tagName: "R&B",
+      tagName: "Rhythm",
       icon: Check,
     },
   ];

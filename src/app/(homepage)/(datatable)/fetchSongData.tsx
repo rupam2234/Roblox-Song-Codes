@@ -151,11 +151,11 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   };
 
   // not in use
-  const handleRowClick = (rowData: { id: number; name: string }) => {
-    const { id, name } = rowData;
-    const encodedName = formatNameForURL(name);
-    router.push(`/track?id=${id}&name=${encodedName}`);
-  };
+  // const handleRowClick = (rowData: { id: number; name: string }) => {
+  //   const { id, name } = rowData;
+  //   const encodedName = formatNameForURL(name);
+  //   router.push(`/track?id=${id}&name=${encodedName}`);
+  // };
 
   const formatDuration = (duration: number) => {
     const minutes = Math.floor(duration / 60);
@@ -317,6 +317,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               data={data}
               columns={columns}
               options={{
+                responsive: "simple",
                 selectableRows: "none",
                 filter: false,
                 print: false,
