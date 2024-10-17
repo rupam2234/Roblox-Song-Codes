@@ -1,5 +1,6 @@
 import Ads from "../Sidebar-Elements/Ads";
 import SidebarMenu from "../Sidebar-Elements/CategoryMenu";
+import RobloxGiftCard from "../Sidebar-Elements/RobloxGiftCard";
 import Share from "../Sidebar-Elements/ShareButtons";
 
 const Sidebar = () => {
@@ -8,7 +9,8 @@ const Sidebar = () => {
       <div className="hidden md:block ">
         <SidebarMenu />
         <Share />
-        <Ads />
+        {/* <Ads /> */}
+        <RobloxGiftCard />
       </div>
       {/* Other content */}
     </div>

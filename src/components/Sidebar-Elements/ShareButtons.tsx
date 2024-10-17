@@ -53,19 +53,22 @@ const Share = () => {
     if (filteredImages.length > 0) {
       setMediaUrl(filteredImages[0].src);
     }
-
   }, []);
 
   useEffect(() => {
     const extractMetaData = () => {
       // Extract title
-      const titleElement = document.querySelectorAll('title');
-      const titleText = titleElement.length > 0 ? titleElement[0]?.textContent || '' : '';
+      const titleElement = document.querySelectorAll("title");
+      const titleText =
+        titleElement.length > 0 ? titleElement[0]?.textContent || "" : "";
       setPageTitle(titleText);
 
       // Extract meta description
-      const metaDescriptionElement = document.querySelector('meta[property="og:description"]');
-      const metaDescriptionContent = metaDescriptionElement?.getAttribute('content') || '';
+      const metaDescriptionElement = document.querySelector(
+        'meta[property="og:description"]'
+      );
+      const metaDescriptionContent =
+        metaDescriptionElement?.getAttribute("content") || "";
       setDescription(metaDescriptionContent);
     };
 
@@ -92,7 +95,7 @@ const Share = () => {
   }, [pathname]);
 
   return (
-    <div className="flex w-full my-10 mx-[15px]">
+    <div className="flex w-full my-7 mx-[15px]">
       <div
         className={cn(
           "text-gray-400 text-[20px] mr-4 flex justify-center items-center",

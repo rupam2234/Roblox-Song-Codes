@@ -49,6 +49,10 @@ const Footer = () => {
           with Roblox Corporation or any of its partners. The authors of this
           site have no affiliation with Roblox Corporation.
         </p>
+        <p className="text-center text-sm mt-2">
+          *** When you shop through affiliate links on this site, the site owner
+          may earn a small commission—at no extra cost to you! ***
+        </p>
       </div>
     </footer>
   );
