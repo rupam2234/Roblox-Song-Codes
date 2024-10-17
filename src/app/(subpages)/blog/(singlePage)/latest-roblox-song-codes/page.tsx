@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Posthead from "../(pageElements)/metaData";
-import InContentAd3 from "@/components/adsense-ads/AdsenseAd3";
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 import InContentAd2 from "@/components/adsense-ads/AdsenseAd2";
+import { GlobalYear } from "@/app/layout";
 
 export const metadata: Metadata = {
   title: "Latest Working Roblox Song Codes in 2024",
@@ -57,7 +57,7 @@ const BlogPost_2 = () => {
           working.
         </p>
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
-          Best Working Roblox Music IDs (2024 September Edition):
+          Working Roblox Boombox Music IDs You Can Try ({GlobalYear} Edition):
         </h2>
         <ul className="space-y-3 terms-list">
           <li>You Knock At My Door - Kosinus - 1839346346</li>

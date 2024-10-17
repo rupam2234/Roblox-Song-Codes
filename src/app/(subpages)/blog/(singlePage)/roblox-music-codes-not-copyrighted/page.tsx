@@ -61,7 +61,7 @@ const CopyRightFreeIds = () => {
           These tracks won&apos;t land you in any copyright trouble or get your
           account banned on the platform, so feel free to groove to them. They
           are some of my favorite copyright free roblox music codes and
-          associated tracks are atleast 1.30 minutes longer.
+          associated tracks are at least 1.30 minutes longer.
         </p>
         <FirstInContentAd/>
         <HandleList apiEndpoint={"/api/songByDuration"} />
