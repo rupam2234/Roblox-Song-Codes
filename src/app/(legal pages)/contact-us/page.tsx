@@ -7,8 +7,8 @@ import ContactFormHandler from "./contactForm";
 export const metadata: Metadata = {
   title: "Contact us",
   description:
-    "Contact information to reach out Roblox music code database creator.",
-  publisher: "Roblox Song Codes",
+    "Use the contact information to reach out builder behind robloxsongcodes.com or send your query via the contact form on this page.",
+  publisher: "Robloxsongcodes.com",
 };
 
 const Contact = () => {

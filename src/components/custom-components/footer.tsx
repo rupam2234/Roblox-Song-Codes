@@ -45,13 +45,13 @@ const Footer = () => {
       </div>
       <div className="mt-8 text-gray-300 flex justify-center items-center sm:block">
         <p className="text-center text-sm">
-          Roblox Song Codes is not endorsed, moderated, owned, or affiliated
+          RobloxSongCodes.com is not endorsed, moderated, owned, or affiliated
           with Roblox Corporation or any of its partners. The authors of this
-          site have no affiliation with Roblox Corporation.
+          site have no affiliation with Roblox.
         </p>
         <p className="text-center text-sm mt-2">
-          *** When you shop through affiliate links on this site, the site owner
-          may earn a small commission—at no extra cost to you! ***
+          When you shop through affiliate links on this site, the site owner may
+          earn a small commission—at no extra cost to you!
         </p>
       </div>
     </footer>

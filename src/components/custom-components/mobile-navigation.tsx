@@ -1,8 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
-import { Button } from "../ui/button";
-import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { NavItem } from "./constants";
 import {
   NavigationMenu,
@@ -13,18 +12,9 @@ import {
 } from "@radix-ui/react-navigation-menu";
 import { FaTools } from "react-icons/fa";
 
-const Sheet = dynamic(
-  () => import("../ui/sheet").then((module) => module.Sheet),
-  { ssr: false }
-); // Import Sheet dynamically and disable SSR
-const SheetContent = dynamic(
-  () => import("../ui/sheet").then((module) => module.SheetContent),
-  { ssr: false }
-); // Import SheetContent dynamically and disable SSR
-const SheetTrigger = dynamic(
-  () => import("../ui/sheet").then((module) => module.SheetTrigger),
-  { ssr: false }
-); // Import SheetTrigger dynamically and disable SSR
+// Import Sheet components normally
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { GlobalYear } from "@/app/layout";
 
 type MobileNavProps = {
   components: NavItem[];
@@ -35,13 +25,22 @@ const MobileNav: React.FC<MobileNavProps> = ({
   components,
   childComponents,
 }) => {
-  const year = new Date().getFullYear();
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure client-side rendering only
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Conditionally render Sheet components only after client-side mount
+  if (!isClient) {
+    return <Menu style={{ marginTop: 1, height: 35.1, width: 24 }} />; // this will prevent CLS issue by displaying the menu icon even if the client rendering is not ready
+  }
+
   return (
     <Sheet>
       <SheetTrigger>
-        <Button variant={"ghost"} size={"icon"} className="md:hidden">
-          <Menu />
-        </Button>
+        <Menu className="mt-[4px]" />
       </SheetTrigger>
       <SheetContent
         side={"right"}
@@ -90,7 +89,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex justify-center items-end pb-4 mx-4 text-[12px] text-white">
-          © {year} Roblox Song Codes. All Rights Reserved.
+          © {GlobalYear} Roblox Song Codes. All Rights Reserved.
         </div>
       </SheetContent>
     </Sheet>
