@@ -172,21 +172,20 @@ const Content = () => {
           To convert your Robux into USD you must participate in Roblox&apos;s
           Developer Exchange (DevEx) program. There are requirements for your
           Roblox account to be eligible for DevX program:
-          <ul className="terms-list space-y-3 mt-[25px]">
-            <li>You must be at least 13 years old.</li>
-            <li>You must have a verified email address on Roblox.</li>
-            <li>
-              You must have earned at least 30,000 Robux to be able to process
-              it.
-            </li>
-            <li>
-              Your account should comply with Roblox&apos;s community standards
-              and terms.
-            </li>
-            <li>You must have a valid DevEx portal account.</li>
-            <li>You must provide valid tax documentation with Roblox.</li>
-          </ul>
         </p>
+        <ul className="terms-list space-y-3 mt-[25px]">
+          <li>You must be at least 13 years old.</li>
+          <li>You must have a verified email address on Roblox.</li>
+          <li>
+            You must have earned at least 30,000 Robux to be able to process it.
+          </li>
+          <li>
+            Your account should comply with Roblox&apos;s community standards
+            and terms.
+          </li>
+          <li>You must have a valid DevEx portal account.</li>
+          <li>You must provide valid tax documentation with Roblox.</li>
+        </ul>
         <InContentAd2 />
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           USD to Robux Conversion Table
