@@ -43,7 +43,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="mt-8 text-gray-300 flex justify-center items-center sm:block">
+      <div className="mt-8 text-gray-300 flex flex-col gap-4 justify-center items-center sm:block">
         <p className="text-center text-sm">
           RobloxSongCodes.com is not endorsed, moderated, owned, or affiliated
           with Roblox Corporation or any of its partners. The authors of this
