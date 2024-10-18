@@ -1,6 +1,5 @@
 "use client";
 
-import { IDCount } from "@/app/api/counter/route";
 import { useEffect, useState } from "react";
 
 const CountSongID = () => {
@@ -12,7 +11,7 @@ const CountSongID = () => {
         const response = await fetch(`/api/counter`);
 
         if (response.ok) {
-          const data: IDCount = await response.json();
+          const data = await response.json();
           setIdcount(data.count);
         } else {
           console.error("Error fetching data:", response.statusText);
