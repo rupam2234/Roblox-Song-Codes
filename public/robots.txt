@@ -2,6 +2,10 @@
 User-agent: *
 Allow: /
 
+# Block indexing of /api/ and /_next/
+Disallow: /api/
+Disallow: /_next/
+
 # Host
 Host: https://robloxsongcodes.com/
 
