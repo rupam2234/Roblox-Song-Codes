@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import TopContent from "./topcontent";
 import BottomContents from "./bottomContent";
 import Sidebar from "@/components/custom-components/sidebar";
-import FeaturedBox from "../../components/custom-components/featuredBox";
 import HandleCategories from "./handleCategories";
 import HomapageSchema from "@/components/SchemaHandler/homaPageSchema";
 
@@ -12,7 +11,7 @@ const month = date.toLocaleString("default", { month: "long" });
 const year = date.getFullYear();
 
 export const metadata: Metadata = {
-  title: `Roblox Song Codes - Boombox Song ID database (${month} ${year})`,
+  title: `Roblox Song Codes - Latest Boombox Music ID database`,
   description:
     "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
   keywords: [
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
   ],
   publisher: "RobloxSongCodes.com",
   openGraph: {
-    title: `Roblox song codes - Boombox Song ID database (${month} ${year})`,
+    title: `Roblox Song Codes - Latest Boombox Music ID database`,
     description:
       "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
     siteName: "Roblox Song Codes",
