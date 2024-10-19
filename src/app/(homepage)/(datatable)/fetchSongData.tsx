@@ -307,19 +307,21 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
         ) : (
           <ThemeProvider theme={getMuiTheme()}>
             <MUIDataTable
-                data={data}
-                columns={columns}
-                options={{
-                  selectableRows: "none",
-                  filter: false,
-                  print: false,
-                  download: false,
-                  searchPlaceholder: "type a song name",
-                  elevation: 0,
-                  rowsPerPage: 25,
-                  rowsPerPageOptions: [5, 10, 25, 50],
-                  responsive: "simple",
-                }} title={undefined}            />
+              title={""}
+              data={data}
+              columns={columns}
+              options={{
+                selectableRows: "none",
+                filter: false,
+                print: false,
+                download: false,
+                searchPlaceholder: "type a song name",
+                elevation: 0,
+                rowsPerPage: 25,
+                rowsPerPageOptions: [5, 10, 25, 50],
+                responsive: "simple",
+              }}
+            />
           </ThemeProvider>
         )}
       </div>
