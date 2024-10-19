@@ -151,11 +151,11 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   };
 
   // not in use
-  const handleRowClick = (rowData: { id: number; name: string }) => {
-    const { id, name } = rowData;
-    const encodedName = formatNameForURL(name);
-    router.push(`/track?id=${id}&name=${encodedName}`);
-  };
+  // const handleRowClick = (rowData: { id: number; name: string }) => {
+  //   const { id, name } = rowData;
+  //   const encodedName = formatNameForURL(name);
+  //   router.push(`/track?id=${id}&name=${encodedName}`);
+  // };
 
   const formatDuration = (duration: number) => {
     const minutes = Math.floor(duration / 60);
@@ -304,10 +304,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
 
   return (
     <>
-      <div
-        className="my-7 border rounded-sm overflow-x-auto w-full"
-        key={apiEndpoint}
-      >
+      <div className="my-7 border rounded-sm overflow-x-auto w-full">
         {loading ? (
           <div className="flex justify-center items-center py-10">
             <CircularProgress />

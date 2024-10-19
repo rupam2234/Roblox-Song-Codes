@@ -32,7 +32,7 @@ const TableDropdownMenu: React.FC<TableDropdownMenuProps> = ({
   };
 
   return (
-    <div className="relative mt-7">
+    <div className="mt-7">
       <Button
         size="sm"
         variant="outline"
