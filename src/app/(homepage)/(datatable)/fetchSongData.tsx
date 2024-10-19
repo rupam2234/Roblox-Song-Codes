@@ -317,7 +317,6 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               data={data}
               columns={columns}
               options={{
-                responsive: "simple",
                 selectableRows: "none",
                 filter: false,
                 print: false,
@@ -326,6 +325,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
                 elevation: 0,
                 rowsPerPage: 25,
                 rowsPerPageOptions: [5, 10, 25, 50],
+                responsive: "simple",
               }}
             />
           </ThemeProvider>
