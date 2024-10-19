@@ -20,7 +20,6 @@ type FetchSongsProps = {
 
 const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   const [data, setData] = useState<SongIDs[]>([]);
-  const router = useRouter();
   const [songRated, setsongRated] = useState(false);
   const [loading, setLoading] = useState(true);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
@@ -63,11 +62,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
     const newRating = currentRating + change;
 
     // Cookies to handle and prevent multiple ratings
-    const setJSONCookie = (
-      name: string,
-      data: any,
-      options?: Cookies.CookieAttributes
-    ) => {
+    const setJSONCookie = (name: string, data: any) => {
       const expirationDays = 10; // Number of days until the cookie expires
       Cookies.set(name, JSON.stringify(data), { expires: expirationDays });
     };
@@ -312,21 +307,19 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
         ) : (
           <ThemeProvider theme={getMuiTheme()}>
             <MUIDataTable
-              title={""}
-              data={data}
-              columns={columns}
-              options={{
-                selectableRows: "none",
-                filter: false,
-                print: false,
-                download: false,
-                searchPlaceholder: "type a song name",
-                elevation: 0,
-                rowsPerPage: 25,
-                rowsPerPageOptions: [5, 10, 25, 50],
-                responsive: "simple",
-              }}
-            />
+                data={data}
+                columns={columns}
+                options={{
+                  selectableRows: "none",
+                  filter: false,
+                  print: false,
+                  download: false,
+                  searchPlaceholder: "type a song name",
+                  elevation: 0,
+                  rowsPerPage: 25,
+                  rowsPerPageOptions: [5, 10, 25, 50],
+                  responsive: "simple",
+                }} title={undefined}            />
           </ThemeProvider>
         )}
       </div>
