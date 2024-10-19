@@ -1,0 +1,21 @@
+{
+  "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "headers": {
+        "cache-control": "no-cache"
+      }
+    }
+  ]
+}
