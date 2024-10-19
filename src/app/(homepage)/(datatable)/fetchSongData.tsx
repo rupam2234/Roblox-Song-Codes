@@ -297,7 +297,6 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
               fontWeight: "bolder",
               color: "#5f8c81",
             },
-            body: {},
           },
         },
       },
@@ -305,7 +304,10 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
 
   return (
     <>
-      <div className="my-7 border rounded-sm" key={apiEndpoint}>
+      <div
+        className="my-7 border rounded-sm overflow-x-auto w-full"
+        key={apiEndpoint}
+      >
         {loading ? (
           <div className="flex justify-center items-center py-10">
             <CircularProgress />
