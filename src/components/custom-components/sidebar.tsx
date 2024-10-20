@@ -11,8 +11,8 @@ const Sidebar = () => {
         <CountSongID />
         <SidebarMenu />
         <Share />
-        {/* <Ads /> */}
-        <RobloxGiftCard />
+        <Ads />
+        {/* <RobloxGiftCard /> */}
       </div>
       {/* Other content */}
     </div>
