@@ -7,7 +7,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
 import { ExternalLink, InfoIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
