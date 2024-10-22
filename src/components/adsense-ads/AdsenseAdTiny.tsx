@@ -3,7 +3,7 @@ const TinyAdsenseAds = () => {
      crossorigin="anonymous"></script>
 <!-- Tiny Roblox Song Code Ad -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:90px"
+     style="display:inline-block;width:250px;height:90px"
      data-ad-client="ca-pub-7255780745640035"
      data-ad-slot="3807479183"></ins>
 <script>
