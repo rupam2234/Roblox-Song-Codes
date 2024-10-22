@@ -8,10 +8,10 @@ const Sidebar = () => {
   return (
     <div className="md:sticky top-20">
       <div className="hidden md:block ">
+        <Ads />
         <CountSongID />
         <SidebarMenu />
         <Share />
-        <Ads />
         {/* <RobloxGiftCard /> */}
       </div>
       {/* Other content */}

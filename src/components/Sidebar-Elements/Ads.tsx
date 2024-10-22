@@ -2,13 +2,11 @@ const Ads = () => {
   const adsenseCode = `
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7255780745640035"
      crossorigin="anonymous"></script>
-<!-- Roblox Song Code Sidebar -->
+<!-- Roblox Song Codes Top Sidebar -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;width:300px;height:300px"
      data-ad-client="ca-pub-7255780745640035"
-     data-ad-slot="7744088290"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-ad-slot="5672722054"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
