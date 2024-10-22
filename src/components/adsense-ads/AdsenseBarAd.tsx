@@ -10,7 +10,7 @@ const AdsenseBarAd = () => {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>`;
   return (
-    <div className="my-4 mx-[15px]">
+    <div className="my-4 hidden md:block mx-[15px]">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }} />
     </div>
   );

@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { CircularProgress } from "@mui/material";
 import Link from "next/link";
 import AdsenseBarAd from "@/components/adsense-ads/AdsenseBarAd";
+import TinyAdsenseAds from "@/components/adsense-ads/AdsenseAdTiny";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -328,6 +329,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       </div>
       <section className="my-2 text-center">
         <AdsenseBarAd />
+        <TinyAdsenseAds />
       </section>
       <p className="text-sm text-gray-600 my-4">
         <strong className="text-[#FA8900]">Tip:</strong> if you can&apos;t find

@@ -14,7 +14,7 @@ const Ads = () => {
 </script>
     `;
   return (
-    <div className="mx-[15px] w-auto h-[300px] text-center">
+    <div className="mx-[15px] text-center">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }} />
     </div>
   );
