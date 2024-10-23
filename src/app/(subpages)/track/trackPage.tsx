@@ -291,8 +291,9 @@ const TrackPage = () => {
                 </Table>
                 <div className="text-[17px]">
                   <p className="mt-14">
-                    You can use the <strong>{song.id}</strong> code to play the
-                    &quot;{song.name}&quot; on Boombox audio player. Or...
+                    You can use the <strong>{song.id}</strong> code to play
+                    &quot;{song.name}&quot; on Roblox Boombox music player. Or
+                    you can...
                   </p>
                   <div className="mt-6">
                     <Button
@@ -328,11 +329,32 @@ const TrackPage = () => {
                   </div>
                   <br />
                   <FirstInContentAd />
-                  <p>
-                    Leave a thumb if you liked the audio and the track ID is
-                    working on Boombox. This will help us filter the song IDs
-                    that is truely working on Roblox.
-                  </p>
+                  <div className="space-y-3">
+                    <p>
+                      <strong>Important: </strong>some music IDs (especially the
+                      ones with longer code such as more than 11 numbers) might
+                      not always play nicely. This can be due to either the
+                      creator forget to set their audio assets to play on loop.
+                    </p>
+                    <p>
+                      Without this setting, the audio might play once and then
+                      fall silent, leaving us all hanging mid-tune.
+                      Additionally, creators can choose whether to make their
+                      audio available for all games or restrict it to specific
+                      games.{" "}
+                    </p>
+                    <p>
+                      <strong>So, if you stumble upon a cool track</strong>,
+                      give it a thumbs-up if it&apos;s working on Boombox.
+                      It&apos;s like a musical quality control vote!
+                    </p>
+                    <p>
+                      It helps us to filter out the gems from the
+                      not-so-gem-like IDs. Plus, it&apos;s a friendly way to
+                      say, &quot;Hey, this track rocks!&quot;
+                    </p>
+                  </div>
+
                   <h2 className="mt-14 font-bold text-[20px] text-[#5F8C81]">
                     Similar Tracks You May Like:
                   </h2>
