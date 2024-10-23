@@ -71,6 +71,10 @@ const HandleCategories = () => {
       tagName: "jazz",
       icon: Check,
     },
+    {
+      tagName: "Ambient",
+      icon: Check,
+    },
   ];
 
   return (

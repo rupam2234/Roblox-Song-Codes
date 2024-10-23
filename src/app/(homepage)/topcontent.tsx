@@ -12,19 +12,18 @@ const TopContent = () => {
             inter.className
           )}
         >
-          {`Largest Roblox Song Codes Database (Working in ${GlobalYear})`}
+          {`Roblox Song Codes: Groove with the Best Tunes`}
         </h1>{" "}
         <p>
           Here&apos;s a list of Roblox song codes from various genres that you
-          can play on your Boombox. The site is regularly updated and filters
-          out non-working codes to ensure you always have access to valid song
-          IDs.
+          can play on Boombox. The site regularly updates and filters working
+          codes to ensure you always have access to currently valid song IDs.
         </p>
         <p>
-          The program behind this site constantly searches for new music IDs
-          that work on Boombox and adds them to the database as soon as
-          they&apos;re found. It also checks for IDs that no longer work and
-          removes them every month to keep things updated.
+          It constantly searches for new music IDs, tests it and adds them to
+          the database as long as they&apos;re working. Additionally, each
+          month, the site automatically removes IDs that no longer work to keep
+          things updated.
         </p>
         <h2 className="font-bold text-[20px] text-[#5F8C81]">
           How to find a song ID?
