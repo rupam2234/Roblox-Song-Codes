@@ -22,8 +22,8 @@ export async function generateMetadata({
   if (id) {
     try {
       // Construct the API URL using the server's origin
-      const protocol = "http"; // or 'https' if you're deploying with SSL
-      const host = window.location.origin || "localhost:3000"; // Change based on your deployment
+      const protocol = window.location.protocol === "https:" ? "https" : "http";
+      const host = process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000"; // Change based on your deployment
 
       const url = new URL(`/api/getTrack`, `${protocol}://${host}`);
       url.searchParams.append("id", id);
