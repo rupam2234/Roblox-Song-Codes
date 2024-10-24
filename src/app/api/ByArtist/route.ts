@@ -17,7 +17,7 @@ export async function GET(req: Request) {
   try {
     const { rows } = await sql<
       SongIDs[]
-    >`SELECT name, id, ratings, genres, duration FROM assets WHERE artist = ${artist}`;
+    >`SELECT name, id, ratings, genres, duration FROM assets WHERE genres = ${artist}`;
     return NextResponse.json(rows);
   } catch (error) {
     console.error("Error fetching database:", error);
