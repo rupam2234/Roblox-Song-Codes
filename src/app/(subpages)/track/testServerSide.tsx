@@ -10,7 +10,6 @@ import { useToast } from "@/components/ui/use-toast";
 import ProgressBar from "@/components/custom-components/progressbar";
 import Sidebar from "@/components/custom-components/sidebar";
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
-import { Metadata } from "next";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 
 const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
