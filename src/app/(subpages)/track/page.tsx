@@ -1,7 +1,6 @@
-// app/track/page.tsx
-
 import React from "react";
-import TrackPageTest from "./testServerSide";
+import { SongIDs } from "@/components/custom-components/constants";
+import TrackPageTest from "./trackPage";
 import { Metadata } from "next";
 
 interface TrackProps {
@@ -11,23 +10,23 @@ interface TrackProps {
   };
 }
 
-// Function to generate metadata for the page
+// Use Metadata export
 export async function generateMetadata({
   searchParams,
 }: TrackProps): Promise<Metadata> {
   const { id, name } = searchParams;
 
-  let songData = null;
+  let songData: SongIDs[] = [];
 
   if (id) {
     try {
-      // Construct the API URL using the server's origin
-      const protocol = window.location.protocol === "https:" ? "https" : "http";
-      const host = process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000"; // Change based on your deployment
-
+      const protocol = process.env.NEXT_PUBLIC_VERCEL_URL ? "https" : "http";
+      const host = process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000";
       const url = new URL(`/api/getTrack`, `${protocol}://${host}`);
       url.searchParams.append("id", id);
-      url.searchParams.append("name", name || "");
+      if (name) {
+        url.searchParams.append("name", name);
+      }
 
       const response = await fetch(url.toString(), {
         method: "GET",
@@ -38,39 +37,36 @@ export async function generateMetadata({
 
       if (response.ok) {
         songData = await response.json();
-      } else {
-        console.error("Failed to fetch track details");
+        const songName = songData[0]?.name || "Unknown Song";
+        const title = `${songName} - Roblox Music ID For Boombox`;
+        const description = `This page contains the Roblox music code for ${songName} that you can use to play it on the Boombox player. Just copy the code from here and try it on Boombox.`;
+
+        return { title, description };
       }
     } catch (error) {
       console.error("Error fetching track details:", error);
     }
   }
 
-  // Default fallback if no songData is available
-  const songName = songData?.name || "Unknown Song";
-  const title = `${songName} - Roblox Music ID For Boombox`;
-  const description = `This page contains the Roblox music code for ${songName} that you can use play it on the Boombox player. Just copy the code from here and try it on Boombox.`;
-
+  // Default metadata in case of failure
   return {
-    title: title,
-    description: description,
+    title: "Default Title",
+    description: "Default Description",
   };
 }
 
+// Fetching the song data directly inside the Track component
 const Track = async ({ searchParams }: TrackProps) => {
-  const { id, name } = searchParams;
+  const { id } = searchParams;
 
-  let songData = null;
+  let songData: SongIDs[] = [];
 
   if (id) {
     try {
-      // Construct the API URL using the server's origin
-      const protocol = "http"; // or 'https' if you're deploying with SSL
-      const host = process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000"; // Change based on your deployment
-
+      const protocol = process.env.NEXT_PUBLIC_VERCEL_URL ? "https" : "http";
+      const host = process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000";
       const url = new URL(`/api/getTrack`, `${protocol}://${host}`);
       url.searchParams.append("id", id);
-      url.searchParams.append("name", name || ""); // Optional, if you want to include name
 
       const response = await fetch(url.toString(), {
         method: "GET",
@@ -90,10 +86,11 @@ const Track = async ({ searchParams }: TrackProps) => {
   }
 
   return (
-    <>
+    <main>
       <TrackPageTest initialSongData={songData} />
-    </>
+    </main>
   );
 };
 
+// Export the component as default
 export default Track;

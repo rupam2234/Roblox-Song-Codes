@@ -135,7 +135,7 @@ const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
   // (Include your existing rating logic here)
 
   return (
-    <main className="grid-cols-12 grid md:gap-10 min-h-screen p-6 lg:px-[170px]">
+    <section className="grid-cols-12 grid md:gap-10 min-h-screen p-6 lg:px-[170px]">
       <section className="lg:col-span-8 col-span-12 place-items-center">
         {/* Content Section */}
         {songData.length > 0 ? (
@@ -350,7 +350,7 @@ const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
         {/* Sidebar */}
         <Sidebar />
       </section>
-    </main>
+    </section>
   );
 };
 

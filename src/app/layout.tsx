@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 import Share from "@/components/Sidebar-Elements/ShareButtons";
+import Head from "next/head";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="google-adsense-account" content="ca-pub-7255780745640035" />
         <meta
           name="google-site-verification"
@@ -78,7 +79,7 @@ export default function RootLayout({
             })();
           `}
         </Script>
-      </head>
+      </Head>
       <body className={cn ? cn("text-[17px]", inter.className) : "text-[17px]"}>
         <Header />
         <Share />
