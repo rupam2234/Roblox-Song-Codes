@@ -9,77 +9,21 @@ import Cookies from "js-cookie";
 import { useToast } from "@/components/ui/use-toast";
 import ProgressBar from "@/components/custom-components/progressbar";
 import Sidebar from "@/components/custom-components/sidebar";
-import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 import { Metadata } from "next";
+import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 
-const TrackPage = () => {
-  const [SongData, setSongData] = useState<SongIDs[]>([]);
+const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
+  const [songData, setSongData] = useState<SongIDs[]>(initialSongData);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
   const [songRated, setsongRated] = useState(false);
   const { toast } = useToast();
-  const [hasFetched, setHasFetched] = useState(false);
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const id = queryParams.get("id");
-
-    if (id && !hasFetched) {
-      const fetchTrackDetails = async () => {
-        try {
-          const url = new URL("/api/getTrack", window.location.origin);
-          url.searchParams.append("id", id);
-
-          const response = await fetch(url.toString(), {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-
-          if (response.ok) {
-            const data = await response.json();
-            setSongData(data);
-            setHasFetched(true);
-          } else {
-            console.error("Failed to fetch track details");
-          }
-        } catch (error) {
-          console.error("Error fetching track details:", error);
-        }
-      };
-
-      fetchTrackDetails();
-    }
-  }, []);
-
-  useEffect(() => {
-    if (SongData.length > 0) {
-      // Assuming SongData[0] contains the relevant song details
-      const songName = SongData[0].name;
-      const title = `${songName} - Roblox Music ID For Boombox`;
-      const description = `This page contains the Roblox music code for ${songName} that you can use play it on the Boombox player. Just copy the code from here and try it on Boombox`;
-
-      // Update the document's title and meta description
-      document.title = title;
-      const metaDescription = document.querySelector(
-        "meta[name='description']"
-      );
-      if (metaDescription) {
-        metaDescription.setAttribute("content", description);
-      }
-    }
-  }, [SongData]);
 
   function handleCopy(id: number) {
     navigator.clipboard
       .writeText(id.toString())
       .then(() => {
         setCopyStatus((prevState) => ({ ...prevState, [id]: true }));
-
-        // return the COPIED text to COPY on the button
-        // set timer
-
         setTimeout(() => {
           setCopyStatus((prevState) => ({ ...prevState, [id]: false }));
         }, 4000);
@@ -180,7 +124,7 @@ const TrackPage = () => {
   ): void {
     try {
       window.open(
-        `https://roblox.com/library/${SongData.map((song) => song.id)}`,
+        `https://roblox.com/library/${songData.map((song) => song.id)}`,
         "_blank"
       );
     } catch (error) {
@@ -188,12 +132,15 @@ const TrackPage = () => {
     }
   }
 
+  // Function to handle rating logic...
+  // (Include your existing rating logic here)
+
   return (
     <main className="grid-cols-12 grid md:gap-10 min-h-screen p-6 lg:px-[170px]">
       <section className="lg:col-span-8 col-span-12 place-items-center">
         {/* Content Section */}
-        {SongData.length > 0 ? (
-          SongData.map((song) => (
+        {songData.length > 0 ? (
+          songData.map((song) => (
             <div key={song.id} className="my-5">
               <h1 className="text-[18px] font-semibold md:font-medium md:text-[25px] text-gray-600">
                 {song.name} - Roblox Audio ID
@@ -230,11 +177,11 @@ const TrackPage = () => {
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium text-[17px]">
-                        User Rating:
+                        Is it working?
                       </TableCell>
                       <TableCell className="flex">
                         <p className="mt-1">
-                          {SongData.map((song) => song.ratings)}
+                          {songData.map((song) => song.ratings)}
                         </p>
                         <Button
                           variant={"outline"}
@@ -408,4 +355,4 @@ const TrackPage = () => {
   );
 };
 
-export default TrackPage;
+export default TrackPageTest;
