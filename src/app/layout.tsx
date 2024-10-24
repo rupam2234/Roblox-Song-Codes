@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="google-adsense-account" content="ca-pub-7255780745640035" />
         <meta
           name="google-site-verification"
@@ -79,7 +79,7 @@ export default function RootLayout({
             })();
           `}
         </Script>
-      </Head>
+      </head>
       <body className={cn ? cn("text-[17px]", inter.className) : "text-[17px]"}>
         <Header />
         <Share />
