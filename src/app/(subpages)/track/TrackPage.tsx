@@ -12,7 +12,7 @@ import Sidebar from "@/components/custom-components/sidebar";
 import FirstInContentAd from "@/components/adsense-ads/AdsenseAd1";
 import FetchSongs from "@/app/(homepage)/(datatable)/fetchSongData";
 
-const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
+const TrackPage = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
   const [songData, setSongData] = useState<SongIDs[]>(initialSongData);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
   const [songRated, setsongRated] = useState(false);
@@ -354,4 +354,4 @@ const TrackPageTest = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
   );
 };
 
-export default TrackPageTest;
+export default TrackPage;

@@ -1,7 +1,7 @@
 import React from "react";
 import { SongIDs } from "@/components/custom-components/constants";
-import TrackPageTest from "./trackPage";
 import { Metadata } from "next";
+import TrackPage from "./TrackPage";
 
 interface TrackProps {
   searchParams: {
@@ -87,7 +87,7 @@ const Track = async ({ searchParams }: TrackProps) => {
 
   return (
     <main>
-      <TrackPageTest initialSongData={songData} />
+      <TrackPage initialSongData={songData} />
     </main>
   );
 };
