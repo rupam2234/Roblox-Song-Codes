@@ -13,7 +13,7 @@ const AdsenseMobileAdForTable = () => {
 </script>`;
 
   return (
-    <div className="my-6 h-64 w-auto mx-[15px] mobile-ad-content">
+    <div className="my-6 h-64 w-screen mx-[15px] mobile-ad-content">
       <div dangerouslySetInnerHTML={{ __html: adsenseCode }}></div>
     </div>
   );
