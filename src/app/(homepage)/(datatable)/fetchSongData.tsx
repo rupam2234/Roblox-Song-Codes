@@ -14,6 +14,7 @@ import { CircularProgress } from "@mui/material";
 import Link from "next/link";
 import AdsenseBarAd from "@/components/adsense-ads/AdsenseBarAd";
 import TinyAdsenseAds from "@/components/adsense-ads/AdsenseAdTiny";
+import AdsenseMobileAdForTable from "@/components/adsense-ads/AdsenseBetweenRows";
 
 type FetchSongsProps = {
   apiEndpoint: string;
@@ -24,6 +25,7 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
   const [songRated, setsongRated] = useState(false);
   const [loading, setLoading] = useState(true);
   const [copyStatus, setCopyStatus] = useState<{ [key: number]: boolean }>({});
+  //const isMobile = () => window.innerWidth <= 768; // Define mobile breakpoint for ad insertion
 
   useEffect(() => {
     const fetchData = async () => {
@@ -174,10 +176,6 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
           return (
             <Link
               href={`/track?id=${id}&name=${formatNameForURL(name)}`}
-              // onClick={(e) => {
-              //   e.preventDefault();
-              //   handleRowClick({ id, name });
-              // }}
               className="hover:text-blue-400 flex gap-1"
               target="_blank"
               rel="noopener noreferrer"
@@ -271,7 +269,21 @@ const FetchSongs = ({ apiEndpoint }: FetchSongsProps) => {
       options: {
         filter: false,
         sort: false,
-        customBodyRender: (value: any) => <p>{formatDuration(value)}</p>,
+        customBodyRender: (value: any, tableMeta: any) => {
+          // Check if the row index is a multiple of 5 and then display ad
+          if ((tableMeta.rowIndex + 1) % 5 === 0) {
+            return (
+              <>
+                <p>{formatDuration(value)}</p>
+                <div className="md:hidden block">
+                  <AdsenseMobileAdForTable />
+                </div>
+              </>
+            );
+          } else {
+            return <p>{formatDuration(value)}</p>;
+          }
+        },
       },
     },
   ];

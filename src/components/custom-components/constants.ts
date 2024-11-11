@@ -26,7 +26,6 @@ export type SongIDs = {
   updated: string;
 };
 
-
 // Define the type for the database row
 export type DBRow = {
   name: string;
