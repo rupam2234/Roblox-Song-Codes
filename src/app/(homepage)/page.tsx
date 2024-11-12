@@ -11,7 +11,7 @@ const month = date.toLocaleString("default", { month: "long" });
 const year = date.getFullYear();
 
 export const metadata: Metadata = {
-  title: `Roblox Song Codes: Groove with the Best Tunes`,
+  title: `Roblox Song Codes: Best Roblox Music IDs (${month} - ${year})`,
   description:
     "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
   keywords: [
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     "Music ID for Boombox",
     "Updated Roblox song codes",
     "Roblox Boombox music IDs",
-    `popular Roblox music codes ${year} `,
+    `Popular Roblox music codes ${year} `,
   ],
   publisher: "RobloxSongCodes.com",
   openGraph: {
-    title: `Roblox Song Codes: Groove with the Best Tunes`,
+    title: `Roblox Song Codes: Best Roblox Music IDs (${month} - ${year})`,
     description:
       "This is a collection of Roblox song codes that are currently working. The database is consistently updated to with the latest public Song IDs from creator's hub.",
     siteName: "RobloxSongCodes.com",
@@ -39,13 +39,15 @@ const HomePage = () => {
       <div className="grid grid-cols-12 md:gap-6 min-h-screen lg:p-2 px-6 mt-8 lg:px-[170px]">
         <div className="lg:col-span-8 col-span-12 flex-col items-center">
           <HomapageSchema
-            Headline={`Roblox Song Codes: Groove with the Best Tunes`}
+            Headline={`Roblox Song Codes: Groove With the Best Roblox Music IDs`}
             PageUrl={"/"}
             PageAbout={
               "This is a complete list of all tested Roblox song codes across different genres that you can play on Boombox. We consistently update and filter this database to provide you with song IDs that work."
             }
             AuthorName={"Rupam Bharali"}
-            PageName={"Roblox Song Codes: Groove with the Best Tunes"}
+            PageName={
+              "Roblox Song Codes: Groove With the Best Roblox Music IDs"
+            }
           />
           <TopContent />
           <HandleCategories />
