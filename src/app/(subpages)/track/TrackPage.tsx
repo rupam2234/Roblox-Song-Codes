@@ -237,11 +237,6 @@ const TrackPage = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
                   </TableBody>
                 </Table>
                 <div className="text-[17px]">
-                  <p className="mt-14">
-                    You can use the <strong>{song.id}</strong> code to play
-                    &quot;{song.name}&quot; on Roblox Boombox music player. Or
-                    you can...
-                  </p>
                   <div className="mt-6">
                     <Button
                       variant={"secondary"}
@@ -276,31 +271,6 @@ const TrackPage = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
                   </div>
                   <br />
                   <FirstInContentAd />
-                  <div className="space-y-3">
-                    <p>
-                      <strong>Important: </strong>some music IDs (especially the
-                      ones with longer code such as more than 11 numbers) might
-                      not always play nicely. This can be due to either the
-                      creator forget to set their audio assets to play on loop.
-                    </p>
-                    <p>
-                      Without this setting, the audio might play once and then
-                      fall silent, leaving us all hanging mid-tune.
-                      Additionally, creators can choose whether to make their
-                      audio available for all games or restrict it to specific
-                      games.{" "}
-                    </p>
-                    <p>
-                      <strong>So, if you stumble upon a cool track</strong>,
-                      give it a thumbs-up if it&apos;s working on Boombox.
-                      It&apos;s like a musical quality control vote!
-                    </p>
-                    <p>
-                      It helps us to filter out the gems from the
-                      not-so-gem-like IDs. Plus, it&apos;s a friendly way to
-                      say, &quot;Hey, this track rocks!&quot;
-                    </p>
-                  </div>
 
                   <h2 className="mt-14 font-bold text-[20px] text-[#5F8C81]">
                     Similar Tracks You May Like:
@@ -313,31 +283,6 @@ const TrackPage = ({ initialSongData }: { initialSongData: SongIDs[] }) => {
                   )}`}
                 />
                 <br />
-                <div className="text-[16px] space-y-3">
-                  <p>
-                    <strong>
-                      You can find more such song IDs on these pages:
-                    </strong>
-                  </p>
-                  <ul className="space-y-3 terms-list">
-                    <li>
-                      <a
-                        href="/blog/latest-roblox-song-codes"
-                        className="text-blue-600 hover:text-blue-500 hover:underline"
-                      >
-                        Latest Working Roblox Song Codes (Tested).
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/blog/monstercat-roblox-songs"
-                        className="text-blue-600 hover:text-blue-500 hover:underline"
-                      >
-                        Latest Monstercat Roblox Song IDs.
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           ))
