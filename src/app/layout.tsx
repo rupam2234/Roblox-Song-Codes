@@ -79,6 +79,7 @@ export default function RootLayout({
             })();
           `}
         </Script>
+        <script src="https://rum.thespeedysite.workers.dev/rum.js?v=0.0.1" defer></script>
       </head>
       <body className={cn ? cn("text-[17px]", inter.className) : "text-[17px]"}>
         <Header />
