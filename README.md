@@ -55,11 +55,16 @@ bun dev
 
 ```
 
-Project Structure : app/
+Project Structure : 
+
+``` bash
+app/
   page.tsx        # Main page
   components/     # UI components
   styles/         # Styling files
   data/           # Roblox song codes (if applicable)
+```
+
 
 Disclaimer: This project is not affiliated with Roblox. All song codes belong to their respective owners and creators and are used for educational and informational purposes only.
 
