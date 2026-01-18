@@ -1,10 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🎵 Roblox Song Codes Finder
 
-## Getting Started
+A Next.js web application that showcases working Roblox song (audio) codes, making it easy for players to find and use music IDs in Roblox games.
 
-First, run the development server:
+The project collects and displays updated Roblox song codes in a simple, fast, and user-friendly interface.
 
-```bash
+🚀 Features
+
+✅ Displays working Roblox song/audio codes
+
+🔍 Easy browsing and searching
+
+⚡ Built with Next.js App Router
+
+📱 Responsive UI
+
+🌐 Fast client-side rendering
+
+🛠 Tech Stack
+
+Framework: Next.js
+
+Language: TypeScript
+
+Styling: CSS / Tailwind (if applicable)
+
+Runtime: Node.js
+
+📦 Data Source
+
+Song codes are gathered and referenced from:
+
+🔗 Roblox Song Codes Repository
+https://github.com/rupam2234/Roblox-Song-Codes
+
+Credits to the original contributors for maintaining the dataset.
+
+🧑‍💻 Getting Started
+1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+2. Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+3. Run the development server
 npm run dev
 # or
 yarn dev
@@ -12,25 +55,48 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit:
+👉 http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🗂 Project Structure
+app/
+ ├─ page.tsx        # Main page
+ ├─ components/     # UI components
+ ├─ styles/         # Styling files
+ └─ data/           # Roblox song codes (if applicable)
 
-## Learn More
+🌍 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The app can be easily deployed on Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push your repository to GitHub
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Go to https://vercel.com
 
-## Deploy on Vercel
+Import the repository
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy 🚀
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+⚠ Disclaimer
+
+This project is not affiliated with Roblox.
+All song codes belong to their respective creators and are used for educational and informational purposes only.
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repo
+
+Create a new branch
+
+Commit your changes
+
+Open a Pull Request
+
+📄 License
+
+This project is licensed under the MIT License.
